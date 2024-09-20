@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 
 function Header() {
-  // State to manage the active link
   const [activeLink, setActiveLink] = useState('Home');
   const [isOpen, setIsOpen] = useState(false);
+  const [isClubDropdownOpen, setIsClubDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Function to set active link when clicked
+  const toggleClubDropdown = () => {
+    setIsClubDropdownOpen(!isClubDropdownOpen);
+  };
+
   const handleLinkClick = (link) => {
     setActiveLink(link);
   };
@@ -18,7 +21,6 @@ function Header() {
     <div>
       <header className="bg-white w-full py-4 shadow">
         <div className="max-w-screen-xl mx-auto flex justify-between items-center px-8">
-
           {/* Logo */}
           <div className="flex items-center">
             <img src="/RcTcetLogo.png" alt="Logo" className="h-10 w-10 rounded-full" />
@@ -47,19 +49,60 @@ function Header() {
             >
               Projects
             </a>
-            <a
-              href="/hobbyclub"
-              className={`text-lg font-medium hover:text-orange-600 ${activeLink === 'Club hub' ? 'text-orange-600' : 'text-black'}`}
-              onClick={() => handleLinkClick('Club hub')}
-            >
-              Club hub
-            </a>
+            {/* Dropdown for Club Hub */}
+            <div className="relative">
+              <button
+                onClick={toggleClubDropdown}
+                className={`text-lg font-medium hover:text-orange-600 ${activeLink === 'Club hub' ? 'text-orange-600' : 'text-black'}`}
+              >
+                Club Hub
+              </button>
+              {isClubDropdownOpen && (
+                <div className="absolute mt-2 bg-white shadow-lg rounded-lg z-10">
+                  <a
+                    href="/meet-the-team"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('HobbyClub')}
+                  >
+                   Meet The Team
+                  </a>
+                  <a
+                    href="/achievement"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('HobbyClub')}
+                  >
+                   Achievement
+                  </a>
+                  <a
+                    href="/hobbyclub"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('HobbyClub')}
+                  >
+                    Hobby Club
+                  </a>
+                  <a
+                    href="/club-insight"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('Club Insight')}
+                  >
+                    Club Insight
+                  </a>
+                  <a
+                    href="/get-involved"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('HobbyClub')}
+                  >
+                   Get Involved
+                  </a>
+                </div>
+              )}
+            </div>
           </nav>
 
           {/* Login & Contact Buttons */}
           <div className="hidden md:flex space-x-4 items-center justify-end">
             <a href="#" className="text-black font-medium hover:text-gray-600">Log in</a>
-            <a href="#" className="bg-[#fae5d3] text-black font-medium py-2 px-4 rounded-xl hover:bg-[#f9d3b5]">Contact us</a>
+            <a href="/contact" className="bg-[#fae5d3] text-black font-medium py-2 px-4 rounded-xl hover:bg-[#f9d3b5]">Contact us</a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -77,42 +120,81 @@ function Header() {
           <div className="md:hidden bg-white shadow-lg">
             <nav className="flex flex-col space-y-4 py-4 px-8">
               <a
-                href="#"
+                href="/"
                 className={`text-lg font-medium hover:text-orange-600 ${activeLink === 'Home' ? 'text-orange-600' : 'text-black'}`}
                 onClick={() => handleLinkClick('Home')}
               >
                 Home
               </a>
               <a
-                href="#"
+                href="/about"
                 className={`text-lg font-medium hover:text-orange-600 ${activeLink === 'About us' ? 'text-orange-600' : 'text-black'}`}
                 onClick={() => handleLinkClick('About us')}
               >
                 About us
               </a>
               <a
-                href="#"
+                href="/projects"
                 className={`text-lg font-medium hover:text-orange-600 ${activeLink === 'Projects' ? 'text-orange-600' : 'text-black'}`}
                 onClick={() => handleLinkClick('Projects')}
               >
                 Projects
               </a>
-              <a
-                href="#"
-                className={`text-lg font-medium hover:text-orange-600 ${activeLink === 'Club hub' ? 'text-orange-600' : 'text-black'}`}
-                onClick={() => handleLinkClick('Club hub')}
-              >
-                Club hub
-              </a>
+              {/* Dropdown for Club Hub in Mobile View */}
+              <div className="relative">
+                <button
+                  onClick={toggleClubDropdown}
+                  className={`text-lg font-medium hover:text-orange-600 ${activeLink === 'Club hub' ? 'text-orange-600' : 'text-black'}`}
+                >
+                  Club Hub
+                </button>
+                {isClubDropdownOpen && (
+                  <div className="mt-2 bg-white shadow-lg rounded-lg">
+<a
+                    href="/meet-the-team"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('HobbyClub')}
+                  >
+                   Meet The Team
+                  </a>
+                  <a
+                    href="/achievement"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('HobbyClub')}
+                  >
+                   Achievement
+                  </a>
+                  <a
+                    href="/hobbyclub"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('HobbyClub')}
+                  >
+                    Hobby Club
+                  </a>
+                  <a
+                    href="/club-insight"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('Club Insight')}
+                  >
+                    Club Insight
+                  </a>
+                  <a
+                    href="/get-involved"
+                    className="block px-4 py-2 text-black hover:bg-gray-100"
+                    onClick={() => handleLinkClick('HobbyClub')}
+                  >
+                   Get Involved
+                  </a>
+                  </div>
+                )}
+              </div>
               <a href="#" className="text-black font-medium hover:text-gray-600">Log in</a>
               <button
-  className="bg-[#fae5d3] text-black font-medium py-2 px-4 rounded-xl hover:bg-[#f9d3b5]"
-  onClick={() => window.location.href = "#"}
-  >
-  Contact us
-</button>
-
-
+                className="bg-[#fae5d3] text-black font-medium py-2 px-4 rounded-xl hover:bg-[#f9d3b5]"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Contact us
+              </button>
             </nav>
           </div>
         )}
