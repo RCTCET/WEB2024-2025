@@ -1,6 +1,4 @@
 import React from 'react'
-import Header from '../Components/Header/Header'
-import Footer from "../Components/Footer/Footer"
 
 function HobbyClub() {
     return(
@@ -46,10 +44,10 @@ function InitiativeText() {
 function HealthClubCardSection() {
     return(
         <div className="flex justify-evenly w-full flex-wrap">
-            <HealthClubCard link="/HobbyClub_svg/svg1.svg" alt="svg1"/>
-            <HealthClubCard link="/HobbyClub_svg/svg2.svg" alt="svg2"/>
-            <HealthClubCard link="/HobbyClub_svg/svg3.svg" alt="svg3"/>
-            <HealthClubCard link="/HobbyClub_svg/svg4.svg" alt="svg4"/>
+            <HealthClubCard link="./HobbyClub_svg/svg1.svg" alt="svg1"/>
+            <HealthClubCard link="./HobbyClub_svg/svg2.svg" alt="svg2"/>
+            <HealthClubCard link="./HobbyClub_svg/svg3.svg" alt="svg3"/>
+            <HealthClubCard link="./HobbyClub_svg/svg4.svg" alt="svg4"/>
         </div>
     )
 }

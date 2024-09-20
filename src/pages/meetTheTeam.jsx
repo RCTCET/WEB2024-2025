@@ -1,12 +1,12 @@
 import React from 'react';
 
 const teamMembers = [
-    { id: 1, name: 'Rtr. Tanisha Kumar', role: 'President', image: 'public/HobbyClub_svg/svg4.svg' },
-    { id: 2, name: 'Rtr. Tanisha Kumar', role: 'President', image: 'public/HobbyClub_svg/svg4.svg' },
-    { id: 3, name: 'Rtr. Tanisha Kumar', role: 'President', image: 'public/HobbyClub_svg/svg4.svg' },
-    { id: 4, name: 'Rtr. Tanisha Kumar', role: 'President', image: 'public/HobbyClub_svg/svg4.svg' },
-    { id: 5, name: 'Rtr. Tanisha Kumar', role: 'President', image: 'public/HobbyClub_svg/svg4.svg' },
-    { id: 6, name: 'Rtr. Tanisha Kumar', role: 'President', image: 'public/HobbyClub_svg/svg4.svg' }
+    { id: 1, name: 'Rtr. Tanisha Kumar', role: 'President', image: '/HobbyClub_svg/svg4.svg' },
+    { id: 2, name: 'Rtr. Tanisha Kumar', role: 'President', image: '/HobbyClub_svg/svg4.svg' },
+    { id: 3, name: 'Rtr. Tanisha Kumar', role: 'President', image: '/HobbyClub_svg/svg4.svg' },
+    { id: 4, name: 'Rtr. Tanisha Kumar', role: 'President', image: '/HobbyClub_svg/svg4.svg' },
+    { id: 5, name: 'Rtr. Tanisha Kumar', role: 'President', image: '/HobbyClub_svg/svg4.svg' },
+    { id: 6, name: 'Rtr. Tanisha Kumar', role: 'President', image: '/HobbyClub_svg/svg4.svg' }
 ];
 
 const TeamPage = () => {

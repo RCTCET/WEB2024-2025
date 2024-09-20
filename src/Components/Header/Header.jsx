@@ -21,7 +21,7 @@ function Header() {
 
           {/* Logo */}
           <div className="flex items-center">
-            <img src="src/assets/RcTcetLogo.png" alt="Logo" className="h-10 w-10 rounded-full" />
+            <img src="/RcTcetLogo.png" alt="Logo" className="h-10 w-10 rounded-full" />
           </div>
 
           {/* Desktop Navigation Links */}

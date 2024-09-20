@@ -16,7 +16,7 @@ function Footer() {
         {/* Logo Section */}
         <div className="flex flex-col items-start mb-4 md:mb-0">
           <div className="flex py-3">
-            <img src="src/assets/RcTcetLogo.png" alt="RCTCET Logo" className="h-12 w-12 mr-4" />
+            <img src="/RcTcetLogo.png" alt="RCTCET Logo" className="h-12 w-12 mr-4" />
             <div>
               <h1 className="text-xl font-bold">RCTCET</h1>
             </div>
@@ -35,18 +35,18 @@ function Footer() {
           <a href="mailto:tcetrotaract@gmail.com" className='w-14' >
             <img
 
-              src="src/Components/Footer/mailIcon.png"
+              src="/Footer/mailIcon.png"
               alt="Email Icon" />
           </a><a href="https://x.com/rc_tcet" className='w-14'>
             <img
 
-              src="src/Components/Footer/xIcon.png"
+              src="/Footer/xIcon.png"
               alt="Twitter Icon" />
           </a>
           <a href="https://www.linkedin.com/in/rotaract-club-tcet-1158811b4/" className='w-14'>
             <img
 
-              src="src/Components/Footer/linkedinIcon.png"
+              src="/Footer/linkedinIcon.png"
               alt="LinkedIn Icon" />
           </a>
 
