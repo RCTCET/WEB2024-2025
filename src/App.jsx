@@ -1,9 +1,5 @@
-
-
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Layout from './layout';
 import Home from './pages/home';
 import { HobbyClub } from './pages/Hobby';
