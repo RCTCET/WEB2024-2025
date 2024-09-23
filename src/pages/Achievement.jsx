@@ -36,10 +36,10 @@ function BestClub() {
 // ---------------------------- Invicta -----------------------------
 const Carousel = () => {
   const slides = [
-    "./Achievement/Invicta svg.svg",
-    "./Achievement/Invicta svg.svg",
-    "./Achievement/Invicta svg.svg",
-    "./Achievement/Invicta svg.svg",
+    "./Achievement/Invicta svgs/invicta1.jpg",
+    "./Achievement/Invicta svgs/invicta2.jpg",
+    "./Achievement/Invicta svgs/invicta3.jpg",
+    "./Achievement/Invicta svgs/invicta4.jpg",
   ];
 
   const captions = [
@@ -63,11 +63,11 @@ const Carousel = () => {
     <div className="flex justify-center w-full items-center flex-wrap lg:flex-nowrap lg:gap-x-10">
       <div className="overflow-hidden relative lg:w-full lg:flex-shrink-0">
         <div
-          className="flex transition-transform ease-in-out duration-500"
+          className="flex transition-transform ease-in-out duration-500 rounded-xl"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover" />
+            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
           ))}
         </div>
 
@@ -113,14 +113,14 @@ const AcerCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svgs/acer1.jpg",
+    "./Achievement/Acer svgs/acer2.jpg",
+    "./Achievement/Acer svgs/acer3.jpg",
+    "./Achievement/Acer svgs/acer4.jpg",
+    "./Achievement/Acer svgs/acer5.jpg",
+    "./Achievement/Acer svgs/acer6.jpg",
+    "./Achievement/Acer svgs/acer7.jpg",
+    "./Achievement/Acer svgs/acer8.jpg",
   ];
   const captions = [
     "Best Outstanding President,Rtr.Amar Singh", // use comma (,) for the next line
@@ -146,13 +146,13 @@ const AcerCarousel = () => {
   return (
   <div className="sm:max-w-sm md:max-w-md xl:max-w-xl mx-auto">
     <div>
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden relative rounded-xl">
         <div
-          className="flex transition-transform ease-in-out duration-500"
+          className="flex transition-transform ease-in-out duration-500 rounded-xl"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover" />
+            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
           ))}
         </div>
 
@@ -221,13 +221,13 @@ const ProjectCarousel = ({slides, captions}) => {
   return (
     <div className="bg-[rgba(255,214,168,1)] xl:w-[386px] h-fit w-auto sm:w-72 md:w-60 lg:w-[300px] rounded-[30px] box-border p-6 xl:p-12 mb-10 mx-2 flex justify-center items-center flex-col">
       <div className="xl:w-[282px] w-fit overflow-hidden object-fill mb-5">
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden relative rounded-xl">
         <div
-          className="flex transition-transform ease-in-out duration-500"
+          className="flex transition-transform ease-in-out duration-500 rounded-xl"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover" />
+            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
           ))}
         </div>
 
@@ -257,11 +257,11 @@ const ProjectCarousel = ({slides, captions}) => {
 
 function ProjectSection() {
 const slides1 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Nominations/Nom1.jpg",
+    "./Achievement/Nominations/Nom2.jpg",
+    "./Achievement/Nominations/Nom3.jpg",
+    "./Achievement/Nominations/Nom1.jpg",
+    "./Achievement/Nominations/Nom2.jpg",
   ];
 const captions1 = [
     '"Herambh",Nominated for Best Project,project in Digital Communications Q1',
@@ -272,11 +272,11 @@ const captions1 = [
   ];
 
 const slides2 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+  "./Achievement/Nominations/Nom4.jpg",
+  "./Achievement/Nominations/Nom5.jpg",
+  "./Achievement/Nominations/Nom6.jpg",
+  "./Achievement/Nominations/Nom4.jpg",
+  "./Achievement/Nominations/Nom5.jpg",
   ];
 const captions2 = [
     '"Field Visit: National Burns Centre",Nominated for Best Project,in PIS for Q1',
@@ -287,11 +287,11 @@ const captions2 = [
   ];
 
   const slides3 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Nominations/Nom7.jpg",
+    "./Achievement/Nominations/Nom8.jpg",
+    "./Achievement/Nominations/Nom9.jpg",
+    "./Achievement/Nominations/Nom7.jpg",
+    "./Achievement/Nominations/Nom8.jpg",
   ];
 const captions3 = [
     '"Festival Fusion:Saath 7 Special",Nominated for Best Project,in SMR for Q2',
@@ -302,11 +302,11 @@ const captions3 = [
   ];
 
   const slides4 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Nominations/Nom10.jpg",
+    "./Achievement/Nominations/Nom11.jpg",
+    "./Achievement/Nominations/Nom1.jpg",
+    "./Achievement/Nominations/Nom2.jpg",
+    "./Achievement/Nominations/Nom3.jpg",
   ];
 const captions4 = [
     '"Khoj Go Get Em 2.O",Nominated for Best Project,in Club Service for Q2',
@@ -317,11 +317,11 @@ const captions4 = [
   ];
 
   const slides5 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Nominations/Nom1.jpg",
+    "./Achievement/Nominations/Nom2.jpg",
+    "./Achievement/Nominations/Nom3.jpg",
+    "./Achievement/Nominations/Nom4.jpg",
+    "./Achievement/Nominations/Nom5.jpg",
   ];
 const captions5 = [
     '"Clash Of MNCs",Nominated for Best Project,in Entrepreneurship for Q1',
