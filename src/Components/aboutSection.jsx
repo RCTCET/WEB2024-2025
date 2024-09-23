@@ -3,19 +3,19 @@ import React from 'react';
 const Illuminate = () => {
   return (
     <>
-<div className="w-full bg-gray-100 flex justify-center mt-10 mb-10">
-  <div className="relative w-4/5 h-[400px] overflow-hidden">
+<div className="w-full flex justify-center mt-10 mb-10">
+  <div className="relative w-full lg:h-[400px] overflow-hidden">
     {/* Background image */}
     <div 
-      className="absolute inset-0 bg-cover bg-center opacity-20"
+      className="absolute inset-0 bg-cover bg-center"
       style={{
-        backgroundImage: "url('/about.png')",
+        backgroundImage: "url('./about.png')",
       }}
     ></div>
     
     {/* Centered Content */}
-    <div className="relative z-10 flex flex-col md:flex-row h-full p-6 justify-center items-center text-justify">
-      <div className="flex-grow pr-4">
+    <div className="relative z-10 flex flex-col md:flex-row h-full p-6 lg:mx-24 justify-center items-center text-justify gap-8">
+      <div className="flex-grow md:pr-4">
         <h2 className="text-2xl font-bold text-orange-500 mb-4">Rotaract Club of TCET</h2>
         <p className="text-gray-800 mb-4">
           At Rotaract Club of TCET, wellbeing is at the forefront of what we're 
@@ -29,13 +29,13 @@ const Illuminate = () => {
         </p>
       </div>
       
-      <div className="flex-shrink-0 w-1/3">
+      <div className="lg:flex-shrink-0 lg:w-1/3 md:w-full">
         <div className="w-full h-full rounded-lg overflow-hidden">
-          <img 
-            src="/flame.png" 
-            alt="Flame silhouette" 
-            className="w-full h-full object-cover"
-          />
+          <video autoPlay muted loop
+            src="./flame.mp4"             
+            type="video/mp4"
+            className="lg:w-full lg:h-[300px] md:h-[200px] w-full h-[300px] object-cover">
+          </video>
         </div>
       </div>
     </div>
