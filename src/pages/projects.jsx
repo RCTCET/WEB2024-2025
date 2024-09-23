@@ -193,9 +193,9 @@ const EndeavorsCarousel = () => {
                     ))}
                 </div>
 
-                <div className="flex transition-transform duration-500" style={{ transform: `translateX(-${selectedImageIndex * 100}%)` }}>
+                <div className="flex transition-transform duration-500 w-full  " style={{ transform: `translateX(-${selectedImageIndex * 100}%)` }}>
                     {currentAvenue.slides.map((slide, index) => (
-                        <div key={index} className="max-sm:h-[80vh] xl:min-w-5xl min-w-full relative">
+                        <div key={index} className="max-sm:h-[80vh] min-w-full  relative">
                             <img
                                 src={slide.image}
                                 alt={slide.title}
