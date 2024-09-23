@@ -36,12 +36,16 @@ function BestClub() {
 // ---------------------------- Invicta -----------------------------
 const Carousel = () => {
   const slides = [
-    "./Achievement/Invicta svg.svg",
-    "./Achievement/Invicta svg.svg",
-    "./Achievement/Invicta svg.svg",
-    "./Achievement/Invicta svg.svg",
+    "./Achievement/Invicta svgs/invicta1.jpg",
+    "./Achievement/Invicta svgs/invicta2.jpg",
+    "./Achievement/Invicta svgs/invicta3.jpg",
+    "./Achievement/Invicta svgs/invicta4.jpg",
   ];
 
+  const captions = [
+    "Invicta,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
+  ];
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-slide functionality
@@ -51,22 +55,21 @@ const Carousel = () => {
         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
     }, 3000); // Change slide every 3 seconds
-
     return () => clearInterval(interval);
   }, [slides.length]);
 
   return (
-    <div className="relative sm:max-w-sm md:max-w-md xl:max-w-2xl mx-auto">
-      <div className="overflow-hidden">
+  <div className="sm:max-w-sm md:max-w-md xl:max-w-2xl mx-auto">
+    <div className="flex justify-center w-full items-center flex-wrap lg:flex-nowrap lg:gap-x-10">
+      <div className="overflow-hidden relative lg:w-full lg:flex-shrink-0">
         <div
-          className="flex transition-transform ease-in-out duration-500"
+          className="flex transition-transform ease-in-out duration-500 rounded-xl"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover" />
+            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
           ))}
         </div>
-      </div>
 
       {/* dots */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -78,7 +81,17 @@ const Carousel = () => {
           ></button>
         ))}
       </div>
+      </div>
+
+      {/* Caption Display */}
+      <div className="text-center my-2 font-poppins text-xs sm:text-sm xl:text-3xl w-full">
+        {captions[0].split(',').map((line, i) => (
+          <p key={i} 
+            className={`font-poppins font-bold text-center whitespace-nowrap ${i === 0 ? 'text-black xl:text-3xl' : 'xl:text-[22px] text-[rgba(254,112,17,1)]'}`}>{line}</p>
+        ))}
+      </div>
     </div>
+  </div>
   );
 };
 
@@ -86,13 +99,8 @@ function Invicta() {
     return(
       <div className="flex justify-center flex-col items-center border-y-2 relative overflow-hidden">
           <img src="./Achievement/Baseline grid bg.svg" alt="bgImg" className="w-full absolute -z-10 -top-3 lg:top-auto"/>
-        <div className="flex justify-evenly flex-wrap xxl:justify-evenly space-y-2 w-full p-4">
-            <div>
+        <div className="xxl:justify-evenly space-y-2 w-screen p-4">
               <Carousel/>
-            </div>
-            <div className="flex justify-center">
-              <img src="./Achievement/Invicta text.svg" alt="InvictaText" className="xxl:max-w-2xl" />
-            </div>
         </div>
       </div>
     )
@@ -105,16 +113,24 @@ const AcerCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svgs/acer1.jpg",
+    "./Achievement/Acer svgs/acer2.jpg",
+    "./Achievement/Acer svgs/acer3.jpg",
+    "./Achievement/Acer svgs/acer4.jpg",
+    "./Achievement/Acer svgs/acer5.jpg",
+    "./Achievement/Acer svgs/acer6.jpg",
+    "./Achievement/Acer svgs/acer7.jpg",
+    "./Achievement/Acer svgs/acer8.jpg",
   ];
   const captions = [
-    "Rtr.Prabhat Maurya,Best Outstanding Editor,in R.I.D 3141", // use comma (,) for the next line
-    "Slide 2,o,-",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    "Best Outstanding President,Rtr.Amar Singh", // use comma (,) for the next line
+    "Best Outstanding Pres-Sec Relations,Rtr.Amar Singh and Rtr.Sumit Sharma",
+    "Highest Membership,in Rotaract District Mumbai,in R.I.D 3141",
+    "Rtr.Bhargav Nadiyana,Best Outstanding PIS Director,in R.I.D 3141",
+    "Rtr.Shreya Pandey,Best Outstanding Club Service Director,in R.I.D 3141",
+    "Rtr.Prabhat Maurya,Best Outstanding Editor,in R.I.D 3141",
+    "Best Council Newcomer,Rtr.Ambresh Shukla,in R.I.D 3141",
+    '"The Big Three",Best Joint Project,in R.I.D 3141',
   ];
 
   useEffect(() => {
@@ -130,13 +146,13 @@ const AcerCarousel = () => {
   return (
   <div className="sm:max-w-sm md:max-w-md xl:max-w-xl mx-auto">
     <div>
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden relative rounded-xl">
         <div
-          className="flex transition-transform ease-in-out duration-500"
+          className="flex transition-transform ease-in-out duration-500 rounded-xl"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover" />
+            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
           ))}
         </div>
 
@@ -155,9 +171,9 @@ const AcerCarousel = () => {
     </div>
 
       {/* Caption Display */}
-      <div className="text-center my-2 md:px-20 font-poppins">
+      <div className="text-center my-2 font-poppins text-xs sm:text-sm xl:text-3xl w-full">
         {captions[currentIndex].split(',').map((line, i) => (
-          <p key={i} className="text-xl font-bold">{line}</p>
+          <p key={i} className="text-lg md:text-xl font-bold">{line}</p>
         ))}
       </div>
   </div>
@@ -205,13 +221,13 @@ const ProjectCarousel = ({slides, captions}) => {
   return (
     <div className="bg-[rgba(255,214,168,1)] xl:w-[386px] h-fit w-auto sm:w-72 md:w-60 lg:w-[300px] rounded-[30px] box-border p-6 xl:p-12 mb-10 mx-2 flex justify-center items-center flex-col">
       <div className="xl:w-[282px] w-fit overflow-hidden object-fill mb-5">
-      <div className="overflow-hidden relative">
+      <div className="overflow-hidden relative rounded-xl">
         <div
-          className="flex transition-transform ease-in-out duration-500"
+          className="flex transition-transform ease-in-out duration-500 rounded-xl"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover" />
+            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
           ))}
         </div>
 
@@ -241,68 +257,78 @@ const ProjectCarousel = ({slides, captions}) => {
 
 function ProjectSection() {
 const slides1 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Nominations/Nom1.jpg",
+    "./Achievement/Nominations/Nom2.jpg",
+    "./Achievement/Nominations/Nom3.jpg",
+    "./Achievement/Nominations/Nom1.jpg",
+    "./Achievement/Nominations/Nom2.jpg",
   ];
 const captions1 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Herambh",Nominated for Best Project,project in Digital Communications Q1',
+    '"D.E.A.R",Won Crown Joint Project,in Quarter 3',
+    '"Cultural Lit",Nominated for Best Project,in Editorials in Q2',
+    '"Dadaist Poem",Nominated for Best Project,in Editorials in Q3',
+    '"Project Muskaan",Won Best Crown Joint Project,in Q4',
   ];
 
 const slides2 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+  "./Achievement/Nominations/Nom4.jpg",
+  "./Achievement/Nominations/Nom5.jpg",
+  "./Achievement/Nominations/Nom6.jpg",
+  "./Achievement/Nominations/Nom4.jpg",
+  "./Achievement/Nominations/Nom5.jpg",
   ];
 const captions2 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Field Visit: National Burns Centre",Nominated for Best Project,in PIS for Q1',
+    '"Field Visit 2.O : National Burns Centre",Nominated for Best Project,in PIS for Q2',
+    '"Indian Youth Parliament",Nominated for Best Project,in Professional Development in Q3',
+    '"Hackers Week",Nominated for Best Project,in Professional Development in Q2',
+    '"Rotary Multilingual Elocution Competition",Won Best Crown Project,in PIS in Q3',
   ];
 
   const slides3 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Nominations/Nom7.jpg",
+    "./Achievement/Nominations/Nom8.jpg",
+    "./Achievement/Nominations/Nom9.jpg",
+    "./Achievement/Nominations/Nom7.jpg",
+    "./Achievement/Nominations/Nom8.jpg",
   ];
 const captions3 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Festival Fusion:Saath 7 Special",Nominated for Best Project,in SMR for Q2',
+    '"Techworld",Nominated for Best Flagship Project,in R.I.D 3141',
+    '"Arena of Gamers",Won Crown Best Project,in Sports for Q3',
+    '"Kick Off",Nominated for Best Project,in Sports for Q4',
+    '"Sunday Funday 2.O",Nominated for Best Project,in Club Service for Q1',
   ];
 
   const slides4 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Nominations/Nom10.jpg",
+    "./Achievement/Nominations/Nom11.jpg",
+    "./Achievement/Nominations/Nom1.jpg",
+    "./Achievement/Nominations/Nom2.jpg",
+    "./Achievement/Nominations/Nom3.jpg",
   ];
 const captions4 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Khoj Go Get Em 2.O",Nominated for Best Project,in Club Service for Q2',
+    '"Beach Battle Royale",Nominated for Best Project,in Club Service for Q4',
+    '"World AIDS Day",Nominated for Best Project,in International Service for Q2',
+    '"PRospect Mastery",Nominated for Best Project,in Public Relations for Q3',
+    '"Idea Ignite:Ideathon Rally",Nominated for Best Project,in Entrepreneurship for Q4',
   ];
 
   const slides5 = [
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
-    "./Achievement/Acer svg.svg",
+    "./Achievement/Nominations/Nom1.jpg",
+    "./Achievement/Nominations/Nom2.jpg",
+    "./Achievement/Nominations/Nom3.jpg",
+    "./Achievement/Nominations/Nom4.jpg",
+    "./Achievement/Nominations/Nom5.jpg",
   ];
 const captions5 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Clash Of MNCs",Nominated for Best Project,in Entrepreneurship for Q1',
+    '"Constructing Diwali Memories",Nominated for Best Project,in Public Relations for Q2',
+    '"LogoRewamp Challenge",Nominated for Best Project,in Digital Communications for Q3',
+    '"Hearts for Humanity",Nominated for Best Project,in International Service  for Q1',
+    '"Little Sculptures",Nominated for Best Project,in Community Service for Q1',
   ];
 
 

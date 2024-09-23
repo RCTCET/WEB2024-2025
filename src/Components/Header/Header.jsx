@@ -58,7 +58,7 @@ function Header() {
                 Club Hub
               </button>
               {isClubDropdownOpen && (
-                <div className="absolute mt-2 bg-white shadow-lg rounded-lg z-10">
+                <div className="absolute mt-2 bg-white shadow-lg rounded-lg z-40">
                   <a
                     href="/meet-the-team"
                     className="block px-4 py-2 text-black hover:bg-gray-100"
@@ -101,7 +101,7 @@ function Header() {
 
           {/* Login & Contact Buttons */}
           <div className="hidden md:flex space-x-4 items-center justify-end">
-            <a href="#" className="text-black font-medium hover:text-gray-600">Log in</a>
+            
             <a href="/contact" className="bg-[#fae5d3] text-black font-medium py-2 px-4 rounded-xl hover:bg-[#f9d3b5]">Contact us</a>
           </div>
 
@@ -188,7 +188,7 @@ function Header() {
                   </div>
                 )}
               </div>
-              <a href="#" className="text-black font-medium hover:text-gray-600">Log in</a>
+              
               <button
                 className="bg-[#fae5d3] text-black font-medium py-2 px-4 rounded-xl hover:bg-[#f9d3b5]"
                 onClick={() => window.location.href = "/contact"}

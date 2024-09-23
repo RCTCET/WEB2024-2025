@@ -44,41 +44,35 @@ function InitiativeText() {
 function HealthClubCardSection() {
     return(
         <div className="flex justify-evenly w-full flex-wrap">
-            <HealthClubCard link="./HobbyClub_svg/svg1.svg" alt="svg1"/>
-            <HealthClubCard link="./HobbyClub_svg/svg2.svg" alt="svg2"/>
-            <HealthClubCard link="./HobbyClub_svg/svg3.svg" alt="svg3"/>
-            <HealthClubCard link="./HobbyClub_svg/svg4.svg" alt="svg4"/>
+            <HealthClubCard activity1="Organize seminars, workshops, and awareness camps focused on substance abuse prevention." activity2="Conduct activities that provide guidance related to the dangers of substance abuse." Head="Awareness and Prevention" obj="To create awareness about health issues among staff and students on the campus." link="./HobbyClub_svg/Awareness and Prevention .jpg" alt="svg1"/>
+            <HealthClubCard activity1="Organize health-related seminars, workshops, and camps to provide necessary guidance on health issues." activity2="Distribute informational materials and conduct sessions to raise health awareness." Head="Health Awareness on Campus" obj="Create awareness about various health issues among staff and students on the campus." link="./HobbyClub_svg/Health Awareness.jpg" alt="svg2"/>
+            <HealthClubCard activity1="Set up counseling sessions to address specific health concerns." activity2="Offer workshops that focus on mental health, stress management, and other health-related issues." Head="Promotion of Healthy Habits" obj="Promote awareness about healthy habits among staff and students." link="./HobbyClub_svg/svg3.svg" alt="svg3"/>
+            <HealthClubCard activity1="Organize workshops and camps that encourage the development of healthy habits." activity2="Educate on topics like nutrition, exercise, and mental well-being." Head="Counseling and Support" obj="Provide counseling for various health problems to staff and students on the campus." link="./HobbyClub_svg/IMG_2113.png" alt="svg4"/>
         </div>
     )
 }
 
-function HealthClubCard({link, alt}) {
+function HealthClubCard({activity1, activity2, obj, Head, link, alt}) {
     return(
             <div className="w-fit md:h-fit bg-HealthCardColor rounded-[30px] md:flex md:items-center md:justify-evenly mb-12 md:py-5 md:pr-5 xl:p-16 xl:mb-20 xl:mx-12 md:mx-8">
                 <img src={link} alt={alt} className="md:w-[300px] lg:w-[350px] xl:w-1/2 w-full p-5 lg:mr-6 xxl:w-2/5"/>
                 <div className="md:w-fit box-border bg-white rounded-[30px] flex justify-center items-center">
-                    <CardText/>
+                <div className="font-montserrat flex flex-col justify-center h-full p-5 md:p-5 md:text-sm lg:text-base xl:text-xl xl:p-12 lg:p-8 xxl:text-2xl xxl:py-20 xxl:space-y-4">
+                <h1 className="font-[650] mb-2"> {Head} </h1>
+            
+                <h1 className="font-[500]">Objective:</h1>
+                <ul className="list-outside list-disc ml-8 mb-2">
+                    <li className="font-[400] ">{obj}</li>
+                </ul>
+
+                <h1 className="font-[500]">Proposed Activity:</h1>
+                <ul className="list-outside list-disc ml-8">
+                    <li className="font-[400]  list-outside">{activity1}</li>
+                    <li className="font-[400]  list-outside">{activity2}</li>
+                </ul>
+                    </div>
                 </div>
             </div>
-    )
-}
-
-function CardText() {
-    return(
-        <div className="font-montserrat flex flex-col justify-center h-full p-5 md:p-5 md:text-sm lg:text-base xl:text-xl xl:p-12 lg:p-8 xxl:text-2xl xxl:py-20 xxl:space-y-4">
-            <h1 className="font-[650] mb-2">Awareness and Prevention</h1>
-        
-            <h1 className="font-[500]">Objective:</h1>
-            <ul className="list-outside list-disc ml-8 mb-2">
-                <li className="font-[400] ">To create awareness about health issues among staff and students on the campus.</li>
-            </ul>
-
-            <h1 className="font-[500]">Proposed Activity:</h1>
-            <ul className="list-outside list-disc ml-8">
-                <li className="font-[400]  list-outside">Organize seminars, workshops, and awareness camps focused on substance abuse prevention.</li>
-                <li className="font-[400]  list-outside">Conduct activities that provide guidance related to the dangers of substance abuse.</li>
-            </ul>
-        </div>
     )
 }
 
