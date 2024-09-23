@@ -67,7 +67,7 @@ const AboutSection = () => {
           </div>
 
           {/* Center Rectangle */}
-          <div className="relative flex flex-col items-center justify-center bg-[#FFD6A8] border border-[#9D320F] shadow-lg rounded-lg p-4 min-h-[18rem] min-w-[18rem] max-w-[18rem] sm:min-h-[20rem] sm:min-w-[18rem] sm:max-w-[22rem] md:min-h-[20rem] md:min-w-[20rem] md:max-w-[20rem] lg:min-h-[25rem] lg:min-w-[25rem] lg:max-w-[27rem] 2xl:min-h-[40rem] 2xl:min-w-[40rem] 2xl:max-w-[40rem] relative overflow-hidden mb-[0.2rem]">
+          <div className="relative flex flex-col items-center justify-center bg-[#FFD6A8] border border-[#9D320F] shadow-lg rounded-lg p-4 min-h-[18rem] min-w-[18rem] max-w-[18rem] sm:min-h-[20rem] sm:min-w-[18rem] sm:max-w-[22rem] md:min-h-[20rem] md:min-w-[20rem] md:max-w-[20rem] lg:min-h-[25rem] lg:min-w-[25rem] lg:max-w-[27rem] 2xl:min-h-[40rem] 2xl:min-w-[40rem] 2xl:max-w-[40rem] overflow-hidden mb-[0.2rem]">
             {/* Background Image behind Rectangle */}
             <img
               src="/About us/png 2 1.svg"

@@ -44,9 +44,6 @@ const Carousel = () => {
 
   const captions = [
     "Invicta,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
-    "Event 2,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
-    "Event 3,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
-    "Event 4,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
   ];
   
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -88,7 +85,7 @@ const Carousel = () => {
 
       {/* Caption Display */}
       <div className="text-center my-2 font-poppins text-xs sm:text-sm xl:text-3xl w-full">
-        {captions[currentIndex].split(',').map((line, i) => (
+        {captions[0].split(',').map((line, i) => (
           <p key={i} 
             className={`font-poppins font-bold text-center whitespace-nowrap ${i === 0 ? 'text-black xl:text-3xl' : 'xl:text-[22px] text-[rgba(254,112,17,1)]'}`}>{line}</p>
         ))}
@@ -120,12 +117,20 @@ const AcerCarousel = () => {
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
   ];
   const captions = [
-    "Rtr.Prabhat Maurya,Best Outstanding Editor,in R.I.D 3141", // use comma (,) for the next line
-    "Slide 2,o,-",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    "Best Outstanding President,Rtr.Amar Singh", // use comma (,) for the next line
+    "Best Outstanding Pres-Sec Relations,Rtr.Amar Singh and Rtr.Sumit Sharma",
+    "Highest Membership,in Rotaract District Mumbai,in R.I.D 3141",
+    "Rtr.Bhargav Nadiyana,Best Outstanding PIS Director,in R.I.D 3141",
+    "Rtr.Shreya Pandey,Best Outstanding Club Service Director,in R.I.D 3141",
+    "Rtr.Prabhat Maurya,Best Outstanding Editor,in R.I.D 3141",
+    "Best Council Newcomer,Rtr.Ambresh Shukla,in R.I.D 3141",
+    '"The Big Three",Best Joint Project,in R.I.D 3141',
   ];
 
   useEffect(() => {
@@ -166,9 +171,9 @@ const AcerCarousel = () => {
     </div>
 
       {/* Caption Display */}
-      <div className="text-center my-2 md:px-20 font-poppins">
+      <div className="text-center my-2 font-poppins text-xs sm:text-sm xl:text-3xl w-full">
         {captions[currentIndex].split(',').map((line, i) => (
-          <p key={i} className="text-xl font-bold">{line}</p>
+          <p key={i} className="text-lg md:text-xl font-bold">{line}</p>
         ))}
       </div>
   </div>
@@ -256,12 +261,14 @@ const slides1 = [
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
   ];
 const captions1 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Herambh",Nominated for Best Project,project in Digital Communications Q1',
+    '"D.E.A.R",Won Crown Joint Project,in Quarter 3',
+    '"Cultural Lit",Nominated for Best Project,in Editorials in Q2',
+    '"Dadaist Poem",Nominated for Best Project,in Editorials in Q3',
+    '"Project Muskaan",Won Best Crown Joint Project,in Q4',
   ];
 
 const slides2 = [
@@ -269,12 +276,14 @@ const slides2 = [
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
   ];
 const captions2 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Field Visit: National Burns Centre",Nominated for Best Project,in PIS for Q1',
+    '"Field Visit 2.O : National Burns Centre",Nominated for Best Project,in PIS for Q2',
+    '"Indian Youth Parliament",Nominated for Best Project,in Professional Development in Q3',
+    '"Hackers Week",Nominated for Best Project,in Professional Development in Q2',
+    '"Rotary Multilingual Elocution Competition",Won Best Crown Project,in PIS in Q3',
   ];
 
   const slides3 = [
@@ -282,12 +291,14 @@ const captions2 = [
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
   ];
 const captions3 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Festival Fusion:Saath 7 Special",Nominated for Best Project,in SMR for Q2',
+    '"Techworld",Nominated for Best Flagship Project,in R.I.D 3141',
+    '"Arena of Gamers",Won Crown Best Project,in Sports for Q3',
+    '"Kick Off",Nominated for Best Project,in Sports for Q4',
+    '"Sunday Funday 2.O",Nominated for Best Project,in Club Service for Q1',
   ];
 
   const slides4 = [
@@ -295,12 +306,14 @@ const captions3 = [
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
   ];
 const captions4 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Khoj Go Get Em 2.O",Nominated for Best Project,in Club Service for Q2',
+    '"Beach Battle Royale",Nominated for Best Project,in Club Service for Q4',
+    '"World AIDS Day",Nominated for Best Project,in International Service for Q2',
+    '"PRospect Mastery",Nominated for Best Project,in Public Relations for Q3',
+    '"Idea Ignite:Ideathon Rally",Nominated for Best Project,in Entrepreneurship for Q4',
   ];
 
   const slides5 = [
@@ -308,12 +321,14 @@ const captions4 = [
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
     "./Achievement/Acer svg.svg",
+    "./Achievement/Acer svg.svg",
   ];
 const captions5 = [
-    "D.E.A.R,Won Crown Joint Project,in Quarter 3", // use comma (,) for the next line
-    "Slide 2,-,o",
-    "Caption about Slide 3,-,-",
-    "This is slide 4,.,.",
+    '"Clash Of MNCs",Nominated for Best Project,in Entrepreneurship for Q1',
+    '"Constructing Diwali Memories",Nominated for Best Project,in Public Relations for Q2',
+    '"LogoRewamp Challenge",Nominated for Best Project,in Digital Communications for Q3',
+    '"Hearts for Humanity",Nominated for Best Project,in International Service  for Q1',
+    '"Little Sculptures",Nominated for Best Project,in Community Service for Q1',
   ];
 
 
