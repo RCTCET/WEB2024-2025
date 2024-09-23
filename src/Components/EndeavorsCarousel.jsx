@@ -49,7 +49,7 @@ const EndeavorsCarousel = () => {
                 </div>
             </div>
 
-            <div className="relative  max-w-5xl overflow-hidden rounded-md shadow-lg m-4 ">
+            <div className="relative max-w-5xl overflow-hidden rounded-md shadow-lg m-4 ">
                 <div className="absolute top-4 right-4 z-10 flex space-x-2 ">
                     {slides.map((_, index) => (
                         <span
@@ -71,8 +71,8 @@ const EndeavorsCarousel = () => {
                             />
                             
                             <div className="absolute bottom-0 left-0 w-full bg-black/60 p-4">
-                                <h3 className="text-2xl font-bold text-white">{slide.title}</h3>
-                                <p className="text-sm text-white">{slide.description}</p>
+                                <h3 className="text-md font-bold text-white">{slide.title}</h3>
+                                <p className="text-xs text-white">{slide.description}</p>
                             </div>
                         </div>
                     ))}
