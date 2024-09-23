@@ -42,6 +42,13 @@ const Carousel = () => {
     "./Achievement/Invicta svg.svg",
   ];
 
+  const captions = [
+    "Invicta,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
+    "Event 2,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
+    "Event 3,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
+    "Event 4,The 9th District Assembly & AARA Nigam,7th July 2024,By Rotaract District 3141,INVICTA",
+  ];
+  
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-slide functionality
@@ -51,13 +58,13 @@ const Carousel = () => {
         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
     }, 3000); // Change slide every 3 seconds
-
     return () => clearInterval(interval);
   }, [slides.length]);
 
   return (
-    <div className="relative sm:max-w-sm md:max-w-md xl:max-w-2xl mx-auto">
-      <div className="overflow-hidden">
+  <div className="sm:max-w-sm md:max-w-md xl:max-w-2xl mx-auto">
+    <div className="flex justify-center w-full items-center flex-wrap lg:flex-nowrap lg:gap-x-10">
+      <div className="overflow-hidden relative lg:w-full lg:flex-shrink-0">
         <div
           className="flex transition-transform ease-in-out duration-500"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -66,7 +73,6 @@ const Carousel = () => {
             <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover" />
           ))}
         </div>
-      </div>
 
       {/* dots */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -78,7 +84,17 @@ const Carousel = () => {
           ></button>
         ))}
       </div>
+      </div>
+
+      {/* Caption Display */}
+      <div className="text-center my-2 font-poppins text-xs sm:text-sm xl:text-3xl w-full">
+        {captions[currentIndex].split(',').map((line, i) => (
+          <p key={i} 
+            className={`font-poppins font-bold text-center whitespace-nowrap ${i === 0 ? 'text-black xl:text-3xl' : 'xl:text-[22px] text-[rgba(254,112,17,1)]'}`}>{line}</p>
+        ))}
+      </div>
     </div>
+  </div>
   );
 };
 
@@ -86,13 +102,8 @@ function Invicta() {
     return(
       <div className="flex justify-center flex-col items-center border-y-2 relative overflow-hidden">
           <img src="./Achievement/Baseline grid bg.svg" alt="bgImg" className="w-full absolute -z-10 -top-3 lg:top-auto"/>
-        <div className="flex justify-evenly flex-wrap xxl:justify-evenly space-y-2 w-full p-4">
-            <div>
+        <div className="xxl:justify-evenly space-y-2 w-screen p-4">
               <Carousel/>
-            </div>
-            <div className="flex justify-center">
-              <img src="./Achievement/Invicta text.svg" alt="InvictaText" className="xxl:max-w-2xl" />
-            </div>
         </div>
       </div>
     )

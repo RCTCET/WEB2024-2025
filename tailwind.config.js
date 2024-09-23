@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'custom-gradient': 'linear-gradient(129.61deg, #FF8627 37.66%, #FFB971 70.67%, #FDBE22 96.09%)',
+      },
       colors: {
         'FFD6A8': '#FFD6A8',
         '9D320F': '#9D320F',
