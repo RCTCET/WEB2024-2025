@@ -148,6 +148,22 @@ const EndeavorsCarousel = () => {
                 },
             ],
         },
+        {
+            avenue: 'Public Relations',
+            slides: [
+                {
+                    image: 'https://via.placeholder.com/800x400?text=Coming+soon',
+                },
+            ],
+        },
+        {
+            avenue: 'Marketing',
+            slides: [
+                {
+                    image: 'https://via.placeholder.com/800x400?text=Coming+soon',
+                },
+            ],
+        },
     ];
 
     const nextAvenue = () => {
