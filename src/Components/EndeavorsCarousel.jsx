@@ -71,8 +71,8 @@ const EndeavorsCarousel = () => {
                             />
                             
                             <div className="absolute bottom-0 left-0 w-full bg-black/60 p-4">
-                                <h3 className="text-md font-bold text-white">{slide.title}</h3>
-                                <p className="text-xs text-white">{slide.description}</p>
+                                <h3 className="text-md md:text-2xl xl:text-3xl font-bold text-white">{slide.title}</h3>
+                                <p className="text-xs md:text-sm xl:text-lg text-white">{slide.description}</p>
                             </div>
                         </div>
                     ))}
