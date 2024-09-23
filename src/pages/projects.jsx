@@ -2,7 +2,7 @@ import { useState } from 'react';
 import MonsoonMatch from '../assets/images/carousel_1.png';
 import Ganpati from '../assets/images/carousel_2.png';
 
-const Projects = () => {
+const EndeavorsCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const slides = [
@@ -26,16 +26,16 @@ const Projects = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
     };
     return (
-        <div className="h-screen bg-white flex flex-col items-center justify-center">
-            <div className=" w-full max-w-5xl">
-                <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#98430A] to-[#FDD24C] right-[50px] ">Projects</h1>
-                <div className="flex">
-                    <button onClick={prevSlide} className="bg-[#FFEDD4] text-black p-3 rounded-full relative bottom-10 left-[99%]">
+        <div className=" bg-white flex flex-col items-center justify-center my-10">
+            <div className="w-full max-w-5xl flex max-sm:flex-col justify-center items-center gap-x-4 gap-y-4  sm:justify-between sm:items-between">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#98430A] to-[#FDD24C]  ">Projects </h1>
+                <div className="flex gap-x-2">
+                    <button onClick={prevSlide} className="bg-[#FFEDD4] text-black p-1 md:p-3 rounded-full  ">
                         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
-                    <button onClick={nextSlide} className="bg-[#FFEDD4] relative text-black p-3 rounded-full bottom-10 left-[100%]">
+                    <button onClick={nextSlide} className="bg-[#FFEDD4] text-black p-1 md:p-3 rounded-full ">
                         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
@@ -43,7 +43,7 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className="relative  max-w-5xl overflow-hidden rounded-md shadow-lg">
+            <div className="relative  max-w-5xl overflow-hidden rounded-md shadow-lg m-4">
                 <div className="absolute top-4 right-4 z-10 flex space-x-2">
                     {slides.map((_, index) => (
                         <span
@@ -61,7 +61,7 @@ const Projects = () => {
                             <img
                                 src={slide.image}
                                 alt={slide.title}
-                                className="w-full h-[32rem] object-cover"
+                                className="w-full h-[20rem] md:h-[32rem] object-cover"
                             />
                             
                             <div className="absolute bottom-0 left-0 w-full bg-black/60 p-4">
@@ -78,4 +78,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default EndeavorsCarousel;

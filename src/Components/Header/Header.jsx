@@ -58,7 +58,7 @@ function Header() {
                 Club Hub
               </button>
               {isClubDropdownOpen && (
-                <div className="absolute mt-2 bg-white shadow-lg rounded-lg z-10">
+                <div className="absolute mt-2 bg-white shadow-lg rounded-lg z-40">
                   <a
                     href="/meet-the-team"
                     className="block px-4 py-2 text-black hover:bg-gray-100"
