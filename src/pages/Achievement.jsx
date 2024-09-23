@@ -127,10 +127,10 @@ const AcerCarousel = () => {
     "Best Outstanding Pres-Sec Relations,Rtr.Amar Singh and Rtr.Sumit Sharma",
     "Highest Membership,in Rotaract District Mumbai,in R.I.D 3141",
     "Rtr.Bhargav Nadiyana,Best Outstanding PIS Director,in R.I.D 3141",
-    "Rtr.Shreya Pandey,Best Outstanding Club Service Director in R.I.D 3141",
-    "Rtr.Prabhat Maurya,Best Outstanding Editor in R.I.D 3141",
-    "Best Council Newcomer,Rtr.Ambresh Shukla in R.I.D 3141",
-    '"The Big Three",Best Joint Project in R.I.D 3141',
+    "Rtr.Shreya Pandey,Best Outstanding Club Service Director,in R.I.D 3141",
+    "Rtr.Prabhat Maurya,Best Outstanding Editor,in R.I.D 3141",
+    "Best Council Newcomer,Rtr.Ambresh Shukla,in R.I.D 3141",
+    '"The Big Three",Best Joint Project,in R.I.D 3141',
   ];
 
   useEffect(() => {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const RotaractClubLayout = () => {
     return (
-        <div className=" w-full bg-black overflow-hidden relative">
+        <div className=" w-full bg-black overflow-hidden relative max-h-[90vh]">
             {/* Logo Section */}
             <div className='flex relative '>
             <div className=" w-full md:w-1/4 bg-white transform skew-x-12 origin-top-left flex items-center justify-center z-10">
@@ -25,7 +25,7 @@ const RotaractClubLayout = () => {
                             <div className="relative w-64 h-72 overflow-hidden transform skew-x-12">
                                 <img
               src={`/home/img${index + 1}.svg`} alt={`Image ${index + 1}`}
-              className={`absolute top-0 left-0 w-full h-full object-cover  ${index==1 ? "opacity-100":"opacity-40"}`}
+              className={`absolute top-0 left-0 w-full h-full object-cover -skew-x-12 scale-150  ${index%2!=0 ? "opacity-100":"opacity-40"}`}
             />
                                 
                             </div>
@@ -39,7 +39,7 @@ const RotaractClubLayout = () => {
                             <div className="relative w-64 h-72 overflow-hidden transform skew-x-12" >
                            < img
               src={`/home/img${index + 4}.svg`} alt={`Image ${index + 4}`}
-              className={`absolute top-0 left-0 w-full h-full object-cover  ${index==0 ? "opacity-100":"opacity-40"}`}
+              className={`absolute top-0 left-0 w-full h-full object-cover -skew-x-12 scale-150  ${index%2==0 ? "opacity-100":"opacity-40"}`}
             />
                                 
                             </div>
