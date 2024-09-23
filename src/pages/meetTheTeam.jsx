@@ -43,7 +43,7 @@ const boardOfDirectors = [
     { id: 12, name: 'Rtr. Ayaan Shaikh', role: 'Sports', image: '/team/Rtr. Ayaan Shaikh.png', year: '2024-2025' },
     { id: 13, name: 'Rtr. Fuzail Khan', role: 'Sports', image: '/team/Rtr. Fuzail Khan.png', year: '2024-2025' },
     { id: 14, name: 'Rtr. Kriti Saxena', role: 'Entrepreneurship Development', image: '/team/Rtr. Kriti Saxena.png', year: '2024-2025' },
-    { id: 15, name: 'Rtr. Atharva Nayak', role: 'Entrepreneurship Development', image: '/team/Rtr. Atharva.png', year: '2024-2025' },
+    { id: 15, name: 'Rtr. Atharva Nayak', role: 'Entrepreneurship Development', image: '/team/Rtr. Atharva Nayak.png', year: '2024-2025' },
     { id: 16, name: 'Rtr. Ansh Mishra', role: 'Social Media and Relation', image: '/team/Rtr. Ansh Mishra.png', year: '2024-2025' },
     { id: 17, name: 'Rtr. Jai Anjaria', role: 'Social Media and Relation', image: '/team/Rtr. Jai Anjaria.png', year: '2024-2025' },
     { id: 18, name: 'Rtr. Srishti Srivastava', role: 'Social Media and Relation', image: '/team/Rtr. Srishti Srivastava.png', year: '2024-2025' },
