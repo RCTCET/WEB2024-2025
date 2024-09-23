@@ -21,11 +21,11 @@ function FounderCard() {
 function Card({ title, image, description, isBig }) {
   return (
     <div className={`relative w-full rounded-lg shadow-lg  overflow-hidden`}>
-      <img src={image} alt={title} className="w-full lg:h-72   object-cover" />
+      <img src={image} alt={title} className="w-full lg:h-72 object-cover object-center" />
       <div className="hover:opacity-0 duration-500 flex">
                         <div className="absolute top-[66%] p-0 left-0 w-full h-1/2 flex blur-[2px] items-baseline text-left bg-black/30 "></div>
                         <div className="text-white absolute bottom-[7%] sm:bottom-[20%] md:bottom-[5%] lg:bottom-[10%] blur-none pl-2 hover:opacity-0 px-4 py-2">
-                            <h2 className=" font-bold text-md">{title}</h2>
+                            <h2 className="font-bold text-md">{title}</h2>
                             <p className="text-xs ">{description}</p>
                         </div>
                     </div>
@@ -57,20 +57,20 @@ function Legacy() {
         <div className="basis-[60%] lg:basis-2/3 flex flex-col gap-y-6">
         <Card
           title="Community Service"
-          image="https://via.placeholder.com/600x400?text=Community"
-          description="Description for Community Service"
+          image="../Legacy_Impact/Community_Img.jpg"
+          // description="Description for Community Service"
           isBig
         />
         <div className="flex max-sm:flex-col gap-y-4 gap-x-6">
         <Card
           title="Shiksha"
-          image="https://via.placeholder.com/600x600?text=Shiksha"
-          description="Description for Shiksha"
+          image="../Legacy_Impact/Shiksha_Img.jpg"
+          // description="Description for Shiksha"
         />
         <Card
           title="Club Service"
-          image="https://via.placeholder.com/600x600?text=Club"
-          description="Description for Club Service"
+          image="../Legacy_Impact/ClubService_Img.jpg"
+          // description="Description for Club Service"
         />
         </div>
         
