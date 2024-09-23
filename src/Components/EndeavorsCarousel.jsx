@@ -7,16 +7,22 @@ const EndeavorsCarousel = () => {
 
     const slides = [
         {
-            image: MonsoonMatch,
-            title: 'Monsoon Match Day',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          "title": "KALAKRITI",
+          "description": "An initiative where we taught underprivileged children the art of making Ganpati idols using clay. This heartwarming event not only nurtured creativity but also created lasting memories with the kids, fostering joy and learning.",
+          "image": "/home/kalakriti.jpg"
         },
         {
-            image: Ganpati,
-            title: 'Ganpati Sculpture',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          "title": "DROWNING PREVENTION DAY",
+          "description": "We honoured the lifeguards of Drishti Marines at Juhu Beach. The event aimed to recognize the crucial role of lifeguards and raise awareness about drowning prevention. The team engaged the lifeguards in heartfelt conversations, learning about their challenges and experiences, while also providing them with thoughtful gifts and food boxes as tokens of appreciation.",
+          "image": "/home/Drowning.jpg"
         },
-    ];
+        {
+          "title": "MUDITA",
+          "description": "A heartfelt visit to an old age home, where we donated gently used clothes, conducted a medical camp, and spent quality time interacting with the elderly. This event was all about sharing joy and spreading warmth among the senior citizens.",
+          "image": "/home/mudita.jpg"
+        }
+      ]
+      
 
 
     const nextSlide = () => {
@@ -43,8 +49,8 @@ const EndeavorsCarousel = () => {
                 </div>
             </div>
 
-            <div className="relative  max-w-5xl overflow-hidden rounded-md shadow-lg m-4">
-                <div className="absolute top-4 right-4 z-10 flex space-x-2">
+            <div className="relative  max-w-5xl overflow-hidden rounded-md shadow-lg m-4 ">
+                <div className="absolute top-4 right-4 z-10 flex space-x-2 ">
                     {slides.map((_, index) => (
                         <span
                             key={index}
@@ -61,7 +67,7 @@ const EndeavorsCarousel = () => {
                             <img
                                 src={slide.image}
                                 alt={slide.title}
-                                className="w-full h-[20rem] md:h-[32rem] object-cover"
+                                className="w-full h-[32rem] object-cover"
                             />
                             
                             <div className="absolute bottom-0 left-0 w-full bg-black/60 p-4">
