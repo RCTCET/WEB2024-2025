@@ -26,10 +26,10 @@ const EndeavorsCarousel = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
     };
     return (
-        <div className="h-screen bg-white flex flex-col items-center justify-center">
-            <div className=" w-full max-w-5xl flex max-sm:flex-col justify-center items-center">
+        <div className=" bg-white flex flex-col items-center justify-center my-10">
+            <div className=" w-full max-w-5xl flex max-sm:flex-col justify-center items-center gap-x-4 gap-y-4">
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#98430A] to-[#FDD24C]  ">Our Latest Endaveours</h1>
-                <div className="flex">
+                <div className="flex ">
                     <button onClick={prevSlide} className="bg-[#FFEDD4] text-black p-1 md:p-3 rounded-full  ">
                         <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

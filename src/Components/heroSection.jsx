@@ -2,7 +2,7 @@ import React from 'react';
 
 const RotaractClubLayout = () => {
     return (
-        <div className=" w-full bg-black overflow-hidden relative">
+        <div className=" w-full bg-black overflow-hidden relative max-h-[90vh]">
             {/* Logo Section */}
             <div className='flex relative '>
             <div className=" w-full md:w-1/4 bg-white transform skew-x-12 origin-top-left flex items-center justify-center z-10">
