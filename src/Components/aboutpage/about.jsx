@@ -67,7 +67,7 @@ const AboutSection = () => {
           </div>
 
           {/* Center Rectangle */}
-          <div className="relative flex flex-col items-center justify-center bg-[#FFD6A8] border border-[#9D320F] shadow-lg rounded-lg p-4 min-h-[18rem] min-w-[18rem] max-w-[18rem] sm:min-h-[20rem] sm:min-w-[18rem] sm:max-w-[22rem] md:min-h-[20rem] md:min-w-[20rem] md:max-w-[20rem] lg:min-h-[25rem] lg:min-w-[25rem] lg:max-w-[27rem] 2xl:min-h-[40rem] 2xl:min-w-[40rem] 2xl:max-w-[40rem] overflow-hidden mb-[0.2rem]">
+          <div className="relative flex flex-col items-center justify-center bg-[#FFD6A8] border border-[#9D320F] shadow-lg rounded-lg p-4 min-h-[18rem] min-w-[18rem] max-w-[18rem] sm:min-h-[20rem] sm:min-w-[18rem] sm:max-w-[22rem] md:min-h-[20rem] md:min-w-[20rem] md:max-w-[20rem] lg:min-h-[25rem] lg:min-w-[25rem] lg:max-w-[27rem] 2xl:min-h-[40rem] 2xl:min-w-[40rem] 2xl:max-w-[40rem] overflow-hidden mb-[2rem]">
             {/* Background Image behind Rectangle */}
             <img
               src="/About us/png 2 1.svg"
@@ -76,17 +76,12 @@ const AboutSection = () => {
             />
 
             <p className="relative text-center font-arial align-top text-base sm:text-lg md:text-xl lg:text-2xl 2xl:text-[2.1rem] font-bold text-[#9D320F] underline whitespace-nowrap z-10">
-              Lorem Ipsum Dolor Sit Amet
+            Illuminate: Carry a Legacy,<br/> Ignite a Change
             </p>
             <br />
             {/* Additional Text Below the Main Text */}
             <p className="relative text-[0.7rem] sm:text-[0.9rem] md:text-[0.9rem] lg:text-[1.2rem] 2xl:text-[1.8rem] text-black whitespace-normal overflow-hidden z-10">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae ullam ipsum rerum autem,
-              deleniti fugiat numquam et laboriosam dolorum ad odio sit. Lorem ipsum dolor sit, amet
-              consectetur adipisicing elit. Beatae ullam ipsum rerum autem, deleniti fugiat numquam et
-              laboriosam dolorum ad odio sit. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Beatae ullam ipsum rerum.
-            </p>
+            The theme emphasizes honoring the values and achievements of the past while embracing the responsibility to inspire and lead new transformations. It highlights the dual purpose of preserving wisdom and using it as a beacon for meaningful change, illustrating the balance between being a steward of history and a catalyst for progress. True illumination arises from valuing the past while daring to innovate.            </p>
           </div>
 
           {/* Column for Right Images */}
