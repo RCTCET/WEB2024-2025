@@ -13,19 +13,18 @@ import ContactForm from './pages/contactus';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          
           <Route path="hobbyclub" element={<HobbyClub />} />
-             <Route path="about" element={<About />} />
-          <Route path="get-involved" element={<GetInvolvedHero/>} />
+          <Route path="about" element={<About />} />
+          <Route path="get-involved" element={<GetInvolvedHero />} />
           <Route path="achievement" element={<Achievement />} />
           <Route path="club-insight" element={<ClubInsightHero />} />
-          <Route path="meet-the-team" element={<TeamPage />} /> 
-          <Route path="projects" element={<Projects />} /> 
-          <Route path="contact" element={<ContactForm />} />  
+          <Route path="meet-the-team" element={<TeamPage />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="contact" element={<ContactForm />} />
         </Route>
       </Routes>
     </Router>

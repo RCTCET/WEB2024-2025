@@ -1,7 +1,9 @@
 {
   "name": "my-react-app",
   "private": true,
+  "homepage": "https://www.rc.tcetmumbai.in",
   "version": "0.0.0",
+
   "type": "module",
   "scripts": {
     "dev": "vite",

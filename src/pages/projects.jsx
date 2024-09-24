@@ -74,7 +74,7 @@ const EndeavorsCarousel = () => {
             avenue: 'Club Service',
             slides: [
                 {
-                    image: '/projects/IMG_8238.jpg',
+                    image: '/projects/IMG_8238.JPG',
                     title: 'CREWMATE CONSPIRACY',
                     description: 'A real-life adaptation of the popular online game Among Us, where participants were split into crewmates and impostors, each with their own secret objectives. Through a series of tasks, challenges, and detective work, the event encouraged teamwork, strategy, and social interaction. It offered a unique and engaging experience, fostering bonding among members while attracting new participants to the club.',
                 },
@@ -99,7 +99,7 @@ const EndeavorsCarousel = () => {
             avenue: 'Entrepreneurship Development',
             slides: [
                 {
-                    image: '/projects/IMG_9948.jpg',
+                    image: '/projects/IMG_9948.JPG',
                     title: 'Brand Revival Series',
                     description: 'Aimed at enhancing the Entrepreneurial Skills of our members, this event featured a series of fun and competitive games. Participants demonstrated their entrepreneurial knowledge by tackling challenges like understanding profit models and analysing brand ideologies, making it both an educational and engaging experience.',
                 },
