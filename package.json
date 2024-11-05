@@ -1,9 +1,8 @@
 {
   "name": "my-react-app",
   "private": true,
-  "homepage": "https://www.rc.tcetmumbai.in",
   "version": "0.0.0",
-
+  "homepage": "https://www.rc.tcetmumbai.in",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "my-react-app": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^6.26.1",
