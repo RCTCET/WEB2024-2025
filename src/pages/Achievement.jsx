@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { LazyLoadComponent, LazyLoadImage } from 'react-lazy-load-image-component';
 
 function Achievement() {
     return(
         <>
-            <AchievementText/>
-            <BestClub/>
-            <Invicta/>
-            <Acer/>
-            <ProjectNomimationText/>
-            <ProjectSection/>
+          <LazyLoadComponent><AchievementText/></LazyLoadComponent>
+          <LazyLoadComponent><BestClub/></LazyLoadComponent>
+          <LazyLoadComponent><Invicta/></LazyLoadComponent>
+          <LazyLoadComponent><Acer/></LazyLoadComponent>
+          <LazyLoadComponent><ProjectNomimationText/></LazyLoadComponent>
+          <LazyLoadComponent><ProjectSection/></LazyLoadComponent>
         </>
     )
 }
@@ -17,7 +18,7 @@ function Achievement() {
 function AchievementText() {
   return(
       <div className="flex justify-center mt-16 mb-14 mx-9">
-          <img src="./Achievement/ACHIEVEMENTS.svg" alt="Achievement"/>
+          <img src={"./Achievement/ACHIEVEMENTS.svg"} alt="Achievement" rel='preload' loading='lazy'/>
       </div>
   )
 }
@@ -36,10 +37,10 @@ function BestClub() {
 // ---------------------------- Invicta -----------------------------
 const Carousel = () => {
   const slides = [
-    "./Achievement/Invicta svgs/invicta1.jpg",
-    "./Achievement/Invicta svgs/invicta2.jpg",
-    "./Achievement/Invicta svgs/invicta3.jpg",
-    "./Achievement/Invicta svgs/invicta4.jpg",
+    "./Achievement/Invicta imgs/invicta1.webp",
+    "./Achievement/Invicta imgs/invicta2.webp",
+    "./Achievement/Invicta imgs/invicta3.webp",
+    "./Achievement/Invicta imgs/invicta4.webp",
   ];
 
   const captions = [
@@ -54,7 +55,7 @@ const Carousel = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // Change slide every 3 seconds
+    }, 5000); // Change slide every 5 seconds
     return () => clearInterval(interval);
   }, [slides.length]);
 
@@ -62,14 +63,15 @@ const Carousel = () => {
   <div className="sm:max-w-sm md:max-w-md xl:max-w-2xl mx-auto">
     <div className="flex justify-center w-full items-center flex-wrap lg:flex-nowrap lg:gap-x-10">
       <div className="overflow-hidden relative lg:w-full lg:flex-shrink-0">
-        <div
-          className="flex transition-transform ease-in-out duration-500 rounded-xl"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      <div 
+        className="flex transition-transform ease-in-out duration-1000 rounded-xl"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }} 
         >
-          {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
-          ))}
-        </div>
+        {slides.map((slide, index) => (
+          <LazyLoadImage key={index} src={slide} alt={`Slide ${index + 1}`}
+          className="xxl:w-4xl object-cover rounded-xl"/>
+        ))}
+      </div>
 
       {/* dots */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
@@ -98,9 +100,11 @@ const Carousel = () => {
 function Invicta() {
     return(
       <div className="flex justify-center flex-col items-center border-y-2 relative overflow-hidden">
-          <img src="./Achievement/Baseline grid bg.svg" alt="bgImg" className="w-full absolute -z-10 -top-3 lg:top-auto"/>
+          <LazyLoadImage src="./Achievement/Baseline grid bg.svg" alt="bgImg" className="w-full absolute -z-10 -top-3 lg:top-auto"/>
         <div className="xxl:justify-evenly space-y-2 w-screen p-4">
-              <Carousel/>
+          <LazyLoadComponent>
+            <Carousel />
+          </LazyLoadComponent>
         </div>
       </div>
     )
@@ -113,14 +117,14 @@ const AcerCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    "./Achievement/Acer svgs/acer1.jpg",
-    "./Achievement/Acer svgs/acer2.jpg",
-    "./Achievement/Acer svgs/acer3.jpg",
-    "./Achievement/Acer svgs/acer4.jpg",
-    "./Achievement/Acer svgs/acer5.jpg",
-    "./Achievement/Acer svgs/acer6.jpg",
-    "./Achievement/Acer svgs/acer7.jpg",
-    "./Achievement/Acer svgs/acer8.jpg",
+    "./Achievement/Acer imgs/acer1.webp",
+    "./Achievement/Acer imgs/acer2.webp",
+    "./Achievement/Acer imgs/acer3.webp",
+    "./Achievement/Acer imgs/acer4.webp",
+    "./Achievement/Acer imgs/acer5.webp",
+    "./Achievement/Acer imgs/acer6.webp",
+    "./Achievement/Acer imgs/acer7.webp",
+    "./Achievement/Acer imgs/acer8.webp",
   ];
   const captions = [
     "Best Outstanding President,Rtr.Amar Singh", // use comma (,) for the next line
@@ -138,7 +142,7 @@ const AcerCarousel = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === slides.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [slides.length]);
@@ -148,11 +152,11 @@ const AcerCarousel = () => {
     <div>
       <div className="overflow-hidden relative rounded-xl">
         <div
-          className="flex transition-transform ease-in-out duration-500 rounded-xl"
+          className="flex transition-transform ease-in-out duration-1000 rounded-xl"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
+            <LazyLoadImage key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
           ))}
         </div>
 
@@ -183,13 +187,13 @@ const AcerCarousel = () => {
 function Acer() {
   return(
     <div className="flex justify-center flex-col items-center relative overflow-hidden my-14">
-        <img src="./Achievement/Baseline grid bg.svg" alt="bgImg" className="w-full absolute -z-10 -top-0 lg:top-auto xxl:-top-0"/>
+        <LazyLoadImage src="./Achievement/Baseline grid bg.svg" alt="bgImg" className="w-full absolute -z-10 -top-0 lg:top-auto xxl:-top-0"/>
       <div className="flex justify-center px-20 lg:justify-start xxl:justify-center w-full lg:pl-20">
         <p className="font-poppins font-bold text-5xl lg:text-[52px] text-[rgba(219,117,4,1)]">ACER'S</p>
       </div>
       <div className="flex justify-evenly flex-wrap xxl:justify-evenly space-y-2 w-full px-4">
         <div className="mt-10">
-          <AcerCarousel/>
+          <LazyLoadComponent><AcerCarousel/></LazyLoadComponent>
         </div>
       </div>
     </div>
@@ -200,7 +204,7 @@ function Acer() {
 function ProjectNomimationText() {
   return(
     <div className="lg:mt-28 mt-20 lg:mb-14 mb-8 flex justify-center px-10">
-      <img src="./Achievement/PROJECT NOMINATIONS.svg" alt="" />
+      <LazyLoadImage src="./Achievement/PROJECT NOMINATIONS.svg" alt="project" />
     </div>
   )
 }
@@ -223,11 +227,11 @@ const ProjectCarousel = ({slides, captions}) => {
       <div className="xl:w-[282px] w-fit overflow-hidden object-fill mb-5">
       <div className="overflow-hidden relative rounded-xl">
         <div
-          className="flex transition-transform ease-in-out duration-500 rounded-xl"
+          className="flex transition-transform ease-in-out duration-1000 rounded-xl"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
           {slides.map((slide, index) => (
-            <img key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
+            <LazyLoadImage key={index} src={slide} alt={`Slide ${index + 1}`} className="xxl:w-4xl object-cover rounded-xl" />
           ))}
         </div>
 
@@ -257,11 +261,11 @@ const ProjectCarousel = ({slides, captions}) => {
 
 function ProjectSection() {
 const slides1 = [
-    "./Achievement/Nominations/Nom1.jpg",
-    "./Achievement/Nominations/Nom2.jpg",
-    "./Achievement/Nominations/Nom3.jpg",
-    "./Achievement/Nominations/Nom1.jpg",
-    "./Achievement/Nominations/Nom2.jpg",
+    "./Achievement/Nominations/Nom1.webp",
+    "./Achievement/Nominations/Nom2.webp",
+    "./Achievement/Nominations/Nom3.webp",
+    "./Achievement/Nominations/Nom1.webp",
+    "./Achievement/Nominations/Nom2.webp",
   ];
 const captions1 = [
     '"Herambh",Nominated for Best Project,project in Digital Communications Q1',
@@ -272,11 +276,11 @@ const captions1 = [
   ];
 
 const slides2 = [
-  "./Achievement/Nominations/Nom4.jpg",
-  "./Achievement/Nominations/Nom5.jpg",
-  "./Achievement/Nominations/Nom6.jpg",
-  "./Achievement/Nominations/Nom4.jpg",
-  "./Achievement/Nominations/Nom5.jpg",
+  "./Achievement/Nominations/Nom4.webp",
+  "./Achievement/Nominations/Nom5.webp",
+  "./Achievement/Nominations/Nom6.webp",
+  "./Achievement/Nominations/Nom4.webp",
+  "./Achievement/Nominations/Nom5.webp",
   ];
 const captions2 = [
     '"Field Visit: National Burns Centre",Nominated for Best Project,in PIS for Q1',
@@ -287,11 +291,11 @@ const captions2 = [
   ];
 
   const slides3 = [
-    "./Achievement/Nominations/Nom7.jpg",
-    "./Achievement/Nominations/Nom8.jpg",
-    "./Achievement/Nominations/Nom9.jpg",
-    "./Achievement/Nominations/Nom7.jpg",
-    "./Achievement/Nominations/Nom8.jpg",
+    "./Achievement/Nominations/Nom7.webp",
+    "./Achievement/Nominations/Nom8.webp",
+    "./Achievement/Nominations/Nom9.webp",
+    "./Achievement/Nominations/Nom7.webp",
+    "./Achievement/Nominations/Nom8.webp",
   ];
 const captions3 = [
     '"Festival Fusion:Saath 7 Special",Nominated for Best Project,in SMR for Q2',
@@ -302,11 +306,11 @@ const captions3 = [
   ];
 
   const slides4 = [
-    "./Achievement/Nominations/Nom10.jpg",
-    "./Achievement/Nominations/Nom11.jpg",
-    "./Achievement/Nominations/Nom1.jpg",
-    "./Achievement/Nominations/Nom2.jpg",
-    "./Achievement/Nominations/Nom3.jpg",
+    "./Achievement/Nominations/Nom10.webp",
+    "./Achievement/Nominations/Nom11.webp",
+    "./Achievement/Nominations/Nom1.webp",
+    "./Achievement/Nominations/Nom2.webp",
+    "./Achievement/Nominations/Nom3.webp",
   ];
 const captions4 = [
     '"Khoj Go Get Em 2.O",Nominated for Best Project,in Club Service for Q2',
@@ -317,11 +321,11 @@ const captions4 = [
   ];
 
   const slides5 = [
-    "./Achievement/Nominations/Nom1.jpg",
-    "./Achievement/Nominations/Nom2.jpg",
-    "./Achievement/Nominations/Nom3.jpg",
-    "./Achievement/Nominations/Nom4.jpg",
-    "./Achievement/Nominations/Nom5.jpg",
+    "./Achievement/Nominations/Nom1.webp",
+    "./Achievement/Nominations/Nom2.webp",
+    "./Achievement/Nominations/Nom3.webp",
+    "./Achievement/Nominations/Nom4.webp",
+    "./Achievement/Nominations/Nom5.webp",
   ];
 const captions5 = [
     '"Clash Of MNCs",Nominated for Best Project,in Entrepreneurship for Q1',
@@ -335,17 +339,17 @@ const captions5 = [
   return(
     <div className="flex flex-row justify-evenly flex-wrap xxl:justify-evenly mb-12">
       <div className="flex flex-col">
-        <ProjectCarousel slides={slides1} captions={captions1}/>
-        <ProjectCarousel slides={slides2} captions={captions2}/>
+      <LazyLoadComponent><ProjectCarousel slides={slides1} captions={captions1}/></LazyLoadComponent>
+      <LazyLoadComponent><ProjectCarousel slides={slides2} captions={captions2}/></LazyLoadComponent>
       </div>
 
       <div className="flex flex-col md:justify-center">
-        <ProjectCarousel slides={slides3} captions={captions3}/>
+      <LazyLoadComponent><ProjectCarousel slides={slides3} captions={captions3}/></LazyLoadComponent>
       </div>
 
       <div className="flex flex-col">
-        <ProjectCarousel slides={slides4} captions={captions4}/>
-        <ProjectCarousel slides={slides5} captions={captions5}/>
+      <LazyLoadComponent><ProjectCarousel slides={slides4} captions={captions4}/></LazyLoadComponent>
+      <LazyLoadComponent><ProjectCarousel slides={slides5} captions={captions5}/></LazyLoadComponent>
       </div>
     </div>
   )
