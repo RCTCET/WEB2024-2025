@@ -140,87 +140,89 @@ const boardOfDirectors = [
     { id: 22, name: 'Rtr. Yash Lad', role: 'Shiksha Director', image: '/2021-2022/Rtr. Yash lad - Shiksha Director_.webp', year: '2021-2022' },
     ];
 
-
-const TeamPage = () => {
-    const [selectedYear, setSelectedYear] = useState('2024-2025');
-
-    const filteredMembers = teamMembers.filter(member => member.year === selectedYear);
-    const filteredBoDs = boardOfDirectors.filter(bod => bod.year === selectedYear);
-
-    const academicYearOptions = Array.from({ length: 2025 - 2017 }, (_, i) => {
-        const startYear = 2017 + i;
-        const endYear = startYear + 1;
-        return `${startYear}-${endYear}`;
-    });
-
-    return (
-        <div className="p-8 bg-white">
-            <div className="flex flex-col justify-center items-center min-h-screen">
-                <div className="flex flex-col sm:flex-row justify-center items-center text-center mb-4">
-                    <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-700 to-orange-500 bg-clip-text text-transparent mb-0 sm:mb-0 sm:mr-4">
-                        CORE TEAM
+    const TeamPage = () => {
+        const [selectedYear, setSelectedYear] = useState('2024-2025');
+    
+        const filteredMembers = teamMembers.filter(member => member.year === selectedYear);
+        const filteredBoDs = boardOfDirectors.filter(bod => bod.year === selectedYear);
+    
+        const academicYearOptions = Array.from({ length: 2025 - 2017 }, (_, i) => {
+            const startYear = 2017 + i;
+            const endYear = startYear + 1;
+            return `${startYear}-${endYear}`;
+        });
+    
+        return (
+            <div className="p-8 bg-white">
+                <div className="flex flex-col justify-center items-center min-h-screen">
+                    <div className="flex flex-col sm:flex-row justify-center items-center text-center mb-4">
+                        <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-700 to-orange-500 bg-clip-text text-transparent mb-0 sm:mb-0 sm:mr-4">
+                            CORE TEAM
+                        </h1>
+                        <select
+                            id="year"
+                            className="p-2 border border-gray-300 rounded-md bg-white text-orange-700 font-bold mt-2 sm:mt-0"
+                            value={selectedYear}
+                            onChange={(e) => setSelectedYear(e.target.value)}
+                        >
+                            {academicYearOptions.map((year) => (
+                                <option key={year} value={year}>{year}</option>
+                            ))}
+                        </select>
+                    </div>
+    
+                    <div className="max-w-[80%] mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-8">
+                            {filteredMembers.map((member) => (
+                                <div
+                                    key={member.id}
+                                    className="bg-[#faebd7] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                                >
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg">
+                                        <img
+                                            src={member.image}
+                                            alt={member.name}
+                                            className="object-cover w-full h-full rounded-lg transform transition-transform duration-300 hover:scale-110"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <h2 className="mt-4 text-xl font-bold text-center">{member.role}</h2>
+                                    <p className="text-center">{member.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+    
+                <div className="mt-32 mb-24">
+                    <h1 className="text-center text-4xl font-bold my-8 bg-gradient-to-r from-orange-700 to-orange-500 bg-clip-text text-transparent">
+                        Board of Directors
                     </h1>
-                    <select
-                        id="year"
-                        className="p-2 border border-gray-300 rounded-md bg-white text-orange-700 font-bold mt-2 sm:mt-0"
-                        value={selectedYear}
-                        onChange={(e) => setSelectedYear(e.target.value)}
-                    >
-                        {academicYearOptions.map((year) => (
-                            <option key={year} value={year}>{year}</option>
-                        ))}
-                    </select>
-                </div>
-
-                <div className="max-w-[80%] mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-8">
-                        {filteredMembers.map((member) => (
-                            <div
-                                key={member.id}
-                                className="bg-[#faebd7] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-                            >
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg">
-                                    <img
-                                        src={member.image}
-                                        alt={member.name}
-                                        className="object-cover w-full h-full rounded-lg transform transition-transform duration-300 hover:scale-110"
-                                    />
+                    <div className="max-w-[80%] mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
+                            {filteredBoDs.map(bod => (
+                                <div
+                                    key={bod.id}
+                                    className="bg-[#faebd7] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+                                >
+                                    <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg">
+                                        <img
+                                            src={bod.image}
+                                            alt={bod.name}
+                                            className="object-cover w-full h-full rounded-lg transform transition-transform duration-300 hover:scale-110"
+                                            loading="lazy"
+                                        />
+                                    </div>
+                                    <h2 className="mt-4 text-xl font-bold text-center">{bod.role}</h2>
+                                    <p className="text-center">{bod.name}</p>
                                 </div>
-                                <h2 className="mt-4 text-xl font-bold text-center">{member.role}</h2>
-                                <p className="text-center">{member.name}</p>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div className="mt-32 mb-24">
-                <h1 className="text-center text-4xl font-bold my-8 bg-gradient-to-r from-orange-700 to-orange-500 bg-clip-text text-transparent">
-                    Board of Directors
-                </h1>
-                <div className="max-w-[80%] mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
-                        {filteredBoDs.map(bod => (
-                            <div
-                                key={bod.id}
-                                className="bg-[#faebd7] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-                            >
-                                <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg">
-                                    <img
-                                        src={bod.image}
-                                        alt={bod.name}
-                                        className="object-cover w-full h-full rounded-lg transform transition-transform duration-300 hover:scale-110"
-                                    />
-                                </div>
-                                <h2 className="mt-4 text-xl font-bold text-center">{bod.role}</h2>
-                                <p className="text-center">{bod.name}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
-
-export default TeamPage;
+        );
+    };
+    
+    export default TeamPage;
+    
