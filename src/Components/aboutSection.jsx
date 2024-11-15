@@ -9,7 +9,7 @@ const Illuminate = () => {
     <div 
       className="absolute inset-0 bg-cover bg-center"
       style={{
-        backgroundImage: "url('./about.png')",
+        backgroundImage: "url('./about.webp')",
       }}
     ></div>
     
@@ -45,9 +45,10 @@ const Illuminate = () => {
 <div className="flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto p-4 text-justify mt-10 mb-16">
   <div className="md:w-1/3 flex items-center justify-center">
     <img 
-      src='/illuminate.png' 
+      src='/illuminate.svg'
       alt="Illuminate" 
       className="w-full h-80 object-cover"
+      loading={"lazy"}
     />
   </div>
   <div className="md:w-2/3 md:ml-8">

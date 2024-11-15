@@ -64,7 +64,7 @@ function StatsBar() {
 function Members({name, image, alt}) {
     return(
         <div className="flex justify-center items-center w-32 md:w-fit">
-            <img src={image} alt={alt} className="w-12 lg:mr-3 lg:w-20"/>
+            <img src={image} alt={alt} className="w-12 lg:mr-3 lg:w-20" loading={"lazy"}/>
             <div className="flex flex-col">
                 <AnimatedCounter300/>
                 <p className="text-center text-gray-500 text-sm lg:text-base lg:ml-3">{name}</p>
@@ -76,7 +76,7 @@ function Members({name, image, alt}) {
 function Zone({name, image, alt, data}) {
     return(
         <div className="flex justify-start items-center w-32 md:w-fit">
-            <img src={image} alt={alt} className="w-11 mr-2 lg:mr-4 lg:w-16"/>
+            <img src={image} alt={alt} className="w-11 mr-2 lg:mr-4 lg:w-16" loading={"lazy"}/>
             <div className="flex flex-col">
                 <p className="text-3xl font-medium text-black text-center lg:mb-2 lg:text-5xl">{data}</p>
                 <p className="text-center text-gray-500 text-sm lg:text-base">{name}</p>
@@ -88,7 +88,7 @@ function Zone({name, image, alt, data}) {
 function District({name, image, alt, data}) {
     return(
         <div className="flex justify-center items-center w-32 md:w-fit">
-            <img src={image} alt={alt} className="w-12 mr-2 lg:mr-3 lg:w-20"/>
+            <img src={image} alt={alt} className="w-12 mr-2 lg:mr-3 lg:w-20" loading={"lazy"}/>
             <div className="flex flex-col">
                 <p className="text-3xl font-medium text-black text-center lg:mb-2 lg:text-5xl">{data}</p>
                 <p className="text-center text-gray-500 text-sm lg:text-base">{name}</p>
@@ -100,7 +100,7 @@ function District({name, image, alt, data}) {
 function TotalProjects({name, image, alt}) {
     return(
         <div className="flex justify-center items-center lg:w-fit">
-            <img src={image} alt={alt} className="w-12 lg:mr-3 lg:w-20"/>
+            <img src={image} alt={alt} className="w-12 lg:mr-3 lg:w-20" loading={"lazy"}/>
             <div className="flex flex-col">
                 <AnimatedCounter100/>
                 <p className="text-center text-gray-500 text-sm lg:text-base">{name}</p>
