@@ -7,6 +7,7 @@ function FounderCard() {
         src="/founders.svg"
         alt="Founder and early members of Rotary International"
         className="w-full mb-4 rounded-xl"
+        loading={"lazy"}
       />
       <h2 className="text-lg font-bold">FOUNDER</h2>
       <p className="text-md text-[#9D320F] font-bold mt-2">
@@ -21,7 +22,7 @@ function FounderCard() {
 function Card({ title, image, description, isBig }) {
   return (
     <div className={`relative w-full rounded-lg shadow-lg  overflow-hidden`}>
-      <img src={image} alt={title} className="w-full lg:h-72 object-cover object-center" />
+      <img src={image} alt={title} className="w-full lg:h-72 object-cover object-center" loading={"lazy"} />
       <div className="hover:opacity-0 duration-500 flex">
                         <div className="absolute top-[66%] p-0 left-0 w-full h-1/2 flex blur-[2px] items-baseline text-left bg-black/30 "></div>
                         <div className="text-white absolute bottom-[7%] sm:bottom-[20%] md:bottom-[5%] lg:bottom-[10%] blur-none pl-2 hover:opacity-0 px-4 py-2">
@@ -47,7 +48,7 @@ Card.propTypes = {
 function Legacy() {
   return (
     <div className="p-8 bg-[#FFEDD4] flex justify-center items-center relative  ">
-        <img className="absolute top-0 left-0" src="/gear.svg" alt="" />
+        <img className="absolute top-0 left-0" src="/gear.svg" alt="" loading={"lazy"}/>
         <div className="max-w-7xl ">
         <h1 className="text-center text-xl md:text-4xl font-bold mb-6 bg-gradient-to-b from-[#98430A] via-[#FE7011] to-[#FDD24C] bg-clip-text text-transparent">Our Legacy & Impact</h1>
       <div className="flex max-sm:flex-col gap-y-4 gap-x-6  ">
