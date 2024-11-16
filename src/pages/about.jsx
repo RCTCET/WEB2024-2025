@@ -1,15 +1,18 @@
-import React from 'react';
-import AboutSection from '../Components/aboutpage/about';
-import Objectives from '../Components/aboutpage/objective';
-import AvenuesofService from "../Components/aboutpage/AvenuesofService"
+import React, { Suspense } from 'react';
+
+const AboutSection = React.lazy(() => import('../Components/aboutpage/about'));
+const Objectives = React.lazy(() => import('../Components/aboutpage/objective'));
+const AvenuesofService = React.lazy(() =>
+  import('../Components/aboutpage/AvenuesofService')
+);
 
 const About = () => {
   return (
-    <>
-      <AboutSection/>
-      <Objectives/>
-      <AvenuesofService/>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <AboutSection />
+      <Objectives />
+      <AvenuesofService />
+    </Suspense>
   );
 };
 
