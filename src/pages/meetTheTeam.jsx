@@ -257,6 +257,7 @@ const TeamPage = () => {
                                         src={member.image}
                                         alt={member.name}
                                         className="object-cover w-full h-full rounded-lg transform transition-transform duration-300 hover:scale-110"
+                                        loading='lazy'
                                     />
                                 </div>
                                 <h2 className="mt-4 text-xl font-bold text-center">{member.role}</h2>
@@ -283,7 +284,6 @@ const TeamPage = () => {
                                         src={bod.image}
                                         alt={bod.name}
                                         loading='lazy'
-                                        decoding='async'
                                         className="object-cover w-full h-full rounded-lg transform transition-transform duration-300 hover:scale-110"
                                     />
                                 </div>
