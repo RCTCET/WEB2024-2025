@@ -1,58 +1,78 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const RotaractClubLayout = () => {
+    const images = [
+        '/home/hero/img1.webp',
+        '/home/hero/img2.webp',
+        '/home/hero/img3.webp',
+        '/home/hero/img4.webp',
+        '/home/hero/img5.webp',
+        '/home/hero/img6.webp',
+        '/home/hero/img7.webp',
+        '/home/hero/img8.webp',
+    ];
+
     return (
-        <div className=" w-full bg-black overflow-hidden relative max-h-[90vh]">
+        <div className="w-full bg-black overflow-hidden relative max-h-[90vh]">
+            {/* Prefetch images */}
+            <Helmet>
+                {images.map((src, index) => (
+                    <link key={index} rel="preload" as="image" href={src} />
+                ))}
+            </Helmet>
+
             {/* Logo Section */}
-            <div className='flex relative '>
-            <div className=" w-full md:w-1/4 bg-white transform skew-x-12 origin-top-left flex items-center justify-center z-10">
-                <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center  transform -skew-x-12 mr-8">
-                    <img src='/home/logo.svg' alt="Logo" className="w-full h-full object-cover" loading={"lazy"} />
+            <div className="flex relative">
+                <div className="w-full md:w-1/4 bg-white transform skew-x-12 origin-top-left flex items-center justify-center z-10">
+                    <div className="w-64 h-64 md:w-80 md:h-80 flex items-center justify-center transform -skew-x-12 mr-8">
+                        <img src="/home/logo.svg" alt="Logo" className="w-full h-full object-cover" loading="lazy" />
+                    </div>
                 </div>
-            </div>
-            <div className="absolute -inset-10 left-[20rem] z-10 flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-5xl xl:text-7xl font-bold bg-custom-gradient bg-clip-text text-transparent" style={{textShadow: " 1px 1px 0px rgba(0, 0, 0, 0.1)"}}>Rotaract Club of</h1>
-                    <h1 className="text-5xl xl:text-7xl font-bold bg-custom-gradient bg-clip-text text-transparent mt-2" style={{textShadow: " 1px 1px 0px rgba(0, 0, 0, 0.1)"}}>TCET</h1>
+                <div className="absolute -inset-10 left-[20rem] z-10 flex items-center justify-center">
+                    <div className="text-center">
+                        <h1 className="text-5xl xl:text-7xl font-bold bg-custom-gradient bg-clip-text text-transparent" style={{ textShadow: "1px 1px 0px rgba(0, 0, 0, 0.1)" }}>
+                            Rotaract Club of
+                        </h1>
+                        <h1 className="text-5xl xl:text-7xl font-bold bg-custom-gradient bg-clip-text text-transparent mt-2" style={{ textShadow: "1px 1px 0px rgba(0, 0, 0, 0.1)" }}>
+                            TCET
+                        </h1>
+                    </div>
                 </div>
-            </div>
-            
-            {/* Images Section */}
-            <div className=" w-full md:w-3/4 flex flex-col pl-10 md:pl-20">
-                <div className="flex-1 flex flex-col md:flex-row">
-                    {[1, 2, 3, 4].map((_, index) => (
-                        <div key={index} className="flex-1 p-2 ">
-                            <div className="relative w-64 h-72 overflow-hidden transform skew-x-12">
-                                <img
-              src={`/home/hero/img${index + 1}.webp`} alt={`Image ${index + 1}`} loading={"lazy"}
-              className={`absolute top-0 left-0 w-full h-full object-cover -skew-x-12 scale-150  ${index%2!=0 ? "opacity-100":"opacity-40"}` }
-            />
 
+                {/* Images Section */}
+                <div className="w-full md:w-3/4 flex flex-col pl-10 md:pl-20">
+                    <div className="flex-1 flex flex-col md:flex-row">
+                        {[1, 2, 3, 4].map((_, index) => (
+                            <div key={index} className="flex-1 p-2">
+                                <div className="relative w-64 h-72 overflow-hidden transform skew-x-12">
+                                    <img
+                                        src={`/home/hero/img${index + 1}.webp`}
+                                        alt={`Image ${index + 1}`}
+                                        loading="lazy"
+                                        className={`absolute top-0 left-0 w-full h-full object-cover -skew-x-12 scale-150  ${index % 2 !== 0 ? "opacity-100" : "opacity-40"}`}
+                                    />
+                                </div>
                             </div>
-                        </div>
-
-                    ))}
-                </div>
-                <div className="flex-1 flex flex-col md:flex-row">
-                    {[5, 6, 7, 8].map((_, index) => (
-                        <div key={index} className="flex-1 p-2 ">
-                            <div className="relative w-64 h-72 overflow-hidden transform skew-x-12" >
-                           < img
-              src={`/home/hero/img${index + 5}.webp`} alt={`Image ${index + 5}`} loading={"lazy"}
-              className={`absolute top-0 left-0  w-full h-full object-cover -skew-x-12 scale-150  ${index%2==0 ? "opacity-100":"opacity-40"}`}
-            />
-                                
+                        ))}
+                    </div>
+                    <div className="flex-1 flex flex-col md:flex-row">
+                        {[5, 6, 7, 8].map((_, index) => (
+                            <div key={index} className="flex-1 p-2">
+                                <div className="relative w-64 h-72 overflow-hidden transform skew-x-12">
+                                    <img
+                                        src={`/home/hero/img${index + 5}.webp`}
+                                        alt={`Image ${index + 5}`}
+                                        loading="lazy"
+                                        className={`absolute top-0 left-0 w-full h-full object-cover -skew-x-12 scale-150  ${index % 2 === 0 ? "opacity-100" : "opacity-40"}`}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                    <img src="/home/WeCarry.svg" className="z-20 absolute bottom-10 right-10" alt="" loading="lazy" />
                 </div>
-                <img src="/home/WeCarry.svg" className='z-20 absolute bottom-10 right-10' alt="" loading={"lazy"}/>
             </div>
-            </div>
-
-
-
-            {/*  */}
         </div>
     );
 };
