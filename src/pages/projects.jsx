@@ -141,30 +141,30 @@ const EndeavorsCarousel = () => {
                 },
             ],
         },
-        {
-            avenue: 'Digital Communication',
-            slides: [
-                {
-                    image: 'https://via.placeholder.com/800x400?text=Coming+soon',
-                },
-            ],
-        },
-        {
-            avenue: 'Public Relations',
-            slides: [
-                {
-                    image: 'https://via.placeholder.com/800x400?text=Coming+soon',
-                },
-            ],
-        },
-        {
-            avenue: 'Marketing',
-            slides: [
-                {
-                    image: 'https://via.placeholder.com/800x400?text=Coming+soon',
-                },
-            ],
-        },
+        // {
+        //     avenue: 'Digital Communication',
+        //     slides: [
+        //         {
+        //             image: 'https://via.placeholder.com/800x400?text=Coming+soon',
+        //         },
+        //     ],
+        // },
+        // {
+        //     avenue: 'Public Relations',
+        //     slides: [
+        //         {
+        //             image: 'https://via.placeholder.com/800x400?text=Coming+soon',
+        //         },
+        //     ],
+        // },
+        // {
+        //     avenue: 'Marketing',
+        //     slides: [
+        //         {
+        //             image: 'https://via.placeholder.com/800x400?text=Coming+soon',
+        //         },
+        //     ],
+        // },
     ];
 
     const nextAvenue = () => {
@@ -210,13 +210,13 @@ const EndeavorsCarousel = () => {
                     ))}
                 </div>
 
-                <div className="flex transition-transform duration-500 w-full" style={{ transform: `translateX(-${selectedImageIndex * 100}%)` }}>
+                <div className="flex transition-transform duration-500 w-full lg:w-[80vw]" style={{ transform: `translateX(-${selectedImageIndex * 100}%)` }}>
                     {currentAvenue.slides.map((slide, index) => (
                         <div key={index} className="max-sm:h-[80vh] min-w-full relative">
                             <LazyLoadImage
                                 src={slide.image}
                                 alt={slide.title}
-                                className="w-full h-[20rem] md:h-[32rem] object-cover"
+                                className="w-full h-[20rem] md:h-[32rem] object-cover object-[40%_40%]"
                             />
                             
                             <div className="absolute bottom-0 left-0 w-full bg-black/60 p-4">
