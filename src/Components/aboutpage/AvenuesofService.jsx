@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const slides = [
     { id: 1, title: "Club Service Team", description: "The Club Service team of the Rotaract Club of TCET is the backbone of our vibrant community, dedicated to fostering fellowship and ensuring the smooth functioning of the club. Through creative activities and events, they bring members together, strengthen bonds, and create a supportive environment where everyone feels connected and valued. This team is the heart of our club, turning every moment into an opportunity for growth, fun, and friendship.", imageUrl: "/About us/Club Service -Board of directors .png" },
@@ -46,7 +47,7 @@ const AvenuesofService = () => {
             </div>
             <div className="relative w-full max-w-5xl bg-[#fef9eb] border-2 border-[#ccc] rounded-2xl shadow-lg overflow-hidden my-5">
                 <div className="flex max-sm:flex-col  items-center">
-                    <img src={slides[currentIndex].imageUrl} alt={slides[currentIndex].title} className={`${slides[currentIndex].id == 13 ? "" : ""} md:w-1/2 object-cover rounded-lg`} />
+                    <LazyLoadImage src={slides[currentIndex].imageUrl} alt={slides[currentIndex].title} className={`${slides[currentIndex].id == 13 ? "" : ""} md:w-1/2 object-cover rounded-lg`} />
                     <div className="p-2 md:p-4 md:w-1/2">
                         <h2 className="text-lg md:text-2xl lg:text-4xl font-bold text-center my-5 md:my-10">{slides[currentIndex].title}</h2>
                         <p className="text-xs md:text-sm lg:text-lg text-justify">{slides[currentIndex].description}</p>
