@@ -47,7 +47,7 @@ const AvenuesofService = () => {
             </div>
             <div className="relative w-full max-w-5xl bg-[#fef9eb] border-2 border-[#ccc] rounded-2xl shadow-lg overflow-hidden my-5">
                 <div className="flex max-sm:flex-col  items-center">
-                    <LazyLoadImage src={slides[currentIndex].imageUrl} alt={slides[currentIndex].title} className={`${slides[currentIndex].id == 13 ? "" : ""} md:w-1/2 object-cover rounded-lg`} />
+                    <img src={slides[currentIndex].imageUrl} alt={slides[currentIndex].title} className={`${slides[currentIndex].id == 13 ? "" : ""} md:w-1/2 object-cover rounded-lg`} />
                     <div className="p-2 md:p-4 md:w-1/2">
                         <h2 className="text-lg md:text-2xl lg:text-4xl font-bold text-center my-5 md:my-10">{slides[currentIndex].title}</h2>
                         <p className="text-xs md:text-sm lg:text-lg text-justify">{slides[currentIndex].description}</p>
