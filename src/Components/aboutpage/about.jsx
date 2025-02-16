@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
+// Preload images function
+const preloadImages = (srcArray) => {
+  srcArray.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
 
 const AboutSection = () => {
+  useEffect(() => {
+    const images = [
+      "/About us/Baseline grid bg.webp",
+      "/About us/About us.webp",
+      "/About us/download 1.webp",
+      "/About us/download 2.webp",
+      "/About us/image 13.webp",
+      "/About us/people-cliff-giving-himself-handshake_1160-629 1.webp",
+      "/About us/png 2 1.webp",
+      "/About us/images 5.webp",
+      "/About us/image 14.webp"
+    ];
+    preloadImages(images);
+  }, []);
+
   return (
     <div className="relative overflow-hidden mb-5">
       {/* Background Image */}
-      <img
+      <LazyLoadImage
         src="/About us/Baseline grid bg.webp"
         alt="Baseline Grid Background"
         className="absolute inset-0 w-full h-full object-cover z-0"
@@ -13,7 +37,7 @@ const AboutSection = () => {
       {/* Content over the background */}
       <div className="relative w-full h-screen flex flex-col items-center justify-center">
         {/* Image Above the Rectangle */}
-        <img
+        <LazyLoadImage
           src="/About us/About us.webp"
           alt="Top Image"
           className="mt-8 mb-4 md:mt-6 min-w-[0.5rem] sm:min-w-[2rem] md:min-w-[3.125rem] lg:min-w-[3.75rem] 2xl:min-w-[13rem]"
@@ -21,19 +45,19 @@ const AboutSection = () => {
 
         {/* Top Image */}
         <div className="flex items-center mb-2">
-          <img
+          <LazyLoadImage
             src="/About us/download 1.webp" 
             alt="Top Image"
             className="xs:hidden max-w-[5rem]"
           />
         </div>
         <div className="flex items-center">
-          <img
+          <LazyLoadImage
             src="/About us/download 2.webp" 
             alt="Top Image"
             className="xs:hidden max-w-[5rem] mr-7"
           />
-          <img
+          <LazyLoadImage
             src="/About us/image 13.webp" 
             alt="Top Image"
             className="xs:hidden max-w-[5rem] ml-7"
@@ -43,7 +67,7 @@ const AboutSection = () => {
         {/* Flex Layout for Side-by-Side Images and Rectangle */}
         <div className="relative flex items-center justify-center w-full px-0.5 gap-0.5 2xl:px-5 2xl:gap-5 mt-[0.1rem]">
           {/* Left-most Image */}
-          <img
+          <LazyLoadImage
             src="/About us/download 1.webp"
             alt="Left Most"
             className="hidden xs:block xs:min-w-[5rem] sm:min-w-[3.125rem] lg:min-w-[3.75rem] 2xl:min-w-[13rem]"
@@ -51,12 +75,12 @@ const AboutSection = () => {
 
           {/* Column for Left Images */}
           <div className="flex flex-col items-center gap-2">
-            <img
+            <LazyLoadImage
               src="/About us/download 2.webp"
               alt="Left Image 2"
               className="hidden xs:block mb-5 xs:mb-0 min-w-[4rem] sm:min-w-[6rem] md:min-w-[4.375rem] lg:min-w-[5rem] 2xl:min-w-[17rem]"
             />
-            <img
+            <LazyLoadImage
               src="/About us/people-cliff-giving-himself-handshake_1160-629 1.webp"
               alt="Left Image 3"
               className="hidden xs:block mt-5 xs:mt-0 min-w-[4rem] sm:min-w-[6rem] md:min-w-[4.375rem] lg:min-w-[5rem] 2xl:min-w-[17rem]"
@@ -65,7 +89,7 @@ const AboutSection = () => {
 
           {/* Center Rectangle */}
           <div className="relative flex flex-col items-center justify-center bg-[#FFD6A8] border border-[#9D320F] shadow-lg rounded-lg p-4 min-h-[18rem] min-w-[18rem] max-w-[18rem] sm:min-h-[20rem] sm:min-w-[18rem] sm:max-w-[22rem] md:min-h-[20rem] md:min-w-[20rem] md:max-w-[20rem] lg:min-h-[25rem] lg:min-w-[25rem] lg:max-w-[27rem] 2xl:min-h-[40rem] 2xl:min-w-[40rem] 2xl:max-w-[40rem] overflow-hidden mb-[2rem]">
-            <img
+            <LazyLoadImage
               src="/About us/png 2 1.webp"
               alt="Background Behind Rectangle"
               className="absolute inset-0 w-full h-full object-cover z-0 opacity-30"
@@ -81,19 +105,19 @@ const AboutSection = () => {
           </div>
 
           <div className="flex flex-col items-center gap-2">
-            <img
+            <LazyLoadImage
               src="/About us/images 5.webp"
               alt="Right Image 2"
               className="hidden xs:block mb-5 xs:mb-0 min-w-[4rem] sm:min-w-[6rem] md:min-w-[4.375rem] lg:min-w-[5rem] 2xl:min-w-[17rem]"
             />
-            <img
+            <LazyLoadImage
               src="/About us/image 13.webp"
               alt="Right Image 3"
               className="hidden xs:block mt-5 xs:mt-0 min-w-[4rem] sm:min-w-[6rem] md:min-w-[4.375rem] lg:min-w-[5rem] 2xl:min-w-[17rem]"
             />
           </div>
 
-          <img
+          <LazyLoadImage
             src="/About us/image 14.webp"
             alt="Right Most"
             className="hidden xs:block xs:min-w-[5rem] sm:min-w-[3.125rem] lg:min-w-[3.75rem] 2xl:min-w-[13rem]"
@@ -101,12 +125,12 @@ const AboutSection = () => {
         </div>
 
         <div className="flex items-center mb-2">
-          <img
+          <LazyLoadImage
             src="/About us/images 5.webp" 
             alt="Top Image"
             className="xs:hidden max-w-[5rem] mr-7"
           />
-          <img
+          <LazyLoadImage
             src="/About us/people-cliff-giving-himself-handshake_1160-629 1.webp" 
             alt="Top Image"
             className="xs:hidden max-w-[5rem] ml-7"
@@ -114,7 +138,7 @@ const AboutSection = () => {
         </div>
 
         <div className="flex items-center">
-          <img
+          <LazyLoadImage
             src="/About us/image 14.webp" 
             alt="Bottom Image"
             className="xs:hidden max-w-[5rem]"
