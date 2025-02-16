@@ -1,11 +1,13 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const Objectives = () => {
   return (
     <div className="bg-[#FFEDD4] py-8 px-4 lg:px-16 w-full">
       <div className="w-full flex flex-col lg:flex-row lg:items-center  ">
         {/* Logo Section */}
         <div className="flex justify-center  basis-[40%] place-items-center  mb-4 lg:mb-0 lg:mr-8 xl:mr-10 2xl:mr-10 2xl:ml-10 ">
-          <img 
+          <LazyLoadImage 
             src="/objective/logo.svg" 
             alt="RC TCET Logo" 
             className=""
