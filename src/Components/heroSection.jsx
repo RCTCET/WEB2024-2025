@@ -24,7 +24,7 @@ const RotaractClubLayout = () => {
                         <div key={index} className="flex-1 p-2 ">
                             <div className="relative w-64 h-72 overflow-hidden transform skew-x-12">
                                 <img
-              src={`/home/hero/img${index + 1}.webp`} alt={`Image ${index + 1}`} loading={"lazy"}
+              src={`/home/hero/img${index + 1}.avif`} alt={`Image ${index + 1}`} loading={"lazy"}
               className={`absolute top-0 left-0 w-full h-full object-cover -skew-x-12 scale-150  ${index%2!=0 ? "opacity-100":"opacity-40"}` }
             />
 
@@ -38,7 +38,7 @@ const RotaractClubLayout = () => {
                         <div key={index} className="flex-1 p-2 ">
                             <div className="relative w-64 h-72 overflow-hidden transform skew-x-12" >
                            < img
-              src={`/home/hero/img${index + 5}.webp`} alt={`Image ${index + 5}`} loading={"lazy"}
+              src={`/home/hero/img${index + 5}.avif`} alt={`Image ${index + 5}`} loading={"lazy"}
               className={`absolute top-0 left-0  w-full h-full object-cover -skew-x-12 scale-150  ${index%2==0 ? "opacity-100":"opacity-40"}`}
             />
                                 
