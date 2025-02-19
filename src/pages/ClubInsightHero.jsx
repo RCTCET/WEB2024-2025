@@ -1,7 +1,62 @@
-// Components/ClubInsight/ClubInsightHero.jsx
-import React from 'react';
+import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast'; // Importing toast and Toaster
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+// Initialize Firebase (replace with your Firebase config)
+const firebaseConfig = {
+  apiKey: "AIzaSyC1ZF_zewkESeIhnPlLTJFjjEl_oYghUnQ",
+  authDomain: "rctcet-85380.firebaseapp.com",
+  projectId: "rctcet-85380",
+  storageBucket: "rctcet-85380.firebasestorage.app",
+  messagingSenderId: "225798502389",
+  appId: "1:225798502389:web:d5a3742de05d951f7492bc"
+};
+
+const app = initializeApp(firebaseConfig); // Initialize Firebase app
+const db = getFirestore(app); // Initialize Firestore
 
 const ClubInsightHero = () => {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Add form data to Firebase Firestore
+    try {
+      const usersCollection = collection(db, 'users'); // Assuming you are saving in a 'users' collection
+      await addDoc(usersCollection, {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        timestamp: new Date()
+      });
+      toast.success('Form submitted successfully!'); // Success Toast
+
+      // Reset form fields after successful submission
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Failed to submit form. Please try again.'); // Error Toast
+    }
+  };
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-10 bg-[#fffff]">
       {/* Header Buttons */}
@@ -22,35 +77,43 @@ const ClubInsightHero = () => {
 
       {/* Fine Payment Details Heading */}
       <h2 className="text-2xl font-bold bg-gradient-to-b from-[#98430A] via-[#FE7011] to-[#FDD24C] bg-clip-text text-transparent mb-8">
-  Fine Payment Details
-</h2>
-
-
+        Fine Payment Details
+      </h2>
 
       {/* Form */}
-      <form className="bg-[#fff7ed] p-8 rounded-lg shadow-md w-full max-w-md">
+      <form onSubmit={handleSubmit} className="bg-[#fff7ed] p-8 rounded-lg shadow-md w-full max-w-md">
         <div className="flex flex-col gap-4 mb-6">
           <div className='flex flex-row space-x-5'>
-          <input
-            type="text"
-            placeholder="First Name"
-            className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 w-[45%]"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 w-[45%]"
-            required
-          />
+            <input
+              type="text"
+              name="firstName"
+              placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
+              className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 w-[45%]"
+              required
+            />
+            <input
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
+              className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 w-[45%]"
+              required
+            />
           </div>
           <input
             type="email"
+            name="email"
             placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
             className="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 w-[95%]"
             required
           />
         </div>
+
         {/* Last part */}
         <div className="flex flex-col items-center justify-center">
           <input
@@ -65,8 +128,10 @@ const ClubInsightHero = () => {
             Submit
           </button>
         </div>
-
       </form>
+
+      {/* Adding Toaster here to display the toast notifications */}
+      <Toaster />
     </div>
   );
 };

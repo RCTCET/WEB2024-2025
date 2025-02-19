@@ -1,4 +1,20 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast'; // Importing toast and Toaster from react-hot-toast
+import { initializeApp } from 'firebase/app';
+import { getFirestore, collection, addDoc } from 'firebase/firestore';
+
+// Initialize Firebase (replace with your Firebase config)
+const firebaseConfig = {
+  apiKey: "AIzaSyC1ZF_zewkESeIhnPlLTJFjjEl_oYghUnQ",
+  authDomain: "rctcet-85380.firebaseapp.com",
+  projectId: "rctcet-85380",
+  storageBucket: "rctcet-85380.firebasestorage.app",
+  messagingSenderId: "225798502389",
+  appId: "1:225798502389:web:d5a3742de05d951f7492bc"
+};
+
+const app = initializeApp(firebaseConfig); // Use the default app
+const db = getFirestore(app);
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -17,10 +33,33 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
 
+    // Add form data to Firebase Firestore
+    try {
+      const contactsCollection = collection(db, 'contacts');
+      await addDoc(contactsCollection, {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        timestamp: new Date()
+      });
+      toast.success('Message sent successfully!'); // Success Toast
+
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error('Failed to send message. Please try again.'); // Error Toast
+    }
   };
 
   return (
@@ -75,6 +114,9 @@ const ContactForm = () => {
           SUBMIT
         </button>
       </form>
+
+      {/* Adding Toaster here to display the toast notifications */}
+      <Toaster />
     </div>
   );
 };
