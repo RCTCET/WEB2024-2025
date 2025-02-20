@@ -14,7 +14,7 @@ const EndeavorsCarousel = () => {
         {
           "title": "DROWNING PREVENTION DAY",
           "description": "We honoured the lifeguards of Drishti Marines at Juhu Beach. The event aimed to recognize the crucial role of lifeguards and raise awareness about drowning prevention. The team engaged the lifeguards in heartfelt conversations, learning about their challenges and experiences, while also providing them with thoughtful gifts and food boxes as tokens of appreciation.",
-          "image": "/home/Drowning.webp"
+          "image": "/home/Drowning(c).avif"
         },
         {
           "title": "MUDITA",

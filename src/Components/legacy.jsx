@@ -58,19 +58,19 @@ function Legacy() {
         <div className="basis-[60%] lg:basis-2/3 flex flex-col gap-y-6">
         <Card
           title="Community Service"
-          image="../Legacy_Impact/Community_Img.jpg"
+          image="../Legacy_Impact/Community_Img.avif"
           // description="Description for Community Service"
           isBig
         />
         <div className="flex max-sm:flex-col gap-y-4 gap-x-6">
         <Card
           title="Shiksha"
-          image="../Legacy_Impact/Shiksha_Img.jpg"
+          image="../Legacy_Impact/Shiksha_Img.avif"
           // description="Description for Shiksha"
         />
         <Card
           title="Club Service"
-          image="../Legacy_Impact/ClubService_Img.jpg"
+          image="../Legacy_Impact/ClubService_Img.avif"
           // description="Description for Club Service"
         />
         </div>
