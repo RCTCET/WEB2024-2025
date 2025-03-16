@@ -17,17 +17,17 @@ const EndeavorsCarousel = () => {
                 {
                     image: '/projects/comserv_mudit_compressed.avif',
                     title: 'MUDITA',
-                    description: 'A heartfelt visit to an old age home, where we donated gently used clothes, conducted a medical camp, and spent quality time interacting with the elderly.',
+                    description: 'A heartfelt visit to an old age home, where we donated gently used clothes, conducted a medical camp, and spent quality time interacting with the elderly. This event was all about sharing joy and spreading warmth among the senior citizens',
                 },
                 {
                     image: '/projects/Comserv_Cup of comfort_compressed.avif',
                     title: 'CUP OF COMFORT',
-                    description: 'A project aimed at supporting the underprivileged by distributing hot tea and biscuits, fostering a sense of community and care among all involved.',
+                    description: 'The "Cups of Comfort" project, led by the Community Service Directors, was a heartfelt initiative aimed at supporting the underprivileged by distributing hot tea and biscuits. On July 20th, volunteers gathered at TCET and divided into three teams, covering locations like Thakur Village, Sai Dham Road, and Poisar Depot. They engaged warmly with delivery workers, beggars, and hawkers, providing refreshments and comfort.The project successfully fostered a sense of community and care among all involved.',
                 },
                 {
                     image: '/projects/comserv_cloth_donation _drive_compressed.avif',
                     title: 'Threads of Kindness',
-                    description: 'A compassionate cloth donation drive aimed at collecting gently used clothing for those in need, fostering generosity and care.',
+                    description: 'A compassionate cloth donation drive aimed at collecting gently used clothing for those in need. This initiative encouraged community members to contribute, fostering a spirit of generosity and care, and ensuring that the donated items could bring warmth and comfort to individuals facing difficult circumstances.',
                 },
             ],
         },
@@ -37,12 +37,12 @@ const EndeavorsCarousel = () => {
                 {
                     image: '/projects/budget_under_lens_compressed.avif',
                     title: 'Budget 2024: Under the Lens',
-                    description: 'An event that enhanced professional skills through engaging debates and discussions on the 2024 Union Budget and key financial policies.',
+                    description: 'This event aimed to enhance professional skills and deepen understanding of the 2024 Union Budget through engaging debates and interactive activities. Members analyzed key financial policies, fostering critical thinking and informed discussions on current economic trends.',
                 },
                 {
                     image: '/projects/LinkedIn Launchpad _compressed.avif',
                     title: 'LinkedIn Launchpad',
-                    description: 'A training session where participants learned to optimize their LinkedIn profiles and network strategically for professional growth.',
+                    description: 'This event featured an expert trainer guiding participants through the essentials and advanced features of LinkedIn. Attendees learned how to effectively optimize their profiles, network strategically, and leverage the platform for professional growth, empowering them to enhance their online presence and career opportunities.',
                 },
             ],
         },
@@ -62,12 +62,12 @@ const EndeavorsCarousel = () => {
                 {
                     image: '/projects/hall_of_fame.webp',
                     title: 'Hall of Games',
-                    description: 'An exciting online gaming tournament where participants competed in a variety of thrilling games.',
+                    description: 'An exciting online game tournament that brought together gaming enthusiasts to compete in a variety of thrilling online games. This event provided a platform for friendly competition and camaraderie, allowing participants to showcase their skills while enjoying a fun and engaging gaming experience.',
                 },
                 {
                     image: '/projects/sports_monsoon_matchday(3)_compressed.avif',
                     title: 'Monsoon Matchday',
-                    description: 'A thrilling football tournament held during the monsoon, filled with competitive spirit and teamwork.',
+                    description: 'A thrilling football tournament that brought together players and enthusiasts for some exciting matches in the midst of the monsoon. The event was filled with competitive spirit, teamwork, and unforgettable moments on the field.',
                 },
             ],
         },
@@ -93,6 +93,11 @@ const EndeavorsCarousel = () => {
                     image: '/projects/editorial_teachersday celebration(3)_compressed.avif',
                     title: 'TEACHERS DAY',
                     description: 'To honour and appreciate the hard work and dedication of the teachers and gurus in our college, we created heartfelt thank you notes and personalised greeting cards. This gesture of gratitude was a small way to acknowledge their invaluable contributions to shaping our lives and education.',
+                },
+                {
+                    image: '/projects/Editorial service - language mash up.avif',
+                    title: 'Words a Day',
+                    description: 'An engaging editorial initiative aimed at enhancing vocabulary among members. Throughout September, participants were introduced to a new word each day, featuring a different alphabet, encouraging daily learning and enriching their linguistic skills in a fun and interactive way.',
                 },
             ],
         },
@@ -120,6 +125,11 @@ const EndeavorsCarousel = () => {
             avenue: 'Social Media Relations',
             slides: [
                 {
+                    image: '/projects/comserv_Kalakriti(5)_compressed.avif',
+                    title: 'Vighna harta Vibes',
+                    description: 'An initiative by the Social Media Relations team, encouraging members to share their magical experiences of Ganpati celebrations. This platform allows everyone to recount the joyous moments, vibrant festivities, and the unique traditions that make this time of year truly special, fostering a sense of community and celebration.',
+                },
+                {
                     image: '/projects/Social media and relation_Snap and Stroll_compressed.avif',
                     title: 'Snap and Stroll',
                     description: 'A captivating photowalk set in the picturesque surroundings of South Bombay, this event encouraged participants to embrace their creativity while adhering to specific rules for capturing stunning images. The journey concluded with a breathtaking sunset, providing the perfect backdrop for sharing memories and showcasing the beauty of the location.',
@@ -135,20 +145,27 @@ const EndeavorsCarousel = () => {
                     description: 'We honoured the lifeguards of Drishti Marines at Juhu Beach. The event aimed to recognize the crucial role of lifeguards and raise awareness about drowning prevention. The team engaged the lifeguards in heartfelt conversations, learning about their challenges and experiences, while also providing them with thoughtful gifts and food boxes as tokens of appreciation.',
                 },
                 {
+                    image: '/projects/International-Service_World-Democracy-day.avif',
+                    title: 'World Literacy Day',
+                    description: 'A vibrant natak (play) organized to highlight the significance of literacy and learning in today′s world. Through engaging performances, children were educated on the importance of reading and education, inspiring them to embrace knowledge and pursue their academic goals.',
+                },
+                {
                     image: '/projects/International Service_World Democracy day(1)_compressed.avif',
                     title: 'World Democracy Day',
                     description: 'An enlightening event where we conducted a demonstration of the current voting system, allowing school students to experience the democratic process firsthand. This initiative aimed to educate young minds about the importance of voting and civic engagement, fostering a sense of responsibility and awareness in the next generation.',
                 },
             ],
         },
-        // {
-        //     avenue: 'Digital Communication',
-        //     slides: [
-        //         {
-        //             image: 'https://via.placeholder.com/800x400?text=Coming+soon',
-        //         },
-        //     ],
-        // },
+        {
+            avenue: 'Digital Communication',
+            slides: [
+                {
+                    image: '/projects/Digi comm-Visual Velocity.avif',
+                    title: 'Canvacation',
+                    description: 'An interactive offline workshop dedicated to teaching the art of design using Canva. Participants learned essential design principles and tools, empowering them to create visually appealing graphics and presentations while enhancing their creative skills in a collaborative environment.',
+                },
+            ],
+        },
         // {
         //     avenue: 'Public Relations',
         //     slides: [
@@ -180,8 +197,8 @@ const EndeavorsCarousel = () => {
     const currentAvenue = avenues[currentIndex];
 
     return (
-        <div className="bg-white flex flex-col items-center justify-center my-10">
-            <div className="w-full max-w-5xl flex max-sm:flex-col justify-center items-center gap-x-4 gap-y-4 sm:justify-between sm:items-between">
+        <div className="bg-white flex flex-col items-center justify-center my-10 md:mx-6">
+            <div className="w-full max-w-2xl md:max-w-3xl lg:max-w-5xl flex max-sm:flex-col justify-center items-center gap-x-4 gap-y-4 sm:justify-between sm:items-between">
                 <h1 className="text-2xl text-center md:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-[#98430A] to-[#FDD24C]">
                     {currentAvenue.avenue}
                 </h1>
@@ -199,7 +216,7 @@ const EndeavorsCarousel = () => {
                 </div>
             </div>
 
-            <div className="relative max-w-5xl overflow-hidden rounded-md shadow-lg m-4">
+            <div className="relative max-w-fit overflow-hidden rounded-md shadow-lg m-4">
                 <div className="absolute top-4 right-4 z-10 flex space-x-2">
                     {currentAvenue.slides.map((_, index) => (
                         <span
