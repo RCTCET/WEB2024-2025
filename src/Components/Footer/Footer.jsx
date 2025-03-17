@@ -16,7 +16,7 @@ function Footer() {
         {/* Logo Section */}
         <div className="flex flex-col items-start mb-4 md:mb-0">
           <div className="flex py-3">
-            <img src="/RcTcetLogo.png" alt="RCTCET Logo" className="h-12 w-12 mr-4" />
+            <img src="/RcTcetLogo.svg" alt="RCTCET Logo" className="h-12 w-12 mr-4" />
             <div>
               <h1 className="text-xl font-bold">RCTCET</h1>
             </div>
@@ -49,7 +49,13 @@ function Footer() {
               src="/Footer/linkedinIcon.png"
               alt="LinkedIn Icon" />
           </a>
+          
+          <a href="https://www.instagram.com/rc_tcet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className='w-14'>
+            <img
 
+              src="/Footer/instagram.png"
+              alt="Instagram Icon" />
+          </a>
         </div>
       </div>
 
