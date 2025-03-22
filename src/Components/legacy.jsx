@@ -21,13 +21,13 @@ function FounderCard() {
 
 function Card({ title, image, description, isBig }) {
   return (
-    <div className={`relative w-full rounded-lg shadow-lg  overflow-hidden`}>
-      <img src={image} alt={title} className="w-full lg:h-72 object-cover object-center" loading={"lazy"} />
+    <div className={`relative w-full  rounded-lg shadow-lg  overflow-hidden`}>
+      <img src={image} alt={title} className=" w-full lg:h-72 object-cover object-center" loading={"lazy"} />
       <div className="hover:opacity-0 duration-500 flex">
-                        <div className="absolute top-[66%] p-0 left-0 w-full h-1/2 flex blur-[2px] items-baseline text-left bg-black/30 "></div>
-                        <div className="text-white absolute bottom-[7%] sm:bottom-[20%] md:bottom-[5%] lg:bottom-[10%] blur-none pl-2 hover:opacity-0 px-4 py-2">
+                        <div className="absolute top-[66%] p-0 left-0 w-full h-1/2 flex blur-[2px] items-baseline text-left bg-black/50 "></div>
+                        <div className="text-white absolute bottom-[7%] sm:bottom-[20%] md:bottom-[5%]  blur-none pl-2 hover:opacity-0 px-4 py-2 lg:pt-10">
                             <h2 className="font-bold text-md">{title}</h2>
-                            <p className="text-xs ">{description}</p>
+                            <p className="text-xs max-md:max-h-[5vh] max-sm:hidden  ">{description}</p>
                         </div>
                     </div>
     </div>
@@ -51,29 +51,23 @@ function Legacy() {
         <img className="absolute top-0 left-0" src="/gear.svg" alt="" loading={"lazy"}/>
         <div className="max-w-7xl ">
         <h1 className="text-center text-xl md:text-4xl font-bold mb-6 bg-gradient-to-b from-[#98430A] via-[#FE7011] to-[#FDD24C] bg-clip-text text-transparent">Our Legacy & Impact</h1>
-      <div className="flex max-sm:flex-col gap-y-4 gap-x-6  ">
-        <div className="basis-[40%] lg:basis-1/3">
+      <div className="flex max-sm:flex-col gap-y-4 gap-x-6 justify-center items-center max-w-5xl  ">
+        <div className=" sm:basis-[40%] ">
           <FounderCard />
         </div>
-        <div className="basis-[60%] lg:basis-2/3 flex flex-col gap-y-6">
+        <div className="sm:basis-[60%] flex flex-col gap-y-6">
         <Card
-          title="Community Service"
-          image="../Legacy_Impact/Community_Img.avif"
+          title="Rotary International"
+          image="../Legacy_Impact/rotary.jpg"
+          description="Rotary International is a global network of passionate leaders committed to humanitarian service, peace, and change. With over 1.4 million members worldwide, we work to make a lasting impact in communities."
+          isBig
+        />
+        <Card
+          title="District"
+          image="../Legacy_Impact/district.jpg"
           // description="Description for Community Service"
           isBig
         />
-        <div className="flex max-sm:flex-col gap-y-4 gap-x-6">
-        <Card
-          title="Shiksha"
-          image="../Legacy_Impact/Shiksha_Img.avif"
-          // description="Description for Shiksha"
-        />
-        <Card
-          title="Club Service"
-          image="../Legacy_Impact/ClubService_Img.avif"
-          // description="Description for Club Service"
-        />
-        </div>
         
         </div>
         
