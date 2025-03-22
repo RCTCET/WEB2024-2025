@@ -11,7 +11,7 @@ const AnimatedCounter300 = () => {
 
     useEffect(() => {
         let timer;
-        if (count < 300) {
+        if (count < 400) {
             timer = setTimeout(() => {
                 setCount(prevCount => prevCount + 1);
             }, speed);

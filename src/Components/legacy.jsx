@@ -63,7 +63,7 @@ function Legacy() {
           isBig
         />
         <Card
-          title="District"
+          title="District 3141"
           image="../Legacy_Impact/district.jpg"
           // description="Description for Community Service"
           isBig
