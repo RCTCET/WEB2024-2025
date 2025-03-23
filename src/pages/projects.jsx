@@ -180,7 +180,7 @@ const EndeavorsCarousel = () => {
                 //     description: 'This event encouraged reflection and goal-setting, inspiring participants to revisit 2024 and set bold aspirations for 2025. Engaging prompts and a vibrant digital campaign sparked meaningful conversations, fostering motivation, connection, and a renewed sense of purpose for the year ahead.',
                 // },
                 {
-                    image: '/projects/Editorial service - language mash up.avif',
+                    image: '/projects/Editorial service - language mash u.avif',
                     title: 'Language Mash-Up',
                     description: 'The event aimed to blend learning with fun, providing participants with insights into global cultures, geography, and teamwork. Creative elements like boarding passes, fake currencies, and hands-on activities added a realistic and interactive touch.',
                 },

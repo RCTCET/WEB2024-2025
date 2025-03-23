@@ -29,13 +29,19 @@ function HeadText() {
 function ImgSet() {
     return(
         <>
+        <MomentBox image="/Moments/img11.avif" alt="img11"/>
             <MomentBox image="/Moments/img1.jpg" alt="img1"/>
             <MomentBox image="/Moments/img2.jpg" alt="img2"/>
+            <MomentBox image="/Moments/img9.avif" alt="img9"/>
             <MomentBox image="/Moments/img3.jpg" alt="img3"/>
             <MomentBox image="/Moments/img4.jpg" alt="img4"/>
             <MomentBox image="/Moments/img5.jpg" alt="img5"/>
             <MomentBox image="/Moments/img6.jpg" alt="img6"/>
             <MomentBox image="/Moments/img7.jpg" alt="img7"/>
+            <MomentBox image="/Moments/img8.avif" alt="img8"/>
+           
+            <MomentBox image="/Moments/img10.avif" alt="img10"/>
+            
         </>
     )
 }
