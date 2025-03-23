@@ -5,12 +5,13 @@ import { getFirestore, collection, addDoc } from 'firebase/firestore';
 
 // Initialize Firebase (replace with your Firebase config)
 const firebaseConfig = {
-  apiKey: "AIzaSyC1ZF_zewkESeIhnPlLTJFjjEl_oYghUnQ",
-  authDomain: "rctcet-85380.firebaseapp.com",
-  projectId: "rctcet-85380",
-  storageBucket: "rctcet-85380.firebasestorage.app",
-  messagingSenderId: "225798502389",
-  appId: "1:225798502389:web:d5a3742de05d951f7492bc"
+  apiKey: "AIzaSyClsdZeFbSFMLCw8YWc96m1HsPRrkF4ru0",
+  authDomain: "rctcet-1b6e4.firebaseapp.com",
+  projectId: "rctcet-1b6e4",
+  storageBucket: "rctcet-1b6e4.firebasestorage.app",
+  messagingSenderId: "210277545370",
+  appId: "1:210277545370:web:17eb63e1885c5a43f1f623",
+  measurementId: "G-S97K8B7PQD"
 };
 
 const app = initializeApp(firebaseConfig); // Initialize Firebase app
