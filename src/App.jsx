@@ -23,7 +23,7 @@ function App() {
           <Route path="achievement" element={<Achievement />} />
           <Route path="club-insight" element={<ClubInsightHero />} />
           <Route path="meet-the-team" element={<TeamPage />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="Projects" element={<Projects />} />
           <Route path="contact" element={<ContactForm />} />
         </Route>
       </Routes>
