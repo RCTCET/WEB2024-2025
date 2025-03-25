@@ -7,20 +7,30 @@ const EndeavorsCarousel = () => {
 
     const slides = [
         {
-          "title": "KALAKRITI",
-          "description": "An initiative where we taught underprivileged children the art of making Ganpati idols using clay. This heartwarming event not only nurtured creativity but also created lasting memories with the kids, fostering joy and learning.",
-          "image": "/home/kalakriti.webp"
+            "image": '/projects/Future Skills Conclave_Professional Development.avif',
+            "title": 'Future Skills Conclave',
+            "description": 'The Future Skills Conclave empowered students with industry insights through expert-led discussions on AI, freelancing, financial literacy, and leadership. Engaging panel sessions explored essential skills, career strategies, and networking, fostering learning and professional growth.',
         },
         {
-          "title": "DROWNING PREVENTION DAY",
-          "description": "We honoured the lifeguards of Drishti Marines at Juhu Beach. The event aimed to recognize the crucial role of lifeguards and raise awareness about drowning prevention. The team engaged the lifeguards in heartfelt conversations, learning about their challenges and experiences, while also providing them with thoughtful gifts and food boxes as tokens of appreciation.",
-          "image": "/home/Drowning(c).avif"
+            "image": '/projects/Entrepreneurship development - entrepreneur_s got latent.avif',
+            "title": 'Entrepreneurs Got Latent',
+            "description": 'The entrepreneurial pitch event challenged participants to present innovative business ideas and engage in critical market analysis. The event fostered creativity, strategic thinking, and engagement, culminating in a spirited competition.',
         },
         {
-          "title": "MUDITA",
-          "description": "A heartfelt visit to an old age home, where we donated gently used clothes, conducted a medical camp, and spent quality time interacting with the elderly. This event was all about sharing joy and spreading warmth among the senior citizens.",
-          "image": "/home/mudita.webp"
-        }
+            "image": '/projects/sports shuttle striker.avif',
+            "title": 'Shuttle Strikers',
+            "description": 'The event blended competition with camaraderie, promoting sportsmanship and teamwork. With exciting matches across multiple categories, seamless coordination, and vibrant participation, the event fostered a spirit of unity and enthusiasm. The thrilling finals, heartfelt awards, and a fun post-event badminton session made it a memorable experience for all involved.',
+        },
+        {
+            "image": '/projects/pis-Multilingual elocution competition.avif',
+            "title": 'Voice of Diversity',
+            "description": 'The multilingual elocution competition encouraged linguistic diversity and public speaking in English, Hindi, Marathi, and Gujarati. Participants showcased creativity and critical thinking, judged on content, delivery, and confidence.',
+        },
+        {
+            "image": '/projects/International Service - Vision beyond Sight.avif',
+            "title": 'Vision Beyond Sight',
+            "description": 'On the occasion of World Braille Day, This event aimed to raise awareness about the challenges faced by the visually impaired through an interactive Braille experience. Participants engaged in hands-on activities, decoding Braille letters and words to foster understanding and empathy.',
+        },
       ]
       
 

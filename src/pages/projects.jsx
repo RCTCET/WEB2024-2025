@@ -1,4 +1,5 @@
-import { useState } from 'react';
+
+import { useState, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const EndeavorsCarousel = () => {
@@ -39,11 +40,7 @@ const EndeavorsCarousel = () => {
                     title: 'Diwali On Duty',
                     description: 'We visited various police stations and bus depots to show appreciation for the hard work and dedication of police officers and depot staff during Diwali. Recognizing their commitment to duty, we shared heartfelt letters and poetry written by our members, expressing gratitude for their service. Alongside these messages, we also distributed sweets to bring a festive touch to their day.',
                 },
-                // {
-                //     image: '/projects/placeholder.avif',
-                //     title: 'Constructing Diwali Memories',
-                //     description: 'We visited construction sites to celebrate Diwali with workers and street children, bringing festive joy to those who often miss out on celebrations. We shared sweets and dry fruits, creating a lively atmosphere and connecting through memorable moments.',
-                // },
+
                 {
                     image: '/projects/Comm-serv-empower her.avif',
                     title: 'Herspark: A Stem Workshop',
@@ -52,7 +49,7 @@ const EndeavorsCarousel = () => {
             ],
         },
         {
-            avenue: 'Professional',
+            avenue: 'Professional Development',
             slides: [
                 {
                     image: '/projects/budget_under_lens_compressed.avif',
@@ -74,11 +71,16 @@ const EndeavorsCarousel = () => {
                     title: 'Around the World',
                     description: 'The event aimed to blend learning with fun, providing participants with insights into global cultures, geography, and teamwork. Creative elements like boarding passes, fake currencies, and hands-on activities added a realistic and interactive touch. With vibrant participation, competitive spirit, and shared laughter, the event successfully celebrated cultural exchange.',
                 },
-                // {
-                //     image: '/projects/placeholder.avif',
-                //     title: 'Future Skills Conclave',
-                //     description: 'The Future Skills Conclave empowered students with industry insights through expert-led discussions on AI, freelancing, financial literacy, and leadership. Engaging panel sessions explored essential skills, career strategies, and networking, fostering learning and professional growth.',
-                // },
+                {
+                    image: '/projects/Future Skills Conclave_Professional Development.avif',
+                    title: 'Future Skills Conclave',
+                    description: 'The Future Skills Conclave empowered students with industry insights through expert-led discussions on AI, freelancing, financial literacy, and leadership. Engaging panel sessions explored essential skills, career strategies, and networking, fostering learning and professional growth.',
+                },
+                {
+                    image: '/projects/Professional development - Art of networki.avif',
+                    title: 'Art of Networking',
+                    description: 'The "Art of Networking" blended learning with fun, equipping participants with essential networking skills through interactive activities. It had segments like Elevator Pitch, Networking Bingo, and Business Card Exchange that fostered confidence, communication, and meaningful connections.',
+                },
             ],
         },
         {
@@ -157,7 +159,7 @@ const EndeavorsCarousel = () => {
             ],
         },
         {
-            avenue: 'Editorial',
+            avenue: 'Editorial Service',
             slides: [
                 {
                     image: '/projects/editorial_teachersday celebration(3)_compressed.avif',
@@ -199,11 +201,7 @@ const EndeavorsCarousel = () => {
                     title: 'Kaun Banega Entreprenuers',
                     description: 'It was an interactive event inspired by the format of Kaun Banega Crorepati, designed to nurture and challenge budding entrepreneurs. The event featured multiple engaging rounds, including a quiz testing participants\' knowledge of entrepreneurship, business strategies, and real-world scenarios.',
                 },
-                {
-                    image: '/projects/Professional development - Art of networki.avif',
-                    title: 'Art of Networking',
-                    description: 'The "Art of Networking" blended learning with fun, equipping participants with essential networking skills through interactive activities. It had segments like Elevator Pitch, Networking Bingo, and Business Card Exchange that fostered confidence, communication, and meaningful connections.',
-                },
+                
                 {
                     image: '/projects/Entrepreneurship development - entrepreneur_s got latent.avif',
                     title: 'Entrepreneurs Got Latent',
@@ -290,21 +288,21 @@ const EndeavorsCarousel = () => {
                     title: 'World Democracy Day',
                     description: 'An enlightening event where we conducted a demonstration of the current voting system, allowing school students to experience the democratic process firsthand. This initiative aimed to educate young minds about the importance of voting and civic engagement, fostering a sense of responsibility and awareness in the next generation.',
                 },
-                // {
-                //     image: '/projects/placeholder.avif',
-                //     title: 'Silent Rhythms, Global Voices',
-                //     description: 'An seminar on spreading awarness about the importance of sign language and it\'s importance of learning to make the disable person feel inclusive in the community.',
-                // },
+                {
+                    image: '/projects/Silent Rhythms, Global Voices_International Service.avif',
+                    title: 'Silent Rhythms, Global Voices',
+                    description: 'An seminar on spreading awarness about the importance of sign language and it\'s importance of learning to make the disable person feel inclusive in the community.',
+                },
                 {
                     image: '/projects/International service - space week.avif',
                     title: 'Cosmic Classroom',
                     description: 'In celebration of World Space Week, we collaborated with the Astronomy Club of TCET to conduct engaging sessions on space and stars for two different schools. Additionally, we extended this learning opportunity to the underprivileged children of Junoon Foundation, where we utilized AR/VR technology to bring the wonders of space to life.',
                 },
-                // {
-                //     image: '/projects/placeholder.avif',
-                //     title: 'Freedom Through Education',
-                //     description: 'The event celebrated International Day of Education by engaging children in India\'s freedom struggle through storytelling, art, and discussions. Volunteers narrated inspiring stories of national heroes, followed by creative activities like drawing national symbols and a collaborative thumbprint flag, fostering patriotism and creativity.',
-                // },
+                {
+                    image: '/projects/Freedom Through Education_International Service.avif',
+                    title: 'Freedom Through Education',
+                    description: 'The event celebrated International Day of Education by engaging children in India\'s freedom struggle through storytelling, art, and discussions. Volunteers narrated inspiring stories of national heroes, followed by creative activities like drawing national symbols and a collaborative thumbprint flag, fostering patriotism and creativity.',
+                },
                 {
                     image: '/projects/International Service - Vision beyond Sight.avif',
                     title: 'Vision Beyond Sight',
@@ -320,11 +318,11 @@ const EndeavorsCarousel = () => {
                     title: 'Canvacation',
                     description: 'An interactive offline workshop dedicated to teaching the art of design using Canva. Participants learned essential design principles and tools, empowering them to create visually appealing graphics and presentations while enhancing their creative skills in a collaborative environment.',
                 },
-                // {
-                //     image: '/projects/placeholder.avif',
-                //     title: 'Tframe: A short Film Festival',
-                //     description: 'We organized a short film competition where participants submitted their entries via Google Forms. The selected films were screened on campus, offering an exciting platform for creativity to be showcased. The winning short film received a cash prize, recognizing the talent and effort of the participants.',
-                // },
+                {
+                    image: '/projects/T-Frame_Digital Communication.avif',
+                    title: 'Tframe: A short Film Festival',
+                    description: 'We organized a short film competition where participants submitted their entries via Google Forms. The selected films were screened on campus, offering an exciting platform for creativity to be showcased. The winning short film received a cash prize, recognizing the talent and effort of the participants.',
+                },
                 {
                     image: '/projects/Digi Comm-Recreate & Re.avif',
                     title: 'Recreate and rewind',
@@ -337,22 +335,53 @@ const EndeavorsCarousel = () => {
                 },
             ],
         },
-        // {
-        //     avenue: 'Public Relation',
-        //     slides: [
-        //         {
-        //             image: '/projects/placeholder.avif',
-        //             title: 'Miles for Impact: TATA Run',
-        //             description: 'We collaborated with Suryoday Trust to support specially-abled children participating in the Tata Mumbai Marathon 2025. Volunteers set up a cheering corridor with banners and slogans, creating an uplifting atmosphere. Members enthusiastically encouraged runners, interacted with participants, and promoted the club\'s initiatives.',
-        //         },
-        //         {
-        //             image: '/projects/placeholder.avif',
-        //             title: 'SGNP Clean up drive',
-        //             description: 'The SGNP Clean-Up Drive was a dynamic environmental initiative promoting conservation, teamwork, and social responsibility. Volunteers worked in designated teams to clear litter across Sanjay Gandhi National Park, ensuring efficient waste disposal.',
-        //         },
-        //     ],
-        // },    
+        {
+            avenue: 'Public Relation',
+            slides: [
+                {
+                    image: '/projects/Miles for Impact_ TATA Run_Public Relations.avif',
+                    title: 'Miles for Impact: TATA Run',
+                    description: 'We collaborated with Suryoday Trust to support specially-abled children participating in the Tata Mumbai Marathon 2025. Volunteers set up a cheering corridor with banners and slogans, creating an uplifting atmosphere. Members enthusiastically encouraged runners, interacted with participants, and promoted the club\'s initiatives.',
+                },
+                // {
+                //     image: '/projects/placeholder.avif',
+                //     title: 'SGNP Clean up drive',
+                //     description: 'The SGNP Clean-Up Drive was a dynamic environmental initiative promoting conservation, teamwork, and social responsibility. Volunteers worked in designated teams to clear litter across Sanjay Gandhi National Park, ensuring efficient waste disposal.',
+                // },
+                {
+                    image: '/projects/Constructing Diwali Memories_Public Relations.avif',
+                    title: 'Constructing Diwali Memories',
+                    description: 'We visited construction sites to celebrate Diwali with workers and street children, bringing festive joy to those who often miss out on celebrations. We shared sweets and dry fruits, creating a lively atmosphere and connecting through memorable moments.',
+                },
+            ],
+        },    
     ];
+    const currentAvenue = avenues[currentIndex];
+
+
+    // Automatic scrolling between images within the current avenue
+    useEffect(() => {
+        const slideInterval = setInterval(() => {
+            // Move to the next image in the current avenue
+            setSelectedImageIndex((prevIndex) => 
+                (prevIndex + 1) % currentAvenue.slides.length
+            );
+        }, 3000); // Change image every 5 seconds
+
+        return () => clearInterval(slideInterval);
+    }, [currentAvenue]);
+
+    // Automatic scrolling between avenues
+    useEffect(() => {
+        const avenueInterval = setInterval(() => {
+            // Move to the next avenue
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % avenues.length);
+            // Reset image index when changing avenue
+            setSelectedImageIndex(0);
+        }, 15000); // Change avenue every 15 seconds
+
+        return () => clearInterval(avenueInterval);
+    }, []);
 
     const nextAvenue = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % avenues.length);
@@ -364,7 +393,6 @@ const EndeavorsCarousel = () => {
         setSelectedImageIndex(0); 
     };
 
-    const currentAvenue = avenues[currentIndex];
 
     return (
         <div className="bg-white flex flex-col items-center justify-center my-10 md:mx-6">

@@ -31,7 +31,7 @@ function Card({ title, image, description, isBig, url }) {
           {url && (
             <a 
               href={url} 
-              className="mt-3 inline-block px-4 py-2 bg-[#FE7011] text-white text-xs font-medium rounded hover:bg-[#98430A] transition-colors duration-300"
+              className=" mt-3 inline-block px-4 py-2 bg-[#FE7011] text-white text-xs font-medium rounded hover:bg-[#98430A] transition-colors duration-300"
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -39,7 +39,9 @@ function Card({ title, image, description, isBig, url }) {
             </a>
           )}
         </div>
+
       </div>
+      
     </div>
   );
 }
