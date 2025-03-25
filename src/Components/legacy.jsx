@@ -19,30 +19,29 @@ function FounderCard() {
   );
 }
 
+
 function Card({ title, image, description, isBig, url }) {
   return (
     <div className={`relative w-full rounded-lg shadow-lg overflow-hidden`}>
-      <img src={image} alt={title} className="w-full lg:h-72 object-cover object-center" loading={"lazy"} />
-      <div className="hover:opacity-100 opacity-0 duration-500 flex">
-        <div className="absolute top-[0%] p-0 left-0 w-full h-full flex blur-[2px] items-baseline text-left bg-black/50"></div>
-        <div className="text-white absolute bottom-[7%] md:bottom-[5%] blur-none pl-2 px-4 py-2 lg:pt-10">
-          <h2 className="font-bold text-md">{title}</h2>
-          <p className="text-xs max-md:max-h-[5vh] max-sm:hidden">{description}</p>
-          {url && (
-            <a 
-              href={url} 
-              className=" mt-3 inline-block px-4 py-2 bg-[#FE7011] text-white text-xs font-medium rounded hover:bg-[#98430A] transition-colors duration-300"
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              Know More
-            </a>
-          )}
-        </div>
-
+    <img src={image} alt={title} className="w-full lg:h-72 object-cover object-center" loading={"lazy"} />
+    <div className="hover:opacity-100 opacity-0 duration-500 flex">
+      <div className="absolute top-[0%] p-0 left-0 w-full h-full flex blur-[2px] items-baseline text-left bg-black/50"></div>
+      <div className="text-white absolute bottom-[7%]  blur-none pl-2 px-4 py-2 lg:pt-10">
+        <h2 className="font-bold text-md">{title}</h2>
+        <p className="text-xs max-md:max-h-[5vh] max-sm:hidden">{description}</p>
       </div>
-      
     </div>
+    {url && (
+  <a 
+    href={url} 
+    className=" absolute bottom-2 right-2  inline-block px-2 py-1 sm:px-4 sm:py-2 bg-[#FE7011] text-white text-[0.5rem] sm:text-xs font-medium rounded hover:bg-[#98430A] transition-colors duration-300"
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Know More
+  </a>
+)}
+  </div>
   );
 }
 
