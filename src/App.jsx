@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layout';
 import Home from './pages/home';
@@ -23,7 +23,7 @@ function App() {
           <Route path="achievement" element={<Achievement />} />
           <Route path="club-insight" element={<ClubInsightHero />} />
           <Route path="meet-the-team" element={<TeamPage />} />
-          <Route path="Project" element={<Projects />} />
+          <Route path="projects" element={<Projects />} />
           <Route path="contact" element={<ContactForm />} />
         </Route>
       </Routes>
@@ -31,4 +31,7 @@ function App() {
   );
 }
 export default App;
+
+
+
 

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { useState, useEffect } from 'react';
 import member from '/Member.svg'
 import zone from '/Zone.svg'

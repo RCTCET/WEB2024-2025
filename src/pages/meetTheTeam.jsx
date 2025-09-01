@@ -3,6 +3,91 @@
 import { useState } from "react"
 
 const teamMembers = [
+  //2025-26
+  {
+    id: 205,
+    name: "Rtr. Tanisha Kumar",
+    role: "President",
+    image: "/team/2024-2025/Rtr. Tanisha Kumar.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 206,
+    name: "Rtr. Prabhat Maurya",
+    role: "Secretary",
+    image: "/team/2024-2025/Rtr. Prabhat Maurya.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 207,
+    name: "Rtr. Amar Singh",
+    role: "Immediate Past President",
+    image: "/team/2024-2025/Rtr. Amar Singh.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 208,
+    name: "Rtr. Aizab Khan",
+    role: "Vice President",
+    image: "/team/2024-2025/Rtr. Aizab Khan.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 209,
+    name: "Rtr. Tushar Mishra",
+    role: "Vice President",
+    image: "/team/2024-2025/Rtr. Tushar Mishra.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 210,
+    name: "Rtr. Sudiksha Kapoor",
+    role: "Vice President",
+    image: "/team/2024-2025/Rtr. Sudiksha Kapoor.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 211,
+    name: "Rtr. Disha Rathod",
+    role: "Chairperson Finance",
+    image: "/team/2024-2025/Rtr. Disha Rathod.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 212,
+    name: "Rtr. Tanisha Sawalkar",
+    role: "Sergeant At Arms",
+    image: "/team/2024-2025/Rtr. Tanisha Sawalkar.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 213,
+    name: "Rtr. Saumya Mishra",
+    role: "Chairperson Human Resource Development",
+    image: "/team/2024-2025/Rtr. Saumya Mishra.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 214,
+    name: "Rtr. Aniska Bachar",
+    role: "Joint Secretary",
+    image: "/team/2024-2025/Rtr. Aniska Bachar.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 215,
+    name: "Rtr. Aaditya Yadav",
+    role: "Joint Secretary",
+    image: "/team/2024-2025/Rtr. Aaditya Yadav.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 216,
+    name: "Rtr. Yohaan Khan",
+    role: "Chairperson Publications",
+    image: "/team/2024-2025/Rtr. Yohaan Khan.webp",
+    year: "2025-2026",
+  },
   // 2024-2025
   {
     id: 1,
@@ -510,9 +595,70 @@ const teamMembers = [
     image: "/team/2017-2018/Rtr. Saloni Jain _ Chairman HR_9_IMGCentury_8_IMGCentury.jpeg",
     year: "2017-2018",
   },
+
+    
 ]
 
 const boardOfDirectors = [
+    // 2025-26
+  {
+    id: 152,
+    name: "Rtr. Het Shah",
+    role: "Club Service Director",
+    image: "/team/2017-2018/Rtr. Het Shah _ Club Service Director_5_IMGCentury_5_IMGCentury.jpeg",
+    year: "2025-2026",
+  },
+  {
+    id: 153,
+    name: "Rtr. Swapnil Arya",
+    role: "Community Service Director",
+    image: "/team/2017-2018/Rtr. Swapnil Arya _ Community Service Director_13_IMGCentury_12_IMGCentury.jpeg",
+    year: "2025-2026",
+  },
+  {
+    id: 154,
+    name: "Rtr. Ashutosh Tiwari",
+    role: "Professional and Entrepreneurship Development Director",
+    image:
+      "/team/2017-2018/Rtr. Ashutosh Tiwari _ Professional and Entrepreneurship Development Director_2_IMGCentury_2_IMGCentury.jpeg",
+    year: "2025-2026",
+  },
+  {
+    id: 156,
+    name: "Rtr. Keval Chavda",
+    role: "International Service Director",
+    image: "/team/2017-2018/Rtr. Keval Chavda _ International Service Director.webp",
+    year: "2025-2026",
+  },
+  {
+    id: 157,
+    name: "Rtr. Keyur Pandey",
+    role: "Sports Director",
+    image: "/team/2017-2018/Rtr. Keyur Pandey _ Sports_7_IMGCentury_14_IMGCentury.jpeg",
+    year: "2025-2026",
+  },
+  {
+    id: 158,
+    name: "Rtr. Shreya Patil",
+    role: "Digital Communication Director",
+    image: "/team/2017-2018/Rtr. Shreya Patil _ Digital Communication_10_IMGCentury_9_IMGCentury.jpeg",
+    year: "2025-2026",
+  },
+  {
+    id: 152,
+    name: "Rtr. Sumer Patel",
+    role: "Partner-In-Service",
+    image: "/team/2017-2018/Rtr. Sumer Patel _ Partner-In-Service_12_IMGCentury_11_IMGCentury.jpeg",
+    year: "2025-2026",
+  },
+  {
+    id: 151,
+    name: "Rtr. Somaiyan Guchait",
+    role: "Public Relations and Marketing Director",
+    image:
+      "/team/2017-2018/Rtr. Somaiyan Guchait _ Public Relations and Marketing Director_11_IMGCentury_10_IMGCentury.jpeg",
+    year: "2025-2026",
+  },
   //2024-2025
   {
     id: 1,
@@ -1346,15 +1492,17 @@ const boardOfDirectors = [
       "/team/2017-2018/Rtr. Somaiyan Guchait _ Public Relations and Marketing Director_11_IMGCentury_10_IMGCentury.jpeg",
     year: "2017-2018",
   },
+
+
 ]
 
 const TeamPage = () => {
-  const [selectedYear, setSelectedYear] = useState("2024-2025")
+  const [selectedYear, setSelectedYear] = useState("2025-2026")
 
   const filteredMembers = teamMembers.filter((member) => member.year === selectedYear)
   const filteredBoDs = boardOfDirectors.filter((bod) => bod.year === selectedYear)
 
-  const academicYearOptions = Array.from({ length: 2025 - 2017 }, (_, i) => {
+  const academicYearOptions = Array.from({ length: 2026 - 2017 }, (_, i) => {
     const startYear = 2017 + i
     const endYear = startYear + 1
     return `${startYear}-${endYear}`
