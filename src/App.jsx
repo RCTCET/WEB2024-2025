@@ -8,7 +8,7 @@ import { Achievement } from './pages/Achievement';
 import ClubInsightHero from './pages/ClubInsightHero';
 import TeamPage from './pages/meetTheTeam';
 import About from './pages/about';
-import Projects from './pages/Projects';
+import Projects from './pages/projects';
 import ContactForm from './pages/contactus';
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
   );
 }
 export default App;
+
 
 
 
