@@ -6,7 +6,7 @@ import { HobbyClub } from './pages/Hobby';
 import GetInvolvedHero from "./Components//getInvolved/GetInvolvedHero"
 import { Achievement } from './pages/Achievement';
 import ClubInsightHero from './pages/ClubInsightHero';
-import TeamPage from './pages/MeetTheTeam';
+import TeamPage from './pages/meetTheTeam';
 import About from './pages/about';
 import Projects from './pages/Projects';
 import ContactForm from './pages/contactus';
@@ -31,5 +31,6 @@ function App() {
   );
 }
 export default App;
+
 
 
