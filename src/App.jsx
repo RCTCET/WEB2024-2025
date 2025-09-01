@@ -1,7 +1,7 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layout';
-import Home from './pages/Home';
+import Home from './pages/home';
 import { HobbyClub } from './pages/Hobby';
 import GetInvolvedHero from "./Components//getInvolved/GetInvolvedHero"
 import { Achievement } from './pages/Achievement';
@@ -31,4 +31,5 @@ function App() {
   );
 }
 export default App;
+
 
