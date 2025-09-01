@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import MonsoonMatch from '../assets/images/carousel_1.png';
-import Ganpati from '../assets/images/carousel_2.png';
 
 const EndeavorsCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

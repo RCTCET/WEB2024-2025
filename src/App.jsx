@@ -1,14 +1,14 @@
-import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './layout';
-import Home from './pages/home';
+import Home from './pages/Home';
 import { HobbyClub } from './pages/Hobby';
 import GetInvolvedHero from "./Components//getInvolved/GetInvolvedHero"
 import { Achievement } from './pages/Achievement';
 import ClubInsightHero from './pages/ClubInsightHero';
-import TeamPage from './pages/meetTheTeam';
+import TeamPage from './pages/MeetTheTeam';
 import About from './pages/about';
-import Projects from './pages/projects';
+import Projects from './pages/Projects';
 import ContactForm from './pages/contactus';
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path="achievement" element={<Achievement />} />
           <Route path="club-insight" element={<ClubInsightHero />} />
           <Route path="meet-the-team" element={<TeamPage />} />
-          <Route path="Project" element={<Projects />} />
+          <Route path="projects" element={<Projects />} />
           <Route path="contact" element={<ContactForm />} />
         </Route>
       </Routes>

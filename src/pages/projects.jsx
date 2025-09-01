@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-const EndeavorsCarousel = () => {
+const Projects = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -446,4 +446,4 @@ const EndeavorsCarousel = () => {
     );
 };
 
-export default EndeavorsCarousel;
+export default Projects;
