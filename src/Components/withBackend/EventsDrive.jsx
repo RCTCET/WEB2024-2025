@@ -12,8 +12,8 @@ export default function EventsDrive() {
   const fetchEvents = async () => {
     try {
       const res = await axios.get("http://localhost:3000/getEventsDrive");
-      console.log("Fetched events:", res.data.reverse().pop());
-      setEvents(res.data);
+      console.log("Fetched events:", res.data.reverse());
+      setEvents(res.data.reverse());
     } catch (error) {
       console.error("Error fetching Events:", error);
     } finally {
@@ -26,12 +26,13 @@ export default function EventsDrive() {
   }
 
   return (
-    <div className="p-6">
+    <div className=" p-6">
       <h2 className="text-2xl font-bold mb-4 text-center text-orange-500">
         🎉 Events & Drives
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {events.length > 0 ? (
+        <div className="flex">
+          {events.length > 0 ? (
           events.map((event, idx) => (
             <div
               key={idx}
@@ -58,6 +59,7 @@ export default function EventsDrive() {
             No events available.
           </p>
         )}
+        </div>
       </div>
     </div>
   );
