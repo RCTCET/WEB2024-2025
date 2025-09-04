@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import { OurJourney } from '../Components/aboutpage/AvenuesofService';
 
 const AboutSection = React.lazy(() => import('../Components/aboutpage/about'));
 const Objectives = React.lazy(() => import('../Components/aboutpage/objective'));
@@ -11,7 +12,8 @@ const About = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <AboutSection />
       <Objectives />
-      <AvenuesofService />
+      {/* <AvenuesofService /> */}
+      <OurJourney />
     </Suspense>
   );
 };
