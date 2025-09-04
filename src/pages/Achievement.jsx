@@ -362,6 +362,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { Pagination, Autoplay } from "swiper/modules";
+import { Projectachivement } from "./Projectachivement";
 
 export const Achievement = () => {
   return (
@@ -469,17 +470,17 @@ export const Achievement = () => {
 </div>
 
 </div>
-        <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent text-center my-[10px] ">
-  Project Achivement
-</h2>
-<div className="w-full mt-[30px] h-[400px] bg-[url('https://www.rc.tcetmumbai.in/Achievement/Baseline%20grid%20bg.svg')] bg-cover bg-center p-6 flex justify-center">
+        
 
+<div className="my-[10px]">
 
-
-
+<Projectachivement />
 
 
 </div>
+
+
+
 
     </section>
   );
