@@ -14,7 +14,7 @@ export const Projectachivement = () => {
         <div className="grid grid-cols-1 gap-6 max-w-4xl w-full place-items-center">
           <div className="bg-[#FFEFD9] p-4 rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-col items-center text-center max-w-sm w-full">
             {/* Image */}
-            <div className="w-full h-[250px] flex items-center justify-center rounded-lg mb-4 overflow-hidden bg-white">
+            <div className="w-full h-[250px] flex items-center justify-center rounded-lg mb-4 overflow-hidden ">
               <img
                 src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756821844/DSC02741_oocb84.jpg"
                 alt="Project Acer"
@@ -45,7 +45,7 @@ export const Projectachivement = () => {
               key={item.id}
               className="bg-[#FFEFD9] p-4 rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-col items-center text-center max-w-sm w-full"
             >
-              <div className="w-full h-[250px] flex items-center justify-center rounded-lg mb-4 overflow-hidden bg-white">
+              <div className="w-full h-[250px] flex items-center justify-center rounded-lg mb-4 overflow-hidden ">
                 <img
                   src={item.image}
                   alt={`Crown ${item.id}`}
