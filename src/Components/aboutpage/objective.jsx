@@ -8,7 +8,7 @@ const Objectives = () => {
         {/* Logo Section */}
         <div className="flex justify-center  basis-[40%] place-items-center  mb-4 lg:mb-0 lg:mr-8 xl:mr-10 2xl:mr-10 2xl:ml-10 ">
           <LazyLoadImage 
-            src="/objective/logo.svg" 
+            src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756746594/logo_pdqctw.svg" 
             alt="RC TCET Logo" 
             className=""
           />
