@@ -29,7 +29,7 @@ function Projects() {
       </div>
 
       {/* Links (sticky, horizontal) */}
-      <div className="sticky top-0 z-20 bg-white/80 backdrop-blur border-b">
+      <div className="bg-white/80 backdrop-blur border-b">
         <div className="flex overflow-x-auto text-sm sm:text-md space-x-6 p-3 sm:p-4 font-bold underline">
           <a href="#Club-Service" className="whitespace-nowrap">Club Service</a>
           <a href="#Community-Service" className="whitespace-nowrap">Community Service</a>
