@@ -10,6 +10,7 @@ import TeamPage from './pages/meetTheTeam';
 import About from './pages/about';
 import Projects from './pages/projects';
 import ContactForm from './pages/contactus';
+import { Avenue } from './Components/Avenue';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="achievement" element={<Achievement />} />
           <Route path="club-insight" element={<ClubInsightHero />} />
           <Route path="meet-the-team" element={<TeamPage />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="projects" element={<Avenue />} />
           <Route path="contact" element={<ContactForm />} />
         </Route>
       </Routes>
@@ -31,7 +32,3 @@ function App() {
   );
 }
 export default App;
-
-
-
-
