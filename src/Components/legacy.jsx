@@ -4,7 +4,7 @@ function FounderCard() {
   return (
     <div className="relative bg-[url('/bg-fcard.svg')] bg-cover bg-no-repeat h-full p-4 bg-white shadow-lg rounded-lg">
       <img
-        src="/founders.svg"
+        src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756748768/founders_evg6h2.svg"
         alt="Founder and early members of Rotary International"
         className="w-full mb-4 rounded-xl"
         loading={"lazy"}
@@ -23,7 +23,7 @@ function FounderCard() {
 function Card({ title, image, description, isBig, url }) {
   return (
     <div className={`relative w-full rounded-lg shadow-lg overflow-hidden`}>
-    <img src={image} alt={title} className="w-full lg:h-72 object-cover object-center" loading={"lazy"} />
+    <img src={image} alt={title} className="w-full lg:h-72 object-cover object-[center_10%]" loading={"lazy"} />
     <div className="hover:opacity-100 opacity-0 duration-500 flex">
       <div className="absolute top-[0%] p-0 left-0 w-full h-full flex blur-[2px] items-baseline text-left bg-black/50"></div>
       <div className="text-white absolute bottom-[7%]  blur-none pl-2 px-4 py-2 lg:pt-10">
@@ -66,14 +66,14 @@ function Legacy() {
           <div className="sm:basis-[60%] flex flex-col gap-y-6">
             <Card
               title="Rotary International"
-              image="../Legacy_Impact/rotary.jpg"
+              image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756759996/IMG-20250719-WA0061_kqc9tx.jpg"
               description="Rotary International is a global network of dedicated professionals and leaders committed to humanitarian service, peace, and goodwill. With over 1.4 million members across 46,000+ clubs worldwide, Rotary addresses critical issues like education, healthcare, clean water, and community development. Guided by the motto 'Service Above Self,' Rotary fosters international collaboration, ethical leadership, and sustainable impact to create a better world for future generations."
               isBig
               url="https://my.rotary.org/en/"
             />
             <Card
               title="District 3141"
-              image="../Legacy_Impact/district.jpg"
+              image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756760931/689352456be4725a6261e0ae_jty8nv.jpg"
               description="Rotaract District 3141 is one of the most dynamic Rotaract districts, encompassing clubs across Mumbai and its suburbs. Committed to service, leadership, and professional development, the district actively engages in impactful projects. Through collaborations, social initiatives, and networking opportunities, Rotaract District 3141 empowers young individuals to create meaningful change while upholding the values of Rotary International."
               isBig
               url="https://www.instagram.com/rotaract_mumbai?igsh=MWlteDgwMG91dDA2eA=="
