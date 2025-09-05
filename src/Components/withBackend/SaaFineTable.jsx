@@ -11,7 +11,7 @@ export default function SaaFineTable() {
 
   const fetchSaaFine = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/getSaaFine");
+      const res = await axios.get("https://rctcet-backend.onrender.com/getSaaFine");
       console.log("Fetched SaaFine:", res.data);
       setData(res.data);
     } catch (error) {

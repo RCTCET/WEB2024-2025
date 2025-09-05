@@ -11,7 +11,7 @@ export default function EventsDrive() {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/getEventsDrive");
+      const res = await axios.get("https://rctcet-backend.onrender.com/getEventsDrive");
       console.log("Fetched events:", res.data.reverse());
       setEvents(res.data.reverse());
     } catch (error) {
