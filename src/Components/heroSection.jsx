@@ -142,6 +142,7 @@ export default function RotaractClubLayout() {
                     src={img.src}
                     alt={img.title}
                     className="h-32 sm:h-40 w-full object-cover rounded-t-2xl"
+                    loading="lazy"
                   />
                   {/* <CardContent>
                     <h3 className="text-sm sm:text-base font-semibold">{img.title}</h3>
