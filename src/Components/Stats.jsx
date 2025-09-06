@@ -1,9 +1,5 @@
 
 import { useState, useEffect } from 'react';
-import member from '/Member.svg'
-import zone from '/Zone.svg'
-import district from '/District.svg'
-import totalProjects from '/TotalProjects.svg'
 
 
 
@@ -33,11 +29,11 @@ function StatsBar() {
         <div className="font-poppins flex flex-wrap gap-x-4 gap-y-9 content-center justify-around h-fit p-2 lg:flex lg:flex-row lg:items-center lg:h-40 lg:space-y-0 lg:space-x-0 bg-statsBar">  {/* statsBar Color : #f5f5f5 */}
             
 
-            <Zone name="Zone" data="2" image={zone} alt="Zone"/>
+            <Zone name="Zone" data="2" image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757123845/Zone_mnggcn.svg" alt="Zone"/>
 
-            <District name="District" data="3141" image={district} alt="District"/>
+            <District name="District" data="3141" image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757123847/District_d8wbnu.svg" alt="District"/>
 
-            <TotalProjects name="Total Projects" image={totalProjects} alt="TotalProject"/>
+            <TotalProjects name="Total Projects" image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757123850/TotalProjects_xmobuh.svg" alt="TotalProject"/>
         </div>
     )
 }
