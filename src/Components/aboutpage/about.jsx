@@ -20,13 +20,13 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section className="relative mb-5 min-h-screen overflow-x-hidden">
-      {/* Background */}
-      <LazyLoadImage
-        src="https://www.rc.tcetmumbai.in/About%20us/Baseline%20grid%20bg.webp"
-        alt="Baseline Grid Background"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
+  <div className="relative overflow-hidden mb-5 bg-white dark:bg-stone-900">
+    {/* Background Image */}
+    <LazyLoadImage
+      src="https://www.rc.tcetmumbai.in/About%20us/Baseline%20grid%20bg.webp"
+      alt="Baseline Grid Background"
+      className="absolute inset-0 w-full h-full object-cover z-0 opacity-100 dark:opacity-30"
+    />
 
       {/* Foreground */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-start md:justify-center">
@@ -94,7 +94,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
+      </div>
   );
 };
 
