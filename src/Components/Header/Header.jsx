@@ -37,6 +37,16 @@ function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isHome]);
 
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setIsClubDropdownOpen(false);
+      setIsMenuOpen(false); 
+  };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []); 
+
   const navLinks = [
     { name: "Home", to: "/" },
     { name: "About us", to: "/about" },
@@ -82,7 +92,7 @@ function Header() {
           ))}
 
           {/* Club Hub Dropdown */}
-          <div className="relative">
+         <div className="relative" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setIsClubDropdownOpen(!isClubDropdownOpen)}
               aria-expanded={isClubDropdownOpen}
@@ -124,9 +134,12 @@ function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={(e) => {
+          e.stopPropagation(); 
+          setIsMenuOpen(!isMenuOpen);
+          }}
           className={`md:hidden focus:outline-none ${
-            isScrolled ? "text-black" : "text-white"
+          isScrolled ? "text-black" : "text-white"
           }`}
           aria-expanded={isMenuOpen}
         >
@@ -152,7 +165,10 @@ function Header() {
 
       {/* Mobile Nav */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
+        <div 
+          className="md:hidden bg-white shadow-lg"
+          onClick={(e) => e.stopPropagation()}
+          >
           <nav className="flex flex-col space-y-4 py-4 px-8">
             {navLinks.map((link) => (
               <Link
@@ -167,7 +183,7 @@ function Header() {
             ))}
 
             {/* Club Hub in Mobile */}
-            <div>
+            <div onClick={(e) => e.stopPropagation()}>
               <button
                 onClick={() => setIsClubDropdownOpen(!isClubDropdownOpen)}
                 className={`text-lg font-medium hover:text-orange-600 ${
@@ -385,3 +401,4 @@ export default Header;
 // }
 
 // export default Header;
+
