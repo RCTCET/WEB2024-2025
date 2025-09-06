@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { StatsBar } from '../Components/Stats';
 import { MomentsFrame } from '../Components/Moments';
 import Legacy from '../Components/legacy'
@@ -14,7 +15,9 @@ const Home = () => {
       <EventsDrive/>
       <Legacy/>
       <EndeavorsCarousel/>
-      <MomentsFrame />
+      <Suspense fallback={<div>Loading...</div>}>
+        <MomentsFrame />
+      </Suspense>
     </>
   );
 };
