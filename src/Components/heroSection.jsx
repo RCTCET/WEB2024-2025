@@ -66,14 +66,14 @@ import { motion } from "framer-motion";
 
 export default function RotaractClubLayout() {
   const images = [
-    { title: "Nagano Prefecture", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757084449/Copy_of_IMG_4190_ayzbil_lplixh.png" },
-    { title: "Marrakech Medina", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757084443/IMG_7581_xlm8wx_lnj4jq.png" },
-    { title: "Denali National Park", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757084443/IMG_2044_h3kady_vbe8iv.png" },
-    { title: "Lake Louise", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757084449/Copy_of_IMG_4190_ayzbil_lplixh.png" },
-    { title: "Santorini", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756761949/Copy_of_IMG_0420_wdpng4.jpg" },
-    { title: "Great Wall of China", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756761965/Copy_of_IMG_1446_1_zwesqm.jpg" },
-    { title: "Patagonia", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756761959/Copy_of_IMG20250825165248_kvd3wk.jpg" },
-    { title: "Iceland", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756761623/PXL_20250718_060353784_i7fthn.jpg" },
+    { title: "hero img1", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757084449/Copy_of_IMG_4190_ayzbil_lplixh.png" },
+    { title: "hero img2", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757084443/IMG_7581_xlm8wx_lnj4jq.png" },
+    { title: "hero img3", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757084443/IMG_2044_h3kady_vbe8iv.png" },
+    { title: "hero img4", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757084449/Copy_of_IMG_4190_ayzbil_lplixh.png" },
+    { title: "hero img5", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756761949/Copy_of_IMG_0420_wdpng4.jpg" },
+    { title: "hero img6", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756761965/Copy_of_IMG_1446_1_zwesqm.jpg" },
+    { title: "hero img7", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756761959/Copy_of_IMG20250825165248_kvd3wk.jpg" },
+    { title: "hero img8", src: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756761623/PXL_20250718_060353784_i7fthn.jpg" },
   ];
 
   const [index, setIndex] = useState(0);
@@ -143,9 +143,9 @@ export default function RotaractClubLayout() {
                     alt={img.title}
                     className="h-32 sm:h-40 w-full object-cover rounded-t-2xl"
                   />
-                  <CardContent>
+                  {/* <CardContent>
                     <h3 className="text-sm sm:text-base font-semibold">{img.title}</h3>
-                  </CardContent>
+                  </CardContent> */}
                 </Card>
               ))}
             </motion.div>
