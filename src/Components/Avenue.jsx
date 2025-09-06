@@ -54,7 +54,7 @@ const allinfo = [
   },
   {
     title: "Community Service",
-    img: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756701724/International_Service_knpfwk.png",
+    img: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756701729/Community_Service_frzs8z.png",
     description:
       "Focuses on projects and programs that benefit the local community; addresses needs through volunteerism and outreach.",
   },
