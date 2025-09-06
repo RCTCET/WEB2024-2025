@@ -26,41 +26,39 @@ export default function EventsDrive() {
   }
 
   return (
-    <div className="border-t-2 mt rounded-t-xl p-6">
-      <h2 className="text-3xl mt-10 font-bold mb-4 text-center text-orange-500">
-        🎉 Events & Drives
-      </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="flex">
-          {events.length > 0 ? (
-          events.map((event, idx) => (
-            <div
-              key={idx}
-              className="bg-white shadow-lg rounded-xl p-4 hover:shadow-2xl transition border border-orange-100"
+  <div className="border-t-2 mt rounded-t-xlp-6 bg-white dark:bg-stone-900">
+    <h2 className="text-3xl mt-10 font-bold mb-4 text-center text-orange-500 dark:text-yellow-400">
+      🎉 Events & Drives
+    </h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex">
+        {events.length > 0 ? (
+        events.map((event, idx) => (
+          <div
+            key={idx}
+            className="bg-white dark:bg-stone-800 shadow-lg rounded-xl p-4 hover:shadow-2xl transition border border-orange-100 dark:border-stone-600"
+          >
+            <h3 className="text-lg font-semibold text-orange-500 dark:text-yellow-400">
+              {event.eventName}
+            </h3>
+            <p className="text-sm text-gray-500 dark:text-stone-400 mb-2">
+              📅 {event.date}
+            </p>
+            <a
+              href={event.driveLink}
+              className="text-white bg-orange-500 dark:bg-yellow-600 hover:bg-orange-600 dark:hover:bg-yellow-700 px-3 py-1 rounded-lg inline-block mt-2 shadow-md transition"
             >
-              <h3 className="text-lg font-semibold text-orange-500">
-                {event.eventName}
-              </h3>
-              <p className="text-sm text-gray-500 mb-2">
-                📅 {event.date}
-              </p>
-              <a
-                href={event.driveLink}
-                // target="_blank"
-                // rel="noopener noreferrer"
-                className="text-white bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded-lg inline-block mt-2 shadow-md transition"
-              >
-                View Drive
-              </a>
-            </div>
-          ))
-        ) : (
-          <p className="text-center text-gray-500 col-span-full">
-            No events available.
-          </p>
-        )}
-        </div>
+              View Drive
+            </a>
+          </div>
+        ))
+      ) : (
+        <p className="text-center text-gray-500 dark:text-stone-400 col-span-full">
+          No events available.
+        </p>
+      )}
       </div>
     </div>
-  );
+  </div>
+);
 }

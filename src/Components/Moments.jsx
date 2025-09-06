@@ -1,7 +1,7 @@
 
 function MomentsFrame() {
     return(
-        <div className="h-auto w-full my-3 overflow-hidden -translate-y-10 sm:-translate-y-20 md:-translate-y-28">
+        <div className="h-auto w-full my-3 overflow-hidden -translate-y-10 sm:-translate-y-20 md:-translate-y-28 bg-white dark:bg-stone-900">
                 <BgImg/>
                 <MomentSection/>
         </div>
@@ -20,7 +20,7 @@ function BgImg() {
 function HeadText() {
     return(
         <div className="absolute lg:top-[165px] px-8">
-            <h1 className="text-center text-xl md:text-4xl font-bold mb-6 bg-gradient-to-b from-[#98430A] via-[#FE7011] to-[#FDD24C] bg-clip-text text-transparent">Moments to Remember</h1>
+            <h1 className="text-center text-xl md:text-4xl font-bold mb-6 bg-gradient-to-b from-amber-800 via-orange-500 to-yellow-400 dark:from-yellow-600 dark:via-yellow-400 dark:to-yellow-200 bg-clip-text text-transparent">Moments to Remember</h1>
         </div>
     )
 }
@@ -47,7 +47,7 @@ function ImgSet() {
 function MomentSection() {
     return(
         <div className="flex justify-between items-center w-full px-2">
-        <div className="z-10 lg:h-[319px] bg-gradient-to-r from-orange-200 rounded-l-[12px] h-[200px] w-[20px] lg:w-[35px]"></div>
+        <div className="z-10 lg:h-[319px] bg-gradient-to-r from-orange-200 dark:from-stone-700 rounded-l-[12px] h-[200px] w-[20px] lg:w-[35px]"></div>
             <div className="w-full overflow-hidden whitespace-nowrap box-content drop-shadow-[2px_2px_4px_rgba(0,0,0,0.40)]">
                 <div className="lg:animate-slider animate-slider_mobile hover:pause-animation">
                     <ImgSet/>
@@ -56,14 +56,14 @@ function MomentSection() {
                     <ImgSet/>
                 </div>
             </div>
-        <div className="z-10 lg:h-[319px] bg-gradient-to-l from-orange-200 rounded-r-[12px] h-[200px] w-[20px] lg:w-[35px]"></div>
+        <div className="z-10 lg:h-[319px] bg-gradient-to-l from-orange-200 dark:from-stone-700 rounded-r-[12px] h-[200px] w-[20px] lg:w-[35px]"></div>
         </div>
     )
 }
 
 function MomentBox({image, alt}) {
     return(
-        <img src={image} alt={alt} className="h-[200px] w-[250px] inline-block ml-4 mr-4 rounded-[12px] object-cover lg:w-[286px] lg:h-[319px] border-[1px] border-black drop-shadow-[2px_2px_4px_rgba(0,0,0,0.40)]" loading="lazy"/>
+        <img src={image} alt={alt} className="h-[200px] w-[250px] inline-block ml-4 mr-4 rounded-[12px] object-cover lg:w-[286px] lg:h-[319px] border-[1px] border-black dark:border-stone-600 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.40)]" loading={"lazy"}/>
     )
 }
 
