@@ -2,14 +2,16 @@ import { StatsBar } from '../Components/Stats';
 import { MomentsFrame } from '../Components/Moments';
 import Legacy from '../Components/legacy'
 import EndeavorsCarousel from '../Components/EndeavorsCarousel'
-import Illuminate from '../Components/aboutSection';
+import Anantya from '../Components/aboutSection';
 import RotaractClubLayout from "../Components/heroSection"
+import EventsDrive from "../Components/withBackend/EventsDrive"
 const Home = () => {
   return (
     <>
     <RotaractClubLayout/>
       <StatsBar />
-      <Illuminate/>
+      <Anantya/>
+      <EventsDrive/>
       <Legacy/>
       <EndeavorsCarousel/>
       <MomentsFrame />

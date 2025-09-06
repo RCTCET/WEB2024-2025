@@ -1,4 +1,3 @@
-import React from 'react'
 
 function MomentsFrame() {
     return(
@@ -12,7 +11,7 @@ function MomentsFrame() {
 function BgImg() {
     return(
         <div className="flex justify-center flex-col items-center relative top-10 sm:top-24 lg:top-36 h-fit">
-            <img src="/home/friendsBg.svg" alt="friendsBg" loading={"lazy"}/>
+            <img src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756826078/International-Day-of-Friendship-Puzzle-Colouring-Poster-black-and-white-RGB_ver_3_1_bfs140.png" alt="friendsBg" loading={"lazy"}/>
             <HeadText/>
         </div>
     )
@@ -21,7 +20,7 @@ function BgImg() {
 function HeadText() {
     return(
         <div className="absolute lg:top-[165px] px-8">
-            <img src="/home/Moments to Remember.svg" alt="Moments to Remember" loading={"lazy"}/>
+            <h1 className="text-center text-xl md:text-4xl font-bold mb-6 bg-gradient-to-b from-[#98430A] via-[#FE7011] to-[#FDD24C] bg-clip-text text-transparent">Moments to Remember</h1>
         </div>
     )
 }
@@ -29,18 +28,17 @@ function HeadText() {
 function ImgSet() {
     return(
         <>
-        <MomentBox image="/Moments/img11.avif" alt="img11"/>
-            <MomentBox image="/Moments/img1.jpg" alt="img1"/>
-            <MomentBox image="/Moments/img2.jpg" alt="img2"/>
-            <MomentBox image="/Moments/img9.avif" alt="img9"/>
-            <MomentBox image="/Moments/img3.jpg" alt="img3"/>
-            <MomentBox image="/Moments/img4.jpg" alt="img4"/>
-            <MomentBox image="/Moments/img5.jpg" alt="img5"/>
-            <MomentBox image="/Moments/img6.jpg" alt="img6"/>
-            <MomentBox image="/Moments/img7.jpg" alt="img7"/>
-            <MomentBox image="/Moments/img8.avif" alt="img8"/>
-           
-            <MomentBox image="/Moments/img10.avif" alt="img10"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756762284/IMG_0449_xpm5xd.heic" alt="img11"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756785690/Copy_of_IMG_1579_1_cllu8u.jpg" alt="img1"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756974494/IMG_4697_dza6nj.heic" alt="img2"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756974495/IMG_4938_tg7ptl.heic" alt="img9"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974490/_DSC7394_apr72u.jpg" alt="img3"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974506/IMG_8196_m0x3cw.jpg" alt="img4"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756974535/IMG_1853.HEIC_bcgtsv.heic" alt="img5"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756974538/IMG_1943_bswadu.heic" alt="img6"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974878/IMG_3102_kjthpm.jpg" alt="img7"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974888/IMG-20250617-WA0034_qeztwp.jpg" alt="img8"/>
+            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974860/IMG20250320115025_afbtrp.jpg" alt="img10"/>
             
         </>
     )
@@ -65,7 +63,7 @@ function MomentSection() {
 
 function MomentBox({image, alt}) {
     return(
-        <img src={image} alt={alt} className="h-[200px] w-[250px] inline-block ml-4 mr-4 rounded-[12px] object-cover lg:w-[286px] lg:h-[319px] border-[1px] border-black drop-shadow-[2px_2px_4px_rgba(0,0,0,0.40)]" loading={"lazy"}/>
+        <img src={image} alt={alt} className="h-[200px] w-[250px] inline-block ml-4 mr-4 rounded-[12px] object-cover lg:w-[286px] lg:h-[319px] border-[1px] border-black drop-shadow-[2px_2px_4px_rgba(0,0,0,0.40)]" loading="lazy"/>
     )
 }
 

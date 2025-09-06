@@ -1,12 +1,4 @@
-import React from 'react';
 
-function SocialIcon({ href, src, alt }) {
-  return (
-    <a href={href} className="rounded-full border border-gray-500 p-2">
-      <img src={src} alt={alt} className="h-[2em] w-[2em]" />
-    </a>
-  );
-}
 
 function Footer() {
   return (
@@ -32,28 +24,23 @@ function Footer() {
         </div>
 
         <div className="flex space-x-4 object-right-bottom">
-          <a href="mailto:tcetrotaract@gmail.com" className='w-14' >
+         <a href="https://x.com/rc_tcet" className='w-14'>
             <img
 
-              src="/Footer/mailIcon.png"
-              alt="Email Icon" />
-          </a><a href="https://x.com/rc_tcet" className='w-14'>
-            <img
-
-              src="/Footer/xIcon.png"
+              src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756746683/xIcon_xn4fbb.png"
               alt="Twitter Icon" />
           </a>
           <a href="https://www.linkedin.com/in/rotaract-club-tcet-1158811b4/" className='w-14'>
             <img
 
-              src="/Footer/linkedinIcon.png"
+              src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756746683/linkedinIcon_cyydqx.png"
               alt="LinkedIn Icon" />
           </a>
           
           <a href="https://www.instagram.com/rc_tcet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className='w-14'>
             <img
 
-              src="/Footer/instagram.png"
+              src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757119301/47bd8384-8446-479d-9a42-485a28b09c09_zsozfe.png"
               alt="Instagram Icon" />
           </a>
         </div>
@@ -63,7 +50,7 @@ function Footer() {
 
         <hr className="border-black mb-4  " />
 
-        <p className="text-gray-600">Copyright © 2024 by Rotaract Club of TCET</p>
+        <p className="text-gray-600">Copyright © {new Date().getFullYear()} by Rotaract Club of TCET</p>
 
       </div>
     </footer>

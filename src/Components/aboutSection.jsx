@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Illuminate = () => {
+const Anantya = () => {
   return (
     <>
 <div className="w-full flex justify-center mt-10 mb-10">
   <div className="relative w-full lg:h-[400px] overflow-hidden">
     {/* Background image */}
     <div 
-      className="absolute inset-0 bg-cover bg-center"
+      className="absolute inset-0 bg-cover bg-[center_40%] opacity-10"
       style={{
-        backgroundImage: "url('./about.webp')",
+        backgroundImage: "url('https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756840156/IMG_3032_2_ibiefc.jpg')",
       }}
     ></div>
     
@@ -31,8 +31,8 @@ const Illuminate = () => {
       
       <div className="lg:flex-shrink-0 lg:w-1/3 md:w-full">
         <div className="w-full h-full rounded-lg overflow-hidden">
-          <video autoPlay muted loop
-            src="./flame.mp4"             
+          <video autoPlay muted loop preload='none'
+            src="https://res.cloudinary.com/dtc2xaeaf/video/upload/v1756700557/flame_am46ja.mp4"             
             type="video/mp4"
             className="lg:w-full lg:h-[300px] md:h-[200px] w-full h-[300px] object-cover">
           </video>
@@ -42,19 +42,19 @@ const Illuminate = () => {
   </div>
 </div>
 
-<div className="flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto p-4 text-justify mt-10 mb-16">
+<div className="flex flex-col md:flex-row items-center md:items-start max-w-7xl mx-auto p-4 text-justify mt-10 mb-16">
   <div className="md:w-1/3 flex items-center justify-center">
     <img 
-      src='/illuminate.svg'
-      alt="Illuminate" 
-      className="w-full h-80 object-cover"
-      loading={"lazy"}
+      src='https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756759766/theme_logo_anantya_bebpcc.png'
+      alt="Anantya" 
+      className="w-full h-50 object-cover"
+      loading="lazy" 
     />
   </div>
   <div className="md:w-2/3 md:ml-8">
-    <h2 className="text-2xl font-bold text-orange-500 mb-4">ILLUMINATE: CARRY A LEGACY, IGNITE A CHANGE</h2>
+    <h2 className="text-2xl font-bold text-orange-500 mb-4">ANANTYA: A LEGACY THAT LASTS</h2>
     <p className="text-gray-700">
-      The theme encapsulates the powerful idea of honoring and continuing the values, traditions, and achievements of those who came before us, while also embracing the responsibility to inspire and lead new transformations. It suggests a dual purpose: to shed light on the wisdom and strengths of the past, ensuring they are not forgotten, and to use that light as a beacon to guide and fuel meaningful change for the future. This theme emphasizes the importance of being both a steward of history and a catalyst for progress, recognizing that true illumination comes from the balance between preserving what is valuable and daring to innovate.
+      The theme embodies the timeless pursuit of creating something that transcends the present and endures for generations to come. Anantya, meaning infinity, reflects the boundless impact of actions, values, and memories that continue to live long after moments have passed. It emphasizes the idea that true legacy is not confined to a single year or achievement, but is built through every effort, every bond, and every milestone that shapes the journey of Rotaract. This theme calls on us to leave behind imprints of compassion, leadership, and service. Memories that inspire, traditions that strengthen, and values that outlast time itself. “A Legacy That Lasts” is a reminder that our journey today becomes the foundation for tomorrow, ensuring that what we create together resonates infinitely, becoming a guiding force for those who follow.
     </p>
   </div>
 </div>
@@ -63,4 +63,4 @@ const Illuminate = () => {
   );
 };
 
-export default Illuminate;
+export default Anantya;
