@@ -26,8 +26,8 @@ export default function EventsDrive() {
   }
 
   return (
-    <div className=" p-6">
-      <h2 className="text-2xl font-bold mb-4 text-center text-orange-500">
+    <div className="border-t-2 mt rounded-t-xl p-6">
+      <h2 className="text-3xl mt-10 font-bold mb-4 text-center text-orange-500">
         🎉 Events & Drives
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -1,26 +1,26 @@
-
-
 export const Avenue = () => {
   return (
     <>
-<div>
-         <img
+      {/* Hero Banner */}
+      <div>
+        <img
           src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756820583/Frame_116_kxbhve.png"
           alt="avenue_page"
-          className="w-full"
+          className="w-full object-cover"
         />
       </div>
-     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 px-2 sm:px-4 mb-4 mt-[30px]">
+
+      {/* Grid Section */}
+<div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6 sm:px-10 lg:px-16 mt-10 mb-10">
   {allinfo.map((item, index) => (
     <div
       key={index}
-      className="bg-[#FFEFD9] flex flex-col items-center justify-start p-2 w-full h-[400px] 
-                 relative rounded-[5px] shadow-[0_19px_38px_rgba(0,0,0,0.3),0_15px_12px_rgba(0,0,0,0.22)] 
-                 transition-all duration-300 ease-in-out 
-                 hover:scale-105 hover:shadow-[0_25px_50px_rgba(0,0,0,0.35),0_20px_15px_rgba(0,0,0,0.25)]"
+      className="bg-[#FFEFD9] flex flex-col items-center text-center p-6 rounded-2xl 
+                 shadow-md hover:shadow-xl transition-transform duration-300 ease-in-out 
+                 hover:scale-105"
     >
-      {/* Image Container */}
-      <div className="flex items-end justify-center h-[300px] w-full bg-white rounded-[5px] overflow-hidden shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+      {/* Image */}
+      <div className="flex items-center justify-center h-48 w-full bg-white rounded-xl overflow-hidden shadow-inner mb-4">
         <img
           src={item.img}
           alt={item.title}
@@ -29,12 +29,12 @@ export const Avenue = () => {
       </div>
 
       {/* Title */}
-      <h3 className="text-sm text-red-500 font-bold mt-3 mb-1 text-center sm:text-[20px]">
+      <h3 className="text-lg sm:text-xl font-bold text-red-600 mb-2">
         {item.title}
       </h3>
 
       {/* Description */}
-      <p className="text-xs text-black-600 text-center">
+      <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
         {item.description}
       </p>
     </div>
@@ -54,7 +54,7 @@ const allinfo = [
   },
   {
     title: "Community Service",
-    img: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756701724/International_Service_knpfwk.png",
+    img: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756701729/Community_Service_frzs8z.png",
     description:
       "Focuses on projects and programs that benefit the local community; addresses needs through volunteerism and outreach.",
   },

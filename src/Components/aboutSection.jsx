@@ -31,7 +31,7 @@ const Anantya = () => {
       
       <div className="lg:flex-shrink-0 lg:w-1/3 md:w-full">
         <div className="w-full h-full rounded-lg overflow-hidden">
-          <video autoPlay muted loop
+          <video autoPlay muted loop preload='none'
             src="https://res.cloudinary.com/dtc2xaeaf/video/upload/v1756700557/flame_am46ja.mp4"             
             type="video/mp4"
             className="lg:w-full lg:h-[300px] md:h-[200px] w-full h-[300px] object-cover">
@@ -48,7 +48,7 @@ const Anantya = () => {
       src='https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756759766/theme_logo_anantya_bebpcc.png'
       alt="Anantya" 
       className="w-full h-50 object-cover"
-      loading={"lazy"}
+      loading="lazy" 
     />
   </div>
   <div className="md:w-2/3 md:ml-8">

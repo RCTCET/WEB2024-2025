@@ -5,7 +5,6 @@ import EndeavorsCarousel from '../Components/EndeavorsCarousel'
 import Anantya from '../Components/aboutSection';
 import RotaractClubLayout from "../Components/heroSection"
 import EventsDrive from "../Components/withBackend/EventsDrive"
-import SaaFineTable from '../Components/withBackend/SaaFineTable';
 const Home = () => {
   return (
     <>

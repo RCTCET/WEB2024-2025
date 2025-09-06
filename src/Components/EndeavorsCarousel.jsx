@@ -91,7 +91,7 @@ const EndeavorsCarousel = () => {
                                 src={slide.image}
                                 alt={slide.title}
                                 className="w-full h-[32rem] object-cover"
-                                loading={"lazy"}
+                                loading="lazy"
                             />
                             
                             <div className="absolute bottom-4 left-4 max-w bg-black/60 p-2 rounded-lg mr-5">

@@ -1,4 +1,3 @@
-import React from 'react'
 
 function MomentsFrame() {
     return(
@@ -64,7 +63,7 @@ function MomentSection() {
 
 function MomentBox({image, alt}) {
     return(
-        <img src={image} alt={alt} className="h-[200px] w-[250px] inline-block ml-4 mr-4 rounded-[12px] object-cover lg:w-[286px] lg:h-[319px] border-[1px] border-black drop-shadow-[2px_2px_4px_rgba(0,0,0,0.40)]" loading={"lazy"}/>
+        <img src={image} alt={alt} className="h-[200px] w-[250px] inline-block ml-4 mr-4 rounded-[12px] object-cover lg:w-[286px] lg:h-[319px] border-[1px] border-black drop-shadow-[2px_2px_4px_rgba(0,0,0,0.40)]" loading="lazy"/>
     )
 }
 
