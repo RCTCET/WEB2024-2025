@@ -9,10 +9,12 @@ import About from './pages/about';
 import Projects from './pages/projects';
 import ContactForm from './pages/contactus';
 import { Avenue } from './Components/Avenue';
+import { ThemeProvider } from './context/themeContext';
 import SaaFineTable from './Components/withBackend/SaaFineTable';
 
 function App() {
   return (
+    <ThemeProvider>
     <Router basename="/">
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -30,6 +32,7 @@ function App() {
         </Route>
       </Routes>
     </Router>
+    </ThemeProvider>
   );
 }
 export default App;

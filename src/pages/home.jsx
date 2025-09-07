@@ -8,9 +8,9 @@ import RotaractClubLayout from "../Components/heroSection"
 import EventsDrive from "../Components/withBackend/EventsDrive"
 const Home = () => {
   return (
-    <>
-    <RotaractClubLayout/>
-      <StatsBar />
+    <div className="bg-white dark:bg-stone-900 min-h-screen">
+      <RotaractClubLayout/>
+      {/* <StatsBar /> */}
       <Anantya/>
       <EventsDrive/>
       <Legacy/>
@@ -18,7 +18,7 @@ const Home = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <MomentsFrame />
       </Suspense>
-    </>
+    </div>
   );
 };
 

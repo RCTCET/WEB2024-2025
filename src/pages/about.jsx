@@ -9,12 +9,14 @@ const Objectives = React.lazy(() => import('../Components/aboutpage/objective'))
 
 const About = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <AboutSection />
-      <Objectives />
-      {/* <AvenuesofService /> */}
-      <OurJourney />
-    </Suspense>
+    <div className="bg-white dark:bg-stone-900 min-h-screen">
+      <Suspense fallback={<div>Loading...</div>}>
+        <AboutSection />
+        <Objectives />
+        {/* <AvenuesofService /> */}
+        <OurJourney />
+      </Suspense>
+    </div>
   );
 };
 
