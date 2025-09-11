@@ -26,17 +26,17 @@ export default function EventsDrive() {
   }
 
   return (
-  <div className="border-t-2 mt rounded-t-xlp-6 bg-white dark:bg-stone-900">
+  <div className=" my-8 rounded-t-xlp-6 bg-white dark:bg-stone-900">
     <h2 className="text-3xl mt-10 font-bold mb-4 text-center text-orange-500 dark:text-yellow-400">
       🎉 Events & Drives
     </h2>
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 mb-10 gap-6">
       <div className="flex">
         {events.length > 0 ? (
         events.map((event, idx) => (
           <div
             key={idx}
-            className="bg-white dark:bg-stone-800 shadow-lg rounded-xl p-4 hover:shadow-2xl transition border border-orange-100 dark:border-stone-600"
+            className="bg-white dark:bg-stone-800 shadow-2xl rounded-xl p-4 mx-4 hover:shadow-2xl transition border border-orange-100 dark:border-stone-600"
           >
             <h3 className="text-lg font-semibold text-orange-500 dark:text-yellow-400">
               {event.eventName}

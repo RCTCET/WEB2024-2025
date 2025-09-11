@@ -12,10 +12,10 @@ const Home = () => {
       <RotaractClubLayout/>
       {/* <StatsBar /> */}
       <Anantya/>
+      <Suspense fallback={<div>Loading...</div>}>
       <EventsDrive/>
       <Legacy/>
       <EndeavorsCarousel/>
-      <Suspense fallback={<div>Loading...</div>}>
         <MomentsFrame />
       </Suspense>
     </div>

@@ -55,7 +55,7 @@ const EndeavorsCarousel = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
     };
 return (
-  <div className="bg-white dark:bg-stone-900 flex flex-col items-center justify-center my-10">
+  <div className="bg-white dark:bg-stone-900 flex flex-col items-center justify-center mt-10">
     <div className="w-full max-w-5xl flex max-sm:flex-col justify-center items-center gap-x-4 gap-y-4">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-amber-800 to-yellow-400 dark:from-yellow-600 dark:to-yellow-200">Our Latest Endeavours</h1>
       <div className="flex gap-x-2">
@@ -94,7 +94,7 @@ return (
               loading={"lazy"}
             />
             
-            <div className="absolute bottom-4 left-4 max-w bg-black/60 dark:bg-black/80 p-2 rounded-lg mr-5">
+            <div className="absolute bottom-20 left-4  bg-black/60 dark:bg-black/80 p-2 rounded-lg mr-5">
               <h3 className="text-sm md:text-lg xl:text-xl font-bold text-white">{slide.title}</h3>
               <p className="text-[0.65rem] md:text-sm xl:text-base text-white">{slide.description}</p>
             </div>
