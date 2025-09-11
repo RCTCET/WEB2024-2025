@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+{/* bg-[url('https://www.rc.tcetmumbai.in/Achievement/Baseline%20grid%20bg.svg')] */}
 
 export const Projectachivement = () => {
   return (
@@ -38,7 +39,7 @@ export const Projectachivement = () => {
         Crowns of Quarter
       </h2>
 
-      <div className="w-full mt-[20px] bg-[url('https://www.rc.tcetmumbai.in/Achievement/Baseline%20grid%20bg.svg')] bg-cover bg-center p-6 flex justify-center mb-[40px]">
+      <div className="w-full mt-[20px] p-6 flex justify-center mb-[40px]">
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6 max-w-5xl w-full place-items-center">
           {Crown.map((item) => (
             <div
@@ -85,8 +86,7 @@ export const Projectachivement = () => {
       <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent text-center my-[20px]">
         Club Nomination
       </h2>
-
-      <div className="w-full mt-[20px] bg-[url('https://www.rc.tcetmumbai.in/Achievement/Baseline%20grid%20bg.svg')] bg-cover bg-center p-6 flex justify-center mb-[40px]">
+      <div className="w-full mt-[20px]  bg-cover bg-center p-6 flex justify-center mb-[40px]">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl w-full place-items-center">
           {projectNomination.map((item) => (
             <div

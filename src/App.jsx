@@ -11,6 +11,8 @@ import ContactForm from './pages/contactus';
 import { Avenue } from './Components/Avenue';
 import { ThemeProvider } from './context/themeContext';
 import SaaFineTable from './Components/withBackend/SaaFineTable';
+import FeedBack from './Components/withBackend/FeedBack';
+
 
 function App() {
   return (
@@ -27,8 +29,11 @@ function App() {
           <Route path="achievement" element={<Achievement />} />
           <Route path="saa-fine" element={<SaaFineTable/>} />
           <Route path="meet-the-team" element={<TeamPage />} />
+          <Route path="feedback" element={<FeedBack />} />
+          
           {/* club hub finish */}
           <Route path="contact" element={<ContactForm />} />
+          
         </Route>
       </Routes>
     </Router>

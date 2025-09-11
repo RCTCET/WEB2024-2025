@@ -25,15 +25,15 @@ function Projects() {
               Discover the transformative initiatives that define our commitment
               to positive change in the community.
             </p>
-            <button className="mt-6 bg-orange-500 dark:bg-yellow-600 hover:bg-orange-600 dark:hover:bg-yellow-700 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition">
+            <a href="/"><button className="mt-6 bg-orange-500 dark:bg-yellow-600 hover:bg-orange-600 dark:hover:bg-yellow-700 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition">
               Get Involved
-            </button>
+            </button></a>
           </div>
         </div>
       </div>
 
       {/* Links */}
-      <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur border-b dark:border-stone-700">
+      {/* <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur border-b dark:border-stone-700">
         <div className="flex overflow-x-auto text-sm sm:text-md space-x-6 p-3 sm:p-4 font-bold underline">
           <a href="#Club-Service" className="whitespace-nowrap text-gray-800 dark:text-stone-200 hover:text-orange-600 dark:hover:text-yellow-400">Club Service</a>
           <a href="#Community-Service" className="whitespace-nowrap text-gray-800 dark:text-stone-200 hover:text-orange-600 dark:hover:text-yellow-400">Community Service</a>
@@ -44,7 +44,38 @@ function Projects() {
           <a href="#Digital-Communication" className="whitespace-nowrap text-gray-800 dark:text-stone-200 hover:text-orange-600 dark:hover:text-yellow-400">Digital Communication</a>
           <a href="#Partner-In-Service" className="whitespace-nowrap text-gray-800 dark:text-stone-200 hover:text-orange-600 dark:hover:text-yellow-400">Partner In Service</a>
         </div>
-      </div>
+      </div> */}
+<div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md border-b dark:border-stone-700 sticky top-0 z-20">
+  <nav className="flex overflow-x-auto scrollbar-hide text-sm sm:text-base font-semibold p-3 sm:p-4 gap-3 sm:gap-4">
+    {[
+      { id: "Club-Service", label: "Club Service" },
+      { id: "Community-Service", label: "Community Service" },
+      { id: "International-Service", label: "International Service" },
+      { id: "Professional-Development", label: "Professional Development" },
+      { id: "Sports", label: "Sports" },
+      { id: "Entrepreneurship-Development", label: "Entrepreneurship Development" },
+      { id: "Digital-Communication", label: "Digital Communication" },
+      { id: "Partner-In-Service", label: "Partner In Service" },
+    ].map((link) => (
+      <a
+        key={link.id}
+        href={`#${link.id}`}
+        className="px-4 py-2 rounded-xl whitespace-nowrap
+          bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-stone-800 dark:to-stone-900
+          text-stone-700 dark:text-stone-200
+          border border-amber-200 dark:border-stone-700
+          hover:from-orange-100 hover:to-yellow-100 hover:text-orange-700
+          dark:hover:from-yellow-100/10 dark:hover:to-yellow-200/10 dark:hover:text-yellow-400
+          transition-all shadow-sm hover:shadow-md"
+      >
+        {link.label}
+      </a>
+    ))}
+  </nav>
+</div>
+
+
+
 
       {/* Sections */}
       <div className="p-4 sm:p-6 space-y-16">

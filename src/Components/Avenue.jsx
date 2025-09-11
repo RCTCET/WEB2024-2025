@@ -1,15 +1,28 @@
 export const Avenue = () => {
   return (
     <div className="bg-white dark:bg-stone-900 min-h-screen">
+      {/* the hero header is image not text with curve bg */}
       <div>
-        <img
+        {/* <img
           src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756820583/Frame_116_kxbhve.png"
           alt="avenue_page"
           className="w-full object-cover"
+        /> */}
+        <img
+          src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756820583/Frame_116_kxbhve.png"
+          alt="avenue_page"
+          className="w-full object-cover dark:hidden"
+        />
+
+        {/* Dark mode image */}
+        <img
+          src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757603396/Frame_5826_exnrgn.png"
+          alt="avenue_page_dark"
+          className="hidden w-full object-cover dark:block"
         />
       </div>
-      
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 px-2 sm:px-4 mb-4 mt-[30px]">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-2 sm:px-4 mb-4 mx-10 mt-[30px]">
         {allinfo.map((item, index) => (
           <div
             key={index}

@@ -30,11 +30,8 @@ function ImgSet() {
         <>
             <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756762284/IMG_0449_xpm5xd.heic" alt="img11"/>
             <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756785690/Copy_of_IMG_1579_1_cllu8u.jpg" alt="img1"/>
-            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756974494/IMG_4697_dza6nj.heic" alt="img2"/>
-            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756974495/IMG_4938_tg7ptl.heic" alt="img9"/>
             <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974490/_DSC7394_apr72u.jpg" alt="img3"/>
             <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974506/IMG_8196_m0x3cw.jpg" alt="img4"/>
-            <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756974535/IMG_1853.HEIC_bcgtsv.heic" alt="img5"/>
             <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/f_auto,q_auto/v1756974538/IMG_1943_bswadu.heic" alt="img6"/>
             <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974878/IMG_3102_kjthpm.jpg" alt="img7"/>
             <MomentBox image="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756974888/IMG-20250617-WA0034_qeztwp.jpg" alt="img8"/>
@@ -47,7 +44,7 @@ function ImgSet() {
 function MomentSection() {
     return(
         <div className="flex justify-between items-center w-full px-2">
-        <div className="z-10 lg:h-[319px] bg-gradient-to-r from-orange-200 dark:from-stone-700 rounded-l-[12px] h-[200px] w-[20px] lg:w-[35px]"></div>
+        <div className="z-10 lg:h-[319px] bg-gradient-to-r from-orange-100 dark:from-stone-700 rounded-l-[12px] h-[200px] w-[20px] lg:w-[35px]"></div>
             <div className="w-full overflow-hidden whitespace-nowrap box-content drop-shadow-[2px_2px_4px_rgba(0,0,0,0.40)]">
                 <div className="lg:animate-slider animate-slider_mobile hover:pause-animation">
                     <ImgSet/>
@@ -56,7 +53,7 @@ function MomentSection() {
                     <ImgSet/>
                 </div>
             </div>
-        <div className="z-10 lg:h-[319px] bg-gradient-to-l from-orange-200 dark:from-stone-700 rounded-r-[12px] h-[200px] w-[20px] lg:w-[35px]"></div>
+        <div className="z-10 lg:h-[319px] bg-gradient-to-l from-orange-100 dark:from-stone-700 rounded-r-[12px] h-[200px] w-[20px] lg:w-[35px]"></div>
         </div>
     )
 }
