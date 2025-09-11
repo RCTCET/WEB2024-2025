@@ -45,34 +45,34 @@ function Projects() {
           <a href="#Partner-In-Service" className="whitespace-nowrap text-gray-800 dark:text-stone-200 hover:text-orange-600 dark:hover:text-yellow-400">Partner In Service</a>
         </div>
       </div> */}
-<div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md border-b dark:border-stone-700 sticky top-0 z-20">
-  <nav className="flex overflow-x-auto scrollbar-hide text-sm sm:text-base font-semibold p-3 sm:p-4 gap-3 sm:gap-4">
-    {[
-      { id: "Club-Service", label: "Club Service" },
-      { id: "Community-Service", label: "Community Service" },
-      { id: "International-Service", label: "International Service" },
-      { id: "Professional-Development", label: "Professional Development" },
-      { id: "Sports", label: "Sports" },
-      { id: "Entrepreneurship-Development", label: "Entrepreneurship Development" },
-      { id: "Digital-Communication", label: "Digital Communication" },
-      { id: "Partner-In-Service", label: "Partner In Service" },
-    ].map((link) => (
-      <a
-        key={link.id}
-        href={`#${link.id}`}
-        className="px-4 py-2 rounded-xl whitespace-nowrap
+      <div className="bg-white/80 dark:bg-stone-900/80 backdrop-blur-md border-b dark:border-stone-700 sticky top-0 z-20">
+        <nav className="flex overflow-x-auto scrollbar-hide text-sm sm:text-base font-semibold p-3 sm:p-4 gap-3 sm:gap-4">
+          {[
+            { id: "Club-Service", label: "Club Service" },
+            { id: "Community-Service", label: "Community Service" },
+            { id: "International-Service", label: "International Service" },
+            { id: "Professional-Development", label: "Professional Development" },
+            { id: "Sports", label: "Sports" },
+            { id: "Entrepreneurship-Development", label: "Entrepreneurship Development" },
+            { id: "Digital-Communication", label: "Digital Communication" },
+            { id: "Partner-In-Service", label: "Partner In Service" },
+          ].map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className="px-4 py-2 rounded-xl whitespace-nowrap
           bg-gradient-to-r from-amber-50 to-yellow-50 dark:from-stone-800 dark:to-stone-900
           text-stone-700 dark:text-stone-200
           border border-amber-200 dark:border-stone-700
           hover:from-orange-100 hover:to-yellow-100 hover:text-orange-700
           dark:hover:from-yellow-100/10 dark:hover:to-yellow-200/10 dark:hover:text-yellow-400
           transition-all shadow-sm hover:shadow-md"
-      >
-        {link.label}
-      </a>
-    ))}
-  </nav>
-</div>
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
 
 
 
@@ -143,12 +143,12 @@ function Projects() {
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-full sm:w-[85%] md:w-[70%] lg:w-[60%]">
               <ProjectCard
-                imageUrl="https://via.placeholder.com/800x400"
-                title="Global Peace Summit"
-                objective="An initiative fostering cross-border friendships and cultural exchange."
+                imageUrl="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756785653/nin_4_vghiwb.jpg"
+                title="Nations In Numbers"
+                objective="Rotaract Club of TCET organised Nations In Numbers on World Population Day to raise awareness about global demographics, culture, and challenges through creative pitches, quizzes, and interactive rounds."
                 impact={[
-                  "Connected 50+ international students in dialogue sessions.",
-                  "Promoted cultural awareness and long-term collaboration.",
+                  "Encouraged participants to think critically about real-world issues, linking numbers with stories of people and nations.",
+                  "Sparked cultural curiosity, empathy, and awareness, leaving students more mindful of global diversity and responsibility.",
                 ]}
               />
             </div>
@@ -161,30 +161,31 @@ function Projects() {
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-full sm:w-[85%] md:w-[70%] lg:w-[60%]">
               <ProjectCard
-                imageUrl="https://via.placeholder.com/800x400"
-                title="Career Bootcamp"
-                objective="Interactive sessions on resume building, LinkedIn branding, and interviews."
+                imageUrl="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756785657/Copy_of_IMG20250627144703_cxmlno.jpg"
+                title="Prerana"
+                objective="Rotaract Club of TCET organised Prena, a 5-day learning fest, to spark curiosity and holistic development among students through hands-on sessions, creativity, and competitions."
                 impact={[
-                  "Helped 200+ students polish their career skills.",
-                  "Built confidence and readiness for professional opportunities.",
+                  "Covered diverse skills including solar robotics, Arduino, photography, Tableau, and breadboard circuits, along with engaging quiz contests.",
+                  "Concluded with a reel-making competition and prize distribution, leaving students motivated, skilled, and inspired to keep exploring.",
                 ]}
               />
             </div>
           </div>
         </section>
 
+        {/*  */}
         {/* Sports */}
         <section id="Sports" className="scroll-mt-24">
           <h2 className="text-xl sm:text-2xl text-center font-bold mb-4 text-orange-600 dark:text-yellow-400">Sports</h2>
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-full sm:w-[85%] md:w-[70%] lg:w-[60%]">
               <ProjectCard
-                imageUrl="https://via.placeholder.com/800x400"
-                title="Rotaract Sports League"
-                objective="Engaging members through cricket, football, and badminton tournaments."
+                imageUrl="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756785672/Copy_of_IMG_1577_1_qflxxv.jpg"
+                title="Monsoon Matchday 2.0"
+                objective="Rotaract Club of TCET organised Monsoon Matchday 2.0, a football tournament, to foster teamwork, sportsmanship, and healthy competition while providing members a professional matchday experience."
                 impact={[
-                  "Participation of 150+ students across sports.",
-                  "Built teamwork, discipline, and fellowship through sportsmanship.",
+                  "Brought together 14 enthusiastic teams in an electrifying series of matches, filled with energy, passion, and fair play.",
+                  "Created unforgettable memories with thrilling finals under the rain, live updates, and vibrant celebrations, strengthening camaraderie among players and spectators.",
                 ]}
               />
             </div>
@@ -197,12 +198,12 @@ function Projects() {
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-full sm:w-[85%] md:w-[70%] lg:w-[60%]">
               <ProjectCard
-                imageUrl="https://via.placeholder.com/800x400"
-                title="Startup Pitch Night"
-                objective="Platform for budding entrepreneurs to pitch ideas and gain feedback."
+                imageUrl="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757610346/Copy_of_IMG_3287_dp5hcc_bt1ngw.jpg"
+                title="Rebrand Rumble"
+                objective="Rotaract Club of TCET organised Rebrand Rumble to spark creativity, teamwork, and entrepreneurial thinking by challenging students to reimagine popular brands in fun and innovative ways."
                 impact={[
-                  "Featured 15 student-led startups.",
-                  "Attracted mentors and seed funding opportunities.",
+                  "Engaged participants in a two-round contest blending rebranding pitches and a high-energy entrepreneurship quiz.",
+                  "Enhanced creativity, teamwork, and pitching skills while creating a lively, laughter-filled atmosphere that made learning fun and memorable.",
                 ]}
               />
             </div>
@@ -215,12 +216,12 @@ function Projects() {
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-full sm:w-[85%] md:w-[70%] lg:w-[60%]">
               <ProjectCard
-                imageUrl="https://via.placeholder.com/800x400"
-                title="Social Media Campaign"
-                objective="Awareness drives via Instagram reels and YouTube shorts."
+                imageUrl="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756785674/Copy_of_IMG20250804161128_1_apwyjd.jpg"
+                title="Visual Velocity 2.0"
+                objective="Rotaract Club of TCET organised Visual Velocity 2.0, a digital design competition with a live Canva workshop, to enhance creativity, sharpen design skills, and foster teamwork under real-time challenges."
                 impact={[
-                  "Reached 10,000+ views across platforms.",
-                  "Increased engagement and community visibility.",
+                  "Engaged 80+ participants in three interactive rounds, blending learning with competition and hands-on creativity.",
+                  "Boosted confidence, teamwork, and design skills while leaving participants inspired to innovate and explore digital tools.",
                 ]}
               />
             </div>
@@ -233,17 +234,18 @@ function Projects() {
           <div className="flex flex-wrap justify-center gap-6">
             <div className="w-full sm:w-[85%] md:w-[70%] lg:w-[60%]">
               <ProjectCard
-                imageUrl="https://via.placeholder.com/800x400"
-                title="Joint Rotaract Initiative"
-                objective="Collaboration with other Rotaract clubs for impactful service projects."
+                imageUrl="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757611079/Copy_of_IMG_6452_mzgv8i_ofksln.jpg"
+                title="Panache"
+                objective="Rotaract Club of TCET organised Panache, an interschool fest at Ramniwas Bajaj English High School, to provide a joyful platform for students to showcase their talents, build confidence, and celebrate creativity and teamwork."
                 impact={[
-                  "Joined hands with 5 clubs, expanding reach by 500+ beneficiaries.",
-                  "Enhanced inter-club fellowship and impact scale.",
+                  "Hosted 14 diverse events engaging 300+ students across grades 1–9, with enthusiastic participation from parents and teachers.",
+                  "Created an inspiring environment of growth, joy, and friendship, leaving children with pride, smiles, and unforgettable memories.",
                 ]}
               />
             </div>
           </div>
         </section>
+
       </div>
     </div>
   );
