@@ -45,7 +45,8 @@ export default function FeedBackForm() {
   };
 
   return (
-    <div className="p-6 dark:bg-stone-900 min-h-[80vh] flex justify-center">
+    <div className="md:min-h-[80vh]">
+    <div className="p-6 dark:bg-stone-900 flex justify-center">
       <div className="w-full max-w-lg bg-white dark:bg-stone-700 rounded-lg shadow-lg p-6">
         <h2 className="text-2xl font-bold mb-4 text-center text-orange-500">
           📝 Submit Feedback
@@ -112,6 +113,7 @@ export default function FeedBackForm() {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 }
