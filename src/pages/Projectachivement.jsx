@@ -1,9 +1,51 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
-{/* bg-[url('https://www.rc.tcetmumbai.in/Achievement/Baseline%20grid%20bg.svg')] */}
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Keyboard, Pagination, Navigation } from "swiper/modules";
 
-export const Projectachivement = () => {
+// Data arrays
+const images = [
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658081/4_qnnrol.png",
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658081/5_n50mr1.png",
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658080/6_nicloc.png",
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658081/7_ojodos.png",
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658081/8_owtkof.png",
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658081/9_dnzkos.png",
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658082/10_iixlzy.png",
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658082/11_cg0n6o.png",
+  "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757658080/12_j8lelc.png",
+];
+
+const achievementsSlider = [
+  {
+    id: 1,
+    image:
+      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996211/IMG_7333_tqqivm_nhpwrj.jpg",
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996210/Copy_of_IMG_2045_ovdcd4_pn8vqx.jpg",
+  },
+  {
+    id: 3,
+    image:
+      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996209/IMG_7404_bc1gjb_udmstq_godqvw.jpg",
+  },
+  {
+    id: 4,
+    image:
+      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996208/IMG_7329_qffgwb_lvl2yg.jpg",
+  },
+  {
+    id: 5,
+    image:
+      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996208/Copy_of_IMG_2049_oglzrf_wuqkxo.jpg",
+  },
+];
+
+const Projectachievement = () => {
   return (
     <>
       {/* Project Achievement */}
@@ -36,72 +78,47 @@ export const Projectachivement = () => {
 
       {/* Crowns of Quarter */}
       <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent text-center my-[20px]">
-        Crowns of Quarter
+        Crowns of Quarter & Nominations
       </h2>
 
-      <div className="w-full mt-[20px] p-6 flex justify-center mb-[40px]">
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6 max-w-5xl w-full place-items-center">
-          {Crown.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#FFEFD9] p-4 rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-col items-center text-center max-w-sm w-full"
-            >
-              <div className="w-full h-[250px] flex items-center justify-center rounded-lg mb-4 overflow-hidden ">
+      <div className="flex justify-center items-center w-full mb-16">
+        <div className="w-[45vw] relative">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            keyboard={{ enabled: true }}
+            navigation
+            modules={[Keyboard, Pagination, Navigation]}
+            className="mySwiper w-full h-full"
+          >
+            {images.map((url, index) => (
+              <SwiperSlide key={index}>
                 <img
-                  src={item.image}
-                  alt={`Crown ${item.id}`}
-                  className="max-h-full max-w-full object-contain"
+                  src={url}
+                  alt={`slide-${index + 1}`}
+                  className="w-full h-full object-contain rounded-lg"
                 />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
 
-      {/* Individual Achievement */}
-      <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent text-center my-[20px]">
-        Individual Achievement
-      </h2>
-
-      <div className="w-full mt-[20px] bg-[url('https://www.rc.tcetmumbai.in/Achievement/Baseline%20grid%20bg.svg')] bg-cover bg-center p-6 flex justify-center mb-[40px]">
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-6 max-w-5xl w-full place-items-center">
-          {individual.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#FFEFD9] p-4 rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-col items-center text-center max-w-sm w-full"
-            >
-              <div className="w-full h-[250px] flex items-center justify-center rounded-lg mb-4 overflow-hidden ">
-                <img
-                  src={item.image}
-                  alt={`Individual ${item.id}`}
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Club Nomination */}
-      <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-600 to-orange-400 bg-clip-text text-transparent text-center my-[20px]">
-        Club Nomination
-      </h2>
-      <div className="w-full mt-[20px]  bg-cover bg-center p-6 flex justify-center mb-[40px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl w-full place-items-center">
-          {projectNomination.map((item) => (
-            <div
-              key={item.id}
-              className="bg-[#FFEFD9] p-4 rounded-lg shadow-[0_8px_20px_rgba(0,0,0,0.25)] flex flex-col items-center text-center max-w-sm w-full"
-            >
-              <div className="w-full h-[250px] flex items-center justify-center rounded-lg mb-4 overflow-hidden ">
-                <img
-                  src={item.image}
-                  alt={`Nomination ${item.id}`}
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-          ))}
+          {/* Custom navigation styles */}
+          <style jsx global>{`
+            .swiper-button-next,
+            .swiper-button-prev {
+              width: 35px !important;
+              height: 35px !important;
+              background: white !important;
+              border-radius: 50% !important;
+              box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+            }
+            .swiper-button-next:after,
+            .swiper-button-prev:after {
+              font-size: 16px !important;
+              color: black !important;
+              font-weight: bold;
+            }
+          `}</style>
         </div>
       </div>
 
@@ -115,7 +132,7 @@ export const Projectachivement = () => {
           modules={[Autoplay]}
           slidesPerView={3}
           spaceBetween={20}
-          loop={true}
+          loop
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
@@ -128,7 +145,7 @@ export const Projectachivement = () => {
           }}
           className="max-w-6xl mx-auto"
         >
-          {achivemnetslider.map((item) => (
+          {achievementsSlider.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="flex items-center justify-center h-[250px] bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
@@ -144,62 +161,4 @@ export const Projectachivement = () => {
     </>
   );
 };
-
-// Data
-const Crown = [
-  {
-    id: 1,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756825813/5_sdtayu.png",
-  },
-];
-
-const individual = [
-  {
-    id: 1,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756825838/10_ypwthh.png",
-  },
-];
-
-const projectNomination = [
-  {
-    id: 1,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756825823/7_ewcflx.png",
-  },
-  {
-    id: 2,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756825827/8_b5u9mo.png",
-  },
-];
-
-const achivemnetslider = [
-  {
-    id: 1,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996211/IMG_7333_tqqivm_nhpwrj.jpg",
-  },
-  {
-    id: 2,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996210/Copy_of_IMG_2045_ovdcd4_pn8vqx.jpg",
-  },
-  {
-    id: 3,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996209/IMG_7404_bc1gjb_udmstq_godqvw.jpg",
-  },
-  {
-    id: 4,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996208/IMG_7329_qffgwb_lvl2yg.jpg",
-  },
-  {
-    id: 5,
-    image:
-      "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756996208/Copy_of_IMG_2049_oglzrf_wuqkxo.jpg",
-  },
-];
-
+export default Projectachievement

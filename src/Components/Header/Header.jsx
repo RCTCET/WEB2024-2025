@@ -87,7 +87,7 @@ function Header() {
         {/* Logo */}
         <div className="flex items-center">
           <img
-            src="/RcTcetLogo.svg"
+            src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757125056/logo_pdqctw_ztwsvl.png"
             alt="Logo"
             className="h-10 w-10 rounded-full"
           />

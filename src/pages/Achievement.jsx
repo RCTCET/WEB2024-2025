@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { Pagination, Autoplay } from "swiper/modules";
-import { Projectachivement } from "./Projectachivement";
+import Projectachievement from "./Projectachivement";
 
 export const Achievement = () => {
   return (
@@ -112,7 +112,7 @@ export const Achievement = () => {
 
       <div className="my-[10px]">
 
-        <Projectachivement />
+        <Projectachievement />
 
 
       </div>
