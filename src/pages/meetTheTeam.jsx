@@ -679,7 +679,7 @@ const boardOfDirectors = [
   {
     id: 166,
     name: "Rtr .Tanishka Jakhmola",
-    role: "Shiksha",
+    role: "Shiksha & Jt.Club Service",
     image: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756701818/Rtr._Tanishka_Jakhmola_BOD_Shiksha_o3pbx8.png",
     year: "2025-2026",
   },
@@ -704,7 +704,14 @@ const boardOfDirectors = [
     image: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756701859/Rtr._Ashrit_Bang_BOD_ED_xozjip.png",
     year: "2025-2026",
   },
-
+  {
+    id: 210,
+    name: "Rtr. Ashrit Bhang",
+    role: "Entrepreneurship Development ",
+    image: "https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756701849/Rtr._Nisha_Singh_BOD_ED_h4dl36.png",
+    year: "2025-2026",
+  },
+// https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756701849/Rtr._Nisha_Singh_BOD_ED_h4dl36.png
   {
     id: 169,
     name: "Rtr. Ritu Dubey",

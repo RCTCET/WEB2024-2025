@@ -18,7 +18,7 @@ export const Achievement = () => {
       {/* Highlight box */}
       <div className="flex justify-center my-[20px]">
         <div className="p-5 lg:p-10 rounded-[20px] bg-[#FFEFD9] flex justify-center items-center">
-          <p className="font-poppins italic text-[rgba(254,112,17,1)] font-bold text-[28px]">
+          <p className="md:text-md text-center font-poppins italic text-[rgba(254,112,17,1)] font-bold text-[28px]">
             8<sup>th</sup> Best Club in Rotaract District R.I.D 3141
           </p>
 

@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react';
 import { OurJourney } from '../Components/aboutpage/AvenuesofService';
+import AboutAvenue from '../Components/AboutAvenue';
 
 const AboutSection = React.lazy(() => import('../Components/aboutpage/about'));
 const Objectives = React.lazy(() => import('../Components/aboutpage/objective'));
@@ -15,6 +16,7 @@ const About = () => {
         <Objectives />
         {/* <AvenuesofService /> */}
         <OurJourney />
+        <AboutAvenue/>
       </Suspense>
     </div>
   );
