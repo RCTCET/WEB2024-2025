@@ -4,7 +4,7 @@ import Layout from './layout';
 import Home from './pages/home';
 import GetInvolvedHero from "./Components//getInvolved/GetInvolvedHero"
 import { Achievement } from './pages/Achievement';
-import TeamPage from './pages/MeetTheTeam';
+import TeamPage from './pages/meetTheTeam';
 import About from './pages/about';
 import Projects from './pages/projects';
 import ContactForm from './pages/contactus';
@@ -40,4 +40,5 @@ function App() {
     </ThemeProvider>
   );
 }
+
 export default App;
