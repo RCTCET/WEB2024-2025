@@ -1,11 +1,11 @@
-import React from "react";
+
 import ProjectCard from "../Components/ProjectCard";
 
 function Projects() {
   return (
     <div className="scroll-smooth bg-white dark:bg-stone-900 min-h-screen">
       {/* Hero */}
-      <div className="flex min-h-[60vh] justify-center items-center p-6 sm:p-8 relative">
+      <div className="flex md:min-h-[60vh] justify-center items-center p-6 sm:p-8 relative">
         <div className="relative w-full h-[80%]">
           <img
             src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1756821756/DSC02604_jmaoow.jpg"
