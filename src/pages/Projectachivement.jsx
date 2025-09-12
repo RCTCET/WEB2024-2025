@@ -82,7 +82,7 @@ const Projectachievement = () => {
       </h2>
 
       <div className="flex justify-center items-center w-full mb-16">
-        <div className="w-[45vw] relative">
+        <div className="md:w-[55vw] w-[90vw] relative">
           <Swiper
             slidesPerView={1}
             spaceBetween={30}

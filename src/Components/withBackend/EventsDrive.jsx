@@ -28,7 +28,7 @@ export default function EventsDrive() {
   return (
   <div className=" my-8 rounded-t-xlp-6 bg-white dark:bg-stone-900">
     <h2 className="text-3xl mt-10 font-bold mb-4 text-center text-orange-500 dark:text-yellow-400">
-      🎉 Events & Drives
+      Events & Drives
     </h2>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 mb-10 gap-6">
       <div className="flex">
@@ -41,9 +41,9 @@ export default function EventsDrive() {
             <h3 className="text-lg font-semibold text-orange-500 dark:text-yellow-400">
               {event.eventName}
             </h3>
-            <p className="text-sm text-gray-500 dark:text-stone-400 mb-2">
+            {/* <p className="text-sm text-gray-500 dark:text-stone-400 mb-2">
               📅 {event.date}
-            </p>
+            </p> */}
             <a
               href={event.driveLink}
               className="text-white bg-orange-500 dark:bg-yellow-600 hover:bg-orange-600 dark:hover:bg-yellow-700 px-3 py-1 rounded-lg inline-block mt-2 shadow-md transition"

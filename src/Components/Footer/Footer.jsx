@@ -5,7 +5,7 @@ function Footer() {
         {/* Logo Section */}
         <div className="flex flex-col items-start mb-4 md:mb-0">
           <div className="flex py-3">
-            <img src="/RcTcetLogo.svg" alt="RCTCET Logo" className="h-12 w-12 mr-4" />
+            <img src="https://res.cloudinary.com/dtc2xaeaf/image/upload/v1757125056/logo_pdqctw_ztwsvl.png" alt="RCTCET Logo" className="h-12 w-12 mr-4" />
             <div>
               <h1 className="text-xl font-bold text-gray-900 dark:text-[#F7F0E1]">RCTCET</h1>
             </div>
